@@ -21,48 +21,90 @@ after all put them on .bashrc  in ~/
 
 -2 Some  commands  
 	
-# cd : Change the shell working directory
+# cd : 
+Change the shell working directory
   ~/ == /home/username
  to go to Desktop from anywhere :
  cd ~/Desktop
 
-# pwd : print name of current/working direc‐tory
+# pwd :
+ print name of current/working direc‐tory
 -------------
-# mkdir: create directories 
+# mkdir:
+ create directories 
 -p  no error if  existing,  make  parent directories as needed
 لو مش موجود اعمله ..
 -------------
-# touch : create the file not directory
+# touch : 
+create the file not directory
 -------------
-# cp:  copy files and directories
+# cp: 
+ copy files and directories
  -i  prompt before overwrite.
-# mv: move (rename) files ...
+ -r copies /xxx directıry to /yyy directory
+# mv: 
+move (rename) files ...
  -i  prompt before overwrite.
  -f  do not prompt before overwriting.
 
-# rm : remove files or directories
+# rm : 
+remove files or directories
  -f gnore  nonexistent  files and argu‐ments, never prompt.
  -i prompt before every removal
  -r remove  directories  and  their contents recursively
-# rmdir: remove empty directories only
+# rmdir:
+ remove empty directories only.
 -p  remove  DIRECTORY and its ancestors 'rmdir -p a/b/c'is similar to'rmdir a/b/c a/b a'
 
    rmdir command: rmdir stands for "remove directory". It is used to remove empty directories. The rmdir command can only delete empty directories, meaning directories that do not contain any files or subdirectories. If a directory contains files or subdirectories, rmdir will not delete it and will give an error message.
-----
-# cat : show the file's contint
+# uname -a : 
+ shows Linux system info
+-r : shows kernel release info
+# uptime:
+ displays system running/life time
+# hostname:
+ shows system host name
+# last reboot :
+displays system reboot history
+# mount:
+ shows mounted filesy-stems
+# 
+-------------
+# 
+# cat :
+ show the file's contint
 
-# more : print first file's page
+# more :
+ print first file's page
+# head :
+ displays first lines
+# tail :
+ displays last lines
 
-# date: print  or  set the system date and time
+# date:
+ print  or  set the system date and time
+
+# id: 
+ show user&group ids of the current user
+# last:
+ shows the last users logged on
+# whoami: 
+shows who you are logged in as
+# who :
+shows who is logged into the system
+# w:
+shows who is logged in and what they do
 
 ---------------------------------------------------------------
 
 3- Commands 
 #  ls 
-  -a   do not ignore entries starting with .
+  -a  lists also hidden files, do not ignore entries starting with .
   -l   use a long listing format - 
   -r   reverse order while sorting بيعكس الترتيب
   -R   list subdirectories recursivel عرص الدلائل الفرعية
+  -la lists files and directories detailly
+
   
  ----------------------------------------------------------------------
 
@@ -84,16 +126,45 @@ man and command --help
   man -s5 passwd 
   man -f  shadow shadowed password file
   
-  # cal  - displays a calendar and the date of Easter
+  # cal:
+  displays a calendar and the date of Easter
   - cal 4 2001 
 
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   # add Users 
+ # useradd -c “KH” -m KHaled: 
+  creates khaled account with
+comment "KH",
+# usermod -aG Networkers Gokhan :
+adds account “Gokhan” to the “Networkers” group
 you must to be root to create user 
   - useradd is creates user 
 -- (/etc/login.defs) that content  useradd's configs
 
 [CREATE_HOME yes ] it creats home directory auto in /etc/login.defs
+
+
+# chown user:
+changes ownership of a file/directory
+- chown user:group filename:
+changes user and group for a file or
+directory
+# File Permissions:
+- r (read) permission, 4
+- w (write) permission, 2
+- x (execute) permission, 1 
+- -= no permission
+
+# File Permissions Examples:
+- 777 | Owner, Group, Everyone has
+rwx permissions
+- 744 | Owner has rwx permission,
+Group, Everyone has r permission
+- 755 | Owner has rwx permission,
+Group, Everyone has rx permissions
+- 776 | Owner, Group has rwx
+permission, Everyone has rw
+
 
 
 
