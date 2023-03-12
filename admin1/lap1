@@ -59,5 +59,51 @@ and relative path for the file mycv
 
 - man -k "passwd"
 
+# 14 Create a user account with the following attribute
+username: islam
+Fullname/comment: Islam Askar
+Password: islam:
+- sudo useradd  -c "Islam Askar" -s /bin/bash islam
+- sudo passwd islam 
+# 15 Create a user account with the following attribute
+ Username: baduser:
+- useradd baduser
+ Full name/comment: Bad User
+- usermod   -c "Bad User" baduser
+ Password: baduser:
+- passed baduser and 
+
+# 16 Create a supplementary (Secondary) group called pgroup with group ID of 30000
+- groupadd   --g  30000 pgroup 
+
+# 17 Create a supplementary group called badgroup
+- groupadd  badgroup
+# 18 Add islam user to the pgroup group as a supplementary group
+- usermod -aG pgroup  islam
+# 19 Modify the password of islam's account to password
+- passwd islam  
+= password
+# 20 Lock bad user account so he can't log in
+- passwd -l baduser 
+# 21 Delete bad user account
+- userdel baduser
+# 22  Create a supplementary group called badgroup
+groupadd badgroup 
+# 23 Delete the supplementary group called badgroup.
+- groupdel badgroup
+
+# 24 Create a folder called myteam in your home directory and change its permissions to read only for the owner.
+
+- mkdir ~/myteam  
+- chmod 400  ~/myteam
+# 25 Log out and log in by another user
+- exit 
+- su username 
+# 26 Try to access (by cd command) the folder (myteam)
+- bash: cd: /home/mo/myteam: Permission denied
+
+# 27 -
+
+
 
 

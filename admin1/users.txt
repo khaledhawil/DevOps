@@ -20,10 +20,10 @@ Linux Users
 - سؤال مهم بقي ازاي بنعمل create لـ user اصلا واي بيحصل وقتها ف الـ background:
 - الاول لازم نبقي عارفين ان انا عشان اعمل add لـ user لازم اكون root او user واخد permission ويقدر يعمل دا لكن الـ user العادي مش هايقدر يعمل add لاي user.
 - عشان اعمل add بقي لـ user جديد في command مسؤل عن دا.
-# useradd + username
+$ useradd + username
 - دا الـ command اللي اقدر بيه اعمل add لـ user جديد.
 
-# passwd + username
+$ passwd + username
 - عشان اغير الـ password بتاع الـ user ودا اللي يقدر يستخدمه الـ root user او الـ user نفسه اللي هايغير الـ pass لنفسه ولكن ف الحاله دي لازم يعمل complicated password.
 
 - لما اعمل add لـ user جديد بيحصل عندي 5 حاجات:
@@ -46,7 +46,7 @@ username:x:UID:GID:comment:/home/username:/bin/bash
 - طبعا الحاجات اللي بتضاف ف الـ home بتاع الـ user بيكون واخدها copy من etc/skel/ وطبعا اقدر اغير دا او اي حاجه بتتعمل by default للـ user من فايل etc/default/useradd.
 
 - هانختم كلامنا ب id command ودا اقدر من خلاله اني اعرض معلومات الـ user.
-# id + username
+$ id + username
 وان شاء الله هاتكلم عن باقي الـ user command وكمان عن الـ group ف بوست تاني.
 ###################################################################################################################################################3333
 Linux Users
@@ -67,7 +67,7 @@ Linux Users
 - طبعا بيكون ليها GID.
 
 طيب ازاي نقدر نعمل add لـ group جديد
-# groupadd + groupname
+$ groupadd + groupname
 دا ال command اللي اقدر اعمل من خلاله add لل group.
 اي بقي بيحصل لما بعمل groupadd
 انا عندي file بيضاف فيه كل الـ groups بتاعتي وهو etc/group/ ودا بيتقسم لـ 4 خانات وهما:
@@ -80,23 +80,23 @@ groupname:password:GID:Userlist
 
 طب انا دلوقتي عملت group جديد وعاوز اعدل فيها ودا بيكون عن طريق groupmod وطبعا ليه options ممكن نعرفها عن طريق ان احنا نعمل man ونعرف كل تفاصيل ال command.
 
-# groupmod -n + newname + groupoldname
+$ groupmod -n + newname + groupoldname
 - دا عشان اغير اسم الـ group بتاعي بعد ما اعملها add.
 
-# gpasswd -a + username + groupname
+$ gpasswd -a + username + groupname
 - عشان اضيف user معين في group معين وتكون secondary group ليه (a-) دي اختصار لـ add.
 
-# gpasswd -M + users + groupname
+$ gpasswd -M + users + groupname
 - عشان اضيف ازيد من user مره واحده ف group معين وتكون secondary group ليه (M-) دي اختصار ل Members.
 
-# gpasswd -A + users + groupname
+$ gpasswd -A + users + groupname
 - عشان اخلي user معين admin ع group معين (A-) دي اختصار ل Administrator.
 - الـ groupadmin يقدر يعمل addusers او deleteusers من الـ group بدون ما يكون Member فيها.
 
-# gpasswd -d + users + groupname
+$ gpasswd -d + users + groupname
 - عشان اعمل delete لـ user معين من الـ group.
 
 كل دا بقي بيظهر عندي ف etc/shadow/ وبيتكون من 4 خانات بردو:
 groupname:password:admin:members
 طيب دلوقتي انا عاوز اعمل delete للـ group دا بيكون عن طريق
-# groupdel + groupname
+$ groupdel + groupname

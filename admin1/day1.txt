@@ -1,10 +1,10 @@
- #                      		This the first day of admin one ~!!				
+ $                      		This the first day of admin one ~!!				
 
-# Don't try to memorize everything! 
+$ Don't try to memorize everything! 
 
 
 
-# alias : print the alias you have 
+$ alias : print the alias you have 
  to make any alias :
 	alias ll='ls -al'
 	alias rm='rm -i'
@@ -13,92 +13,94 @@
 after all put them on .bashrc  in ~/
 
 1- 
-# how to open real tty : ->
+$ how to open real tty : ->
   	Alt + Ctrl + f3 ..
-# how to close this tty : ->
+$ how to close this tty : ->
   	Alt + ctrl + f2 or f1 
 --------------------------------------------------------------------
 
 -2 Some  commands  
 	
-# cd : 
+$ cd : 
 Change the shell working directory
   ~/ == /home/username
  to go to Desktop from anywhere :
  cd ~/Desktop
 
-# pwd :
+$ pwd :
  print name of current/working direc‐tory
 -------------
-# mkdir:
+$ mkdir:
  create directories 
 -p  no error if  existing,  make  parent directories as needed
 لو مش موجود اعمله ..
 -------------
-# touch : 
+$ touch : 
 create the file not directory
 -------------
-# cp: 
+$ cp: 
  copy files and directories
  -i  prompt before overwrite.
  -r copies /xxx directıry to /yyy directory
-# mv: 
+$ mv: 
 move (rename) files ...
  -i  prompt before overwrite.
  -f  do not prompt before overwriting.
 
-# rm : 
+$ rm : 
 remove files or directories
  -f gnore  nonexistent  files and argu‐ments, never prompt.
  -i prompt before every removal
  -r remove  directories  and  their contents recursively
-# rmdir:
+$ rmdir:
  remove empty directories only.
 -p  remove  DIRECTORY and its ancestors 'rmdir -p a/b/c'is similar to'rmdir a/b/c a/b a'
 
    rmdir command: rmdir stands for "remove directory". It is used to remove empty directories. The rmdir command can only delete empty directories, meaning directories that do not contain any files or subdirectories. If a directory contains files or subdirectories, rmdir will not delete it and will give an error message.
-# uname -a : 
+$ uname -a : 
  shows Linux system info
 -r : shows kernel release info
-# uptime:
+$ uptime:
  displays system running/life time
-# hostname:
+$ hostname:
  shows system host name
-# last reboot :
+$ last reboot :
 displays system reboot history
-# mount:
+$ mount:
  shows mounted filesy-stems
-# 
+$ 
 -------------
-# 
-# cat :
+$ 
+$ cat :
  show the file's contint
 
-# more :
+$ more :
  print first file's page
-# head :
+$ head :
  displays first lines
-# tail :
+$ tail :
  displays last lines
 
-# date:
+$date:
  print  or  set the system date and time
+ to change the date :
+ $date -s "16 Apr 2023 12:00:00"
 
-# id: 
+$ id: 
  show user&group ids of the current user
-# last:
+$ last:
  shows the last users logged on
-# whoami: 
+$ whoami: 
 shows who you are logged in as
-# who :
+$ who :
 shows who is logged into the system
-# w:
+$ w:
 shows who is logged in and what they do
 
 ---------------------------------------------------------------
 
 3- Commands 
-#  ls 
+$  ls 
   -a  lists also hidden files, do not ignore entries starting with .
   -l   use a long listing format - 
   -r   reverse order while sorting بيعكس الترتيب
@@ -108,16 +110,16 @@ shows who is logged in and what they do
   
  ----------------------------------------------------------------------
 
-#   Some commands Wiht (Ctrl)
+$   Some commands Wiht (Ctrl)
 
 
 Ctrl + c  is kill process
 Ctrl + z  is stop process
 -------------------------------------------------------------
-#  editors :
+$  editors :
 [nano - vi/vim - gedit]
 
-# when you need help :
+$ when you need help :
 man and command --help 
 
 -to search anyhelp by phrase :
@@ -126,16 +128,16 @@ man and command --help
   man -s5 passwd 
   man -f  shadow shadowed password file
   
-  # cal:
+  $ cal:
   displays a calendar and the date of Easter
   - cal 4 2001 
 
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  # add Users 
- # useradd -c “KH” -m KHaled: 
+  $ add Users 
+ $ useradd -c “KH” -m KHaled: 
   creates khaled account with
 comment "KH",
-# usermod -aG Networkers Gokhan :
+$ usermod -aG Networkers Gokhan :
 adds account “Gokhan” to the “Networkers” group
 you must to be root to create user 
   - useradd is creates user 
@@ -144,18 +146,18 @@ you must to be root to create user
 [CREATE_HOME yes ] it creats home directory auto in /etc/login.defs
 
 
-# chown user:
+$ chown user:
 changes ownership of a file/directory
 - chown user:group filename:
 changes user and group for a file or
 directory
-# File Permissions:
+$ File Permissions:
 - r (read) permission, 4
 - w (write) permission, 2
 - x (execute) permission, 1 
 - -= no permission
 
-# File Permissions Examples:
+$ File Permissions Examples:
 - 777 | Owner, Group, Everyone has
 rwx permissions
 - 744 | Owner has rwx permission,
@@ -164,6 +166,7 @@ Group, Everyone has r permission
 Group, Everyone has rx permissions
 - 776 | Owner, Group has rwx
 permission, Everyone has rw
+
 
 
 
