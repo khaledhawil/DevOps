@@ -70,6 +70,10 @@ translate or delete characters
 $ Sudoers privileges :
 you can change in this file ! :
 /etc/sudoers = visudo
+ex: put it to /etc/sudoers
+username  ALL=/usr/sbin/useradd, /usr/sbin/groupadd, ..., ...
+
+
 
 
 

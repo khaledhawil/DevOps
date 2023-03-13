@@ -1,3 +1,3 @@
-lol1:12345678:1004:1004:created by newusers for test:/home/lol1:/bin/bash
-lol2:12345678:1005:1005:created by newusers for test:/home/lol2:/bin/bash
-lol3:12345678:1006:1006:created by newusers for test:/home/lol3:/bin/bash
+lol11:123:1004:1004:created by newusers for test1:/home/lol4:/bin/bash
+lol5:123:1005:1005:created by newusers for test2:/home/lol5:/bin/bash
+lol6:123:1006:1006:created by newusers for test3:/home/lol6:/bin/bash
