@@ -96,7 +96,10 @@ $ who :
 shows who is logged into the system
 $ w:
 shows who is logged in and what they do
-
+$ which :
+locate a command
+- ex: 
+which passwd , which python
 ---------------------------------------------------------------
 
 3- Commands 
@@ -151,11 +154,7 @@ changes ownership of a file/directory
 - chown user:group filename:
 changes user and group for a file or
 directory
-$ File Permissions:
-- r (read) permission, 4
-- w (write) permission, 2
-- x (execute) permission, 1 
-- -= no permission
+
 
 $ File Permissions Examples:
 - 777 | Owner, Group, Everyone has
