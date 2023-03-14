@@ -74,8 +74,9 @@ ex: put it to /etc/sudoers
 username  ALL=/usr/sbin/useradd, /usr/sbin/groupadd, ..., ...
 
 
-
-
+$ ansiweather :
+the weather command 
+# ex ansiweather -l "الناوية"
 
 
 
