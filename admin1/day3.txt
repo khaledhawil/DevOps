@@ -30,7 +30,7 @@ $ Process :
  alter priority of running processes
 #ex: renice -n -15 psId
 #ex: renice -n 5 psId
- $ ps:
+ $ ps: or jobs
 report a snapshot of the current processes.
  $ pstree:
 display a tree of processes
