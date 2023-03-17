@@ -157,14 +157,10 @@ directory
 
 
 $ File Permissions Examples:
-- 777 | Owner, Group, Everyone has
-rwx permissions
-- 744 | Owner has rwx permission,
-Group, Everyone has r permission
-- 755 | Owner has rwx permission,
-Group, Everyone has rx permissions
-- 776 | Owner, Group has rwx
-permission, Everyone has rw
+- 777 | Owner, Group, Everyone has rwx permissions
+- 744 | Owner has rwx permission, Group, Everyone has r permission
+- 755 | Owner has rwx permission,Group, Everyone has rx permissions
+- 776 | Owner, Group has rwx permission, Everyone has rw
 
 
 
