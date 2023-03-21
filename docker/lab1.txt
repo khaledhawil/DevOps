@@ -1,0 +1,17 @@
+1- Run the container hello-world :
+$ docker run hell-world  or <image-name>
+
+2- Check the container status :
+$ docker ps hell-world or <image-name>
+
+3- Start the stopped container : 
+$ docker  start hell-world or <image-name>
+
+4- Remove the container:
+$ docker rm hell-world or <image-name>
+
+5- Remove the image:
+$ docker rmi hell-world  or <image-name>
+
+
+

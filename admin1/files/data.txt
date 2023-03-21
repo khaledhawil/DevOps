@@ -1,3 +1,2 @@
-lol11:123:1004:1004:created by newusers for test1:/home/lol4:/bin/bash
-lol5:123:1005:1005:created by newusers for test2:/home/lol5:/bin/bash
-lol6:123:1006:1006:created by newusers for test3:/home/lol6:/bin/bash
+mox:123:1016:1016:created by newusers for Eng-Mohamed:/home/mox:/bin/bash
+vox:123:1015:1015:created by newusers for Eng-Mohamed:/home/vox:/bin/bash

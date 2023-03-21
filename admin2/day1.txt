@@ -17,3 +17,7 @@ nmcli connection add con-name Test ifname enp0s3 type ethernet ipv4.method manua
 to change it to auto :
 nmcli connection modify Test ipv4.method auto 
 
+
+$ free -h : 
+ 
+ # echo 1 | sudo tee /proc/sys/vm/drop_caches
