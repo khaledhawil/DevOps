@@ -1,5 +1,6 @@
 $-                            The first day of Docker's Course   
 
+- (https://github.com/ahmedsami76/AraBigData/blob/main/Docker.ipynb)
 
 1- What is DOCKER? :
 - Docker is a platform or ecosystem around creating and running something called containers.
@@ -63,8 +64,15 @@ $-                            The first day of Docker's Course
 - Docker Engine is a lightweight runtime that allows users to create and run Docker containers on their local machine or in a production environment
 - Docker Engine consists of several components, including a server, a client, and a command-line interface (CLI). 
 
+10- Docker daemon :
+- Docker daemon (dockerd) is a background process that runs on a Docker host and manages the lifecycle of Docker containers.
+- It is responsible for building, running, and distributing Docker containers.
 
-
+11- What is a difference between Docker daemon  and Docker Engine?
+- Docker Engine is the overall technology/project
+- The Docker daemon is the key process that makes the Docker Engine work
+- In a sense, the Docker daemon is a key part of the Docker Engine - it's the service that "executes" the Engine and runs containers etc.
+- But Docker Engine is a broader term that refers to the whole technology and ecosystem
 
 $ A container lifecycle refers to the various stages that a container goes through from its creation to its deletion. These stages typically include:
 
@@ -116,6 +124,9 @@ $ docker run -i <image-name> :
 - This allows the user to interact with the container's command prompt or shell.
 
 
+$ docker  run -t : 
+Terminal  
+
 $ docker run -p host:container <image-name> :
  Port mapping
 - This option specifies that a network port in the container should be mapped to a port on the host machine.
@@ -151,8 +162,12 @@ $ docker ps -a :
 - -a: This option is used to show all containers, including the ones that are not currently running.
 
 
+$ docker --name contnr-name :
 
+$ docker -h : 
+hostname of container 
 
+$ docker -c "" :with command
 
 
 

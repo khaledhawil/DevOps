@@ -1,0 +1,93 @@
+
+
+1- Build time:
+
+- The image is created (docker build)Instructions in the Dockerfile are executed Layers are created
+- Build time is when the image is constructed
+
+
+2 - Runtime:
+- The image is run as a container (docker run)The container is executed from the final image layers Port mappings,
+- volume mounts etc take effect The actual process inside the container is executed
+- Runtime is when the image (as a container) is executed
+
+
+
+3- NetWork in Docker 
+
+$ docker network create net-name : to create a network 
+
+
+$ docker network ls 
+ 
+$ docker network connect net-name contr-name
+
+$ docker network disconnect net-name contr-name
+
+$ docker network create --subnet 16.0.0.4/16 
+
+$ docker network create --internal net-name 
+
+
+
+
+
+
+
+
+
+
+
+4- Volumes
+
+-  Create a volume: 
+$docker volume create my-vol
+- List volumes:
+$ docker volume ls
+- Inspect a volume: 
+$ docker volume inspect my-vol
+- Remove a volume:
+$  docker volume rm my-vol
+
+Volume usage with containers:
+
+- Mount a volume: 
+$docker run -v my-vol:/app image-name
+- Mount a host directory as a volume:
+ $ docker run -v /host/dir:/app image-name
+- Mount a volume read-only: 
+$ docker run -v my-vol:/app:ro image-name
+
+
+- docker volume prune:
+$ Deletes all unused volumes in Docker.
+
+- Mounts a host directory as a volume in a container.
+
+$ docker run -v [HOST_DIRECTORY]:[CONTAINER_DIRECTORY] [IMAGE_NAME]:
+- Mounts a host directory as a volume in a container.
+
+$ docker run -v [VOLUME_NAME]:[CONTAINER_DIRECTORY] [IMAGE_NAME]: 
+Mounts a Docker volume as a volume in a container.
+
+to create an image by container :
+$ docker commit  image:name  conr-name
+
+
+
+$ docker build -t myapp .
+- to build docker file 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
