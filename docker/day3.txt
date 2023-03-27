@@ -2,6 +2,8 @@
 
 $ docker-compose up -d
 $ docker-compose down
+$ docker-compose exec contr-name ping -c 3 another-contnr :
+to piing from contnr to another contnr 
 - Overall, Docker Compose is a powerful tool for managing multi-container Docker applications,
 - making it easier for developers to define and deploy complex applications in a consistent and reproducible manne
 - Configure services: You can use Docker Compose to configure the settings for each service,
@@ -89,9 +91,4 @@ services:
 
 
 
-
-
-*                 Docker Swarm 
-
-- Overall, Docker Swarm is a powerful tool for managing Docker containers at scale
 
