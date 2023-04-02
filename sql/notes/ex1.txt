@@ -56,8 +56,12 @@ here i'll put example thet i uesd ;
 > SELECT  *  FROM student LIMIT 2;
 > SELECT  *  FROM student LIMIT 2 OFFSET 1 ; # this is when you tell him to start after first qury;;
 
-
-
+12- to add a new column to table:
+> ALTER TABLE `users`  ADD  country varchar(100) null after `age` ;
+13- to don't repet name in culomn :
+> SELECT DISTINCT age FROM users WHERE age < 25 ;
+14- to Delete :
+> DELETE FROM users WHERE age > 96 and age < 20
 
 
 
@@ -92,6 +96,59 @@ CREATE TABLE users (
              ('zahra', 24, 26, 'zahra@zahra.com', 'zahra555'),
              ('youssef', 33, 27, 'youssef@youssef.com', 'youssef777');
              
+
+- to update column in table:
+> UPDATE `users` SET `pass` = '1222' WHERE `users`.`id` = 17;
+
+- to show all users from older to smaller ;
+> SELECT age,name FROM users ORDER BY age DESC ;
+> SELECT age,name FROM users ORDER BY age asc ; ااالعكس ..
+> SELECT age, name FROM users WHERE age = 21 ;
+> SELECT age, name FROM users WHERE age >21 ;
+> SELECT * FROM users WHERE age <15 or email = 'khaledhawil@kh.com'  ;
+> SELECT * FROM users WHERE age < 30 and age >20
+> UPDATE  users set age = 30 WHERE name= 'khaled';
+> 
+> SELECT * FROM users WHERE not age = 22;
+> 
+
+| | | | | | | | | | | | | | | | | | | | | 
++---------+-----+----+---------------------+------------+
+| name    | age | id | email               | pass       |
++---------+-----+----+---------------------+------------+
+| mohamed |  21 | 14 | momo@mo.com         | 1233       |
+| lox     |  22 | 15 | loxlox@lo.com       | 123        |
+| khaled  |  22 | 16 | khaledhawil@kh.com  | 164        |
+| ahmed   |  27 | 17 | ahmedahwil@ah.ocm   | 1222       |
+| sara    |  19 | 18 | sara@sara.com       | sara123    |
+| ali     |  31 | 19 | ali@ali.com         | ali456     |
+| nour    |  25 | 20 | nour@nour.com       | nour789    |
+| adam    |  26 | 21 | adam@adam.com       | adam101    |
+| lara    |  23 | 22 | lara@lara.com       | lara2021   |
+| omar    |  30 | 23 | omar@omar.com       | omar567    |
+| layla   |  28 | 24 | layla@layla.com     | layla4321  |
+| hassan  |  29 | 25 | hassan@hassan.com   | hassan987  |
+| zahra   |  24 | 26 | zahra@zahra.com     | zahra555   |
+| youssef |  33 | 27 | youssef@youssef.com | youssef777 |
++---------+-----+----+---------------------+------------+
+14 rows in set (0.0009 sec)
+* note :
+- name, age ,pass and id : they are columns
+- [ mohamed |  21 | 14 | momo@mo.com ] this is a row 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
