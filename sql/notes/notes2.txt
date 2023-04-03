@@ -1,0 +1,42 @@
+1- max :
+> SELECT MAX(age) FROM users ; # to show the old one 
+- min
+> SELECT min(age) FROM users ; # to show the small one
+- avg
+> SELECT AVG(age) FROM users ;  # to show the avraga
+- count
+> SELECT COUNT(id) FROM users ; # to count how many 
+> SELECT COUNT(country) FROM users ; # to show how many country 
+> SELECT COUNT(DISTINCT  country) FROM users ; # to show how many contry without repet
+- and sum
+> SELECT sum(id) FROM users ; # to sum 
+
+2- Like
+> SELECT * FROM users WHERE name LIKE 'K%' ;
+> SELECT * FROM users WHERE name LIKE '%H%' ;
+> SELECT name FROM users WHERE name LIKE 'k%d' ;
+
+￼
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
