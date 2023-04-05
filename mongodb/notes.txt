@@ -50,7 +50,7 @@ $ docker-compose up -d
 $ dcoker exec -it  container bash 
 
 4- after all you need to  create and define MongoDB in mongodb's container by this command:
-$ mongosh  mongodb://localhost:27017 -u admin -p password
+$ mongosh  localhost
   
 
 5- it's ready for U now 

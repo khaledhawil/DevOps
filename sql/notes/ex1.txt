@@ -45,7 +45,7 @@ here i'll put example thet i uesd ;
 > SELECT * FROM student 
 -> WHERE stu_name LIKE 'm%';
 > SELECT * FROM student  WHERE stu_name LIKE 'm%d';
->SELECT * FROM student  WHERE stu_name LIKE 'm_h_m_d';
+> SELECT * FROM student  WHERE stu_name LIKE 'm_h_m_d';
 
 
 

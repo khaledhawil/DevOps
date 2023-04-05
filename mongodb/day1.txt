@@ -1,0 +1,127 @@
+*            here i'll talk about MongoDB And how to use it 
+mongo    =     sql 
+collections = tables  
+Row = document
+coulmn = fields
+primary keys = primarykey providd by mongodb itself
+
+
+- first  you have to use databes 
+> use data-name
+
+
+1- to show database 
+> show dbs;
+> > db.dropDatabase(); # this to remove db
+
+2- to show collection :
+> show collections;
+
+2- to create a collection :
+> db.createCollection("Coll-name")
+
+3- to delete collection; 
+> db.data-name.drop()
+4- to find :
+> db.data.find()
+> db.data.find({name:"khaled"})
+
+* you can craete var and add it to collection
+> var names = [  {    "name": "Fatima Ahmed",    "age": 25,    "salary": 10000,    "job": "Marketing Manager",    "address": "5th Settlement, New Cairo"  },  {    "name": "Hassan Ali",    "age": 45,    "salary": 15000,    "job": "Operations Director",    "address": "Dokki, Giza"  },  {    "name": "Yara Mahmoud",    "age": 26,    "salary": 8000,    "job": "Graphic Designer",    "address": "Maadi, Cairo"  },  {    "name": "Khaled Said",    "age": 37,    "salary": 12000,    "job": "Software Developer",    "address": "Heliopolis, Cairo"  },  {    "name": "Aya Abdelrahman",    "age": 31,    "salary": 9000,    "job": "HR Manager",    "address": "Nasr City, Cairo"  },  {    "name": "Mohamed Ibrahim",    "age": 40,    "salary": 14000,    "job": "Financial Analyst",    "address": "Mohandessin, Giza"  },  {    "name": "Sara Ali",    "age": 27,    "salary": 7500,    "job": "Content Writer",    "address": "Zamalek, Cairo"  },  {    "name": "Omar Abdelaziz",    "age": 33,    "salary": 11000,    "job": "Product Manager",    "address": "October City, Giza"  },  {    "name": "Laila Mohamed",    "age": 24,    "salary": 7000,    "job": "Social Media Specialist",    "address": "El Rehab City, New Cairo"  },  {    "name": "Adham Mustafa",    "age": 36,    "salary": 13000,    "job": "IT Manager",    "address": "Mokattam, Cairo"  }]
+- to insert this variable in any collection:
+> db.collection-name.insert(names);
+- you can edit in collection with update:
+> db.names.update({name:"Fatima Ahmed"},{$set:{"age": 25}})
+
+* when you add a document accidentally and  you need to remove it :
+> db.names.remove({age:24})
+
+- you can increment document with update
+
+> db.names.update({ age: 22} , {$inc:{ age: 5}}) # that means  you incremented age + 5
+> db.names.update({ age: 27} , {$unset:{ age: 1}}) # that means delete age doc
+> db.names.updateOne(
+               { "name": "Sarah" },
+               { $set: { "age": 27, "salary": 5000, "job": "Developer", "address": { "street": "123 Main St", "city": "Cairo", "country": "Egypt" } } },
+               { upsert: true }
+            )
+            # this to add doc with update , you must add this at end { upsert: true } 
+- rename with update 
+> db.names.update({ "name": "Sarah" }, {$rename:{"salary": "moany"}})
+
+- to find with lower than
+db.names.find({age : {$lt : 30 }})
+
+- to find with greater then :
+>  db.names.find({age : {$gt : 30 }})
+- to fint with equal 
+> db.names.find({age : {$lte : 26 }})
+
+- to find with $or 
+> db.names.find({$or: [ {name: 'Omar Abdelaziz'} ,{name: 'Adham Mustafa'}]})
+
+- to sort with find 
+> db.names.find().sort({name:1})
+> db.names.find().sort({name:-1}) # the opposite
+
+- to count documents :
+> db.names.find().count()
+> db.names.find({name:"Sarah"}).count()
+> db.names.find({age : 25}).count()
+
+- functions :
+> db.names.find().forEach(
+               function (names) 
+               {print("name::" + names.name);})
+               name::Fatima Ahmed
+               name::Hassan Mansour
+               name::Yara Mahmoud
+               name::Khaled Said
+               name::Aya Abdelrahman
+               name::Mohamed Ibrahim
+               name::Sara Ali
+               name::Omar Abdelaziz
+               name::Adham Mustafa
+               name::Sarah
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
