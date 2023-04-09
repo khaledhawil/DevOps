@@ -71,6 +71,15 @@ spec:               # Specifies the desired state of the deployment.
         # containerPort: Specifies the port number that should be exposed.
         - containerPort: 80 
 
+        Events:
+        Type    Reason     Age   From               Message
+        ----    ------     ----  ----               -------
+        Normal  Scheduled  69s   default-scheduler  Successfully assigned default/nginx-pod to minikube
+        Normal  Pulling    68s   kubelet            Pulling image "nginx"
+        Normal  Pulled     61s   kubelet            Successfully pulled image "nginx" in 6.899917291s (6.899936272s including waiting)
+        Normal  Created    61s   kubelet            Created container nginx
+        Normal  Started    61s   kubelet            Started container nginx
+
 
 - to create this file  :
 $ kubectl create -f podia.yml
@@ -79,12 +88,14 @@ $ kubectl describe  po  nginx-pod # to describe pod's info
 $ kubectl replace -f podia.yml  --force # to replace a ymal file to a new configur
 $ kubectl apply -f podia.yml  # at end we'll use it 
 
-
-
-$ k
-
-
-
+$ kubectl exec -it nginx -- /bin/bash # to excute the pod 
+$ kubectl logs nginx-pod   # logs of pod 
+$ kubectl  get po nginx-pod --show-labels # to show the labels 
+$ kubectl  label po nginx-pod owner=Khaled  # to set a label to pod and you can add more labels
+$ kubectl get po --selector owner=Khaled  # to find a pod by label
+$ kubectl get po -l owner=Khaled  # to find a pod by label
+$ kubectl get po -l owner!=Khaled  # to find a pod by label with not equal
+$ kubectl get po -l  'owner in (Khaled)' 
 
 
 
