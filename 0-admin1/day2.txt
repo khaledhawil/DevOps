@@ -1,0 +1,82 @@
+#                       Second day 
+
+
+they are important files
+{
+[/etc/passed] is content the users's info
+[/etc/gshadow] is content the group's pass
+[/etc/shadow] is content the userp's pass
+}
+
+$ nweusers
+- pw_name:pw_passwd:pw_uid:pw_gid:pw_gecos:pw_dir:pw_shell
+admin1/files/data.txt
+- newusers files/data.txt
+
+
+$ chage
+change user password expiry information
+- chage -l username:
+ Show account aging information.
+ -m15 : --mindays
+ minimum number of days
+ -M30: --maxdays
+ maximum number of days
+ -W3 : --warndays
+ number of days of warning a password change is required
+ -I4: --inactive
+ number of days of inactivity after a password has expired before the account is locked
+ -E: --expiredate EXPIRE_DATE(2023-4-16)
+ Set the date or number of days
+- ex :
+ $ chage -m15 -M30 -W3  -I4 -E 2023-4-16
+
+ -----------------
+ $ chgrp:
+        change group ownership
+       - ex:
+        $chgrp   groupname filename
+---------------------------
+ $ umask :
+     set file mode creation mask
+    ------------
+ $ File Permissions:
+     - r (read) permission, 4
+     - w (write) permission, 2
+     - x (execute) permission, 1 
+     - -= no permission
+--------------------------
+     $ special permissions
+     SUID: "chmod u+s filename" or "chmod 4xxx filename"
+     SGID: "chmod g+s filename" or "chmod 2xxx filename"
+     Sticky bit: "chmod +t directory" or "chmod 1xxx directory"
+         
+     ![Alt text](path "Optional title")
+     #SUID :
+     When this permission is set on an executable file, it allows users who execute the file to run it with the privileges of the file owner instead of their own privileges. This is useful for allowing non-privileged users to execute programs that require higher privileges.
+     #SGID :
+     When this permission is set on a directory, it allows files created in the directory to inherit the group ownership of the directory instead of the group ownership of the user who created the file.
+     #Sticky bit:
+     When this permission is set on a directory, it prevents users from deleting or renaming files that are owned by other users. It is commonly used on directories that are shared by multiple users to prevent accidental deletion of files.
+
+$  I/O redirection:
+ls > files.txt = ls 1> files.txt
+ls non_existent_file 2> errors.txt
+
+$ tr :
+translate or delete characters
+#ex tr 'a-z' 'A-Z'  </etc/passwd
+
+$ Sudoers privileges :
+you can change in this file ! :
+/etc/sudoers = visudo
+ex: put it to /etc/sudoers
+username  ALL=/usr/sbin/useradd, /usr/sbin/groupadd, ..., ...
+
+
+$ ansiweather :
+the weather command 
+# ex ansiweather -l "الناوية"
+
+
+

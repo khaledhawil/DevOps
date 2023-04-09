@@ -1,0 +1,81 @@
+$  The Search in linux !!
+
+
+- locate - Find 
+
+$ find :
+search for files in a directory hi‐erarchy
+- find /home/   -user fox,
+- find /home/   -user fox -o -user lol5
+- find /home/luka/  -iname  *.mp3
+search by size :
+- find /path    -size 1024k
+- find /path    -size 5M
+- find /home/  -ctime -10 الملفات الي اتعدلت ف ال10 ايام
+- fine /home   -perm /6600  الملفات الي عليها premiss
+- find /homd -type -f for file or -d for directory 
+
+
+$   file command:
+determine file type
+
+$ grep :
+print lines that match patterns
+
+
+$ Process :
+ $ nice :
+ run a program with modified scheduling priority
+ $ renice:
+ alter priority of running processes
+#ex: renice -n -15 psId
+#ex: renice -n 5 psId
+ $ ps: or jobs
+report a snapshot of the current processes.
+ $ pstree:
+display a tree of processes
+ $ kill :
+kill - send a signal to a process
+#ex: kill -9 psID ,is kills all processes you can kill
+$ pkill :
+kill processes by name
+#ex: pkill -u username it kills all processes the user has
+$ pidof:
+find the process ID of a running program.
+ $ killall :
+kill processes by name
+#ex: killall firefox
+- $ signals:
+!man 7 signal for info about signals
+------------------------------------------------------------------------
+SIGHUP        1       Term    Hangup detected on controlling terminal  |
+                                     or death of controlling process   |
+SIGKILL       9       Term    Kill signal                              |    
+SIGSEGV      11       Core    Invalid memory reference                 |     
+SIGPIPE      13       Term    Broken pipe: write to pipe with no       |
+                              readers                                  |   
+SIGALRM      14       Term    Timer signal from alarm(2)               |                  
+SIGTERM      15       Term    Termination signal                       |
+SIGUSR1   30,10,16    Term    User-defined signal 1                    |    
+SIGUSR2   31,12,17    Term    User-defined signal 2                    |   
+SIGCHLD   20,17,18    Ign     Child stopped or terminated              |    
+SIGCONT   19,18,25    Cont    Continue if stopped                      |
+SIGSTOP   17,19,23    Stop    Stop process                             |
+SIGTSTP   18,20,24    Stop    Stop typed at terminal                   |
+SIGTTIN   21,21,26    Stop    Terminal input for background process    |
+SIGTTOU   22,22,27    Stop    Terminal output for background process   |
+------------------------------------------------------------------------
+$ NetWorking 
+- DNS /etc/resolv.conf
+- hostname /etc/hostname
+- local /etc/hosts 
+
+$ ssh
+- ssh name@ip
+- to copy any file from cloud machine to your machine :
+- scp -r  name@ip:filePath yourpath
+- scp  -r luka@192.168.1.48:/home/luka/Desktop/linux  /home/mo
+
+$ systemctl / service 
+timedatectl list-timezones
+timedatectl  set-timezone  "Africa/Cairo"

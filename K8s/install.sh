@@ -15,7 +15,7 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 
 # Start Minikube
-minikube start --vm-driver=docker
+minikube start --driver=docker
 
 # Verify installation
 kubectl version

@@ -1,0 +1,55 @@
+*                                        Key-Words of k8s  
+
+- Container orchestration:
+Kubernetes is a tool that automates the deployment, scaling,
+and management of containerized applications across a cluster of nodes,
+abstracting away the underlying infrastructure.
+
+
+- Cluster:
+ Kubernetes runs on a cluster of nodes, which can be physical or virtual machines,
+that are grouped together to form a pool of resources for running containers.
+
+
+- Pod: 
+A pod is the smallest deployable unit in Kubernetes,
+consisting of one or more containers that share the same network namespace and can communicate with each other directly.
+
+- Service:
+ A service is an abstraction that defines a set of pods and a policy for accessing them,
+providing a stable IP address and DNS name for the pods, and load-balancing traffic between them.
+
+
+- Deployment:
+ A deployment is a higher-level abstraction that defines a desired state for a set of replicas of a pod or a container,
+allowing Kubernetes to automatically create, scale, and update them as needed.
+
+
+
+- Configuration:
+ Kubernetes uses configuration files, such as YAML or JSON files, to define the desired state of the cluster,
+  including the resources, services, deployments, and other objects.
+
+
+
+ - API:
+   Kubernetes exposes a RESTful API that allows users to interact with the cluster programmatically, using tools such as kubectl,
+    the Kubernetes command-line interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

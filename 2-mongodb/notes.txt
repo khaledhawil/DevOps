@@ -1,0 +1,88 @@
+*            here we are talking about mongoDB and how to use it by docker 
+
+
+
+
+1- first if U need to run mongoDB by docker container :
+- You have to create a docker-compose file and following the insturactions
+
+# version: '3.8'
+
+# services:
+#   mongo:
+#     image: mongo:latest
+#     container_name: mongo
+#     ports:
+#       - 27017:27017  -> this mongo's port 
+#     volumes:
+#       - ./data:/data/db
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: admin    this the default user and pass |
+#       MONGO_INITDB_ROOT_PASSWORD: password
+#     restart: always
+
+#   mongo-express:
+#     image: mongo-express:latest
+#     container_name: mongo-express
+#     ports:
+#       - 8081:8081
+#     environment:
+#       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+#       ME_CONFIG_MONGODB_ADMINPASSWORD: password
+#       ME_CONFIG_MONGODB_SERVER: mongo
+#       ME_CONFIG_BASICAUTH_USERNAME: admin
+#       ME_CONFIG_BASICAUTH_PASSWORD: password
+#     restart: always
+
+# # volumes:
+# #   data: . data/ 
+# networks:
+#   default:
+#     name: mongodb_network
+
+
+2- after you created docker compose :
+- run this command :
+$ docker-compose up -d 
+
+3- once you run them :
+- exec the mongo's container by this command :
+$ dcoker exec -it  container bash 
+
+4- after all you need to  create and define MongoDB in mongodb's container by this command:
+$ mongosh  localhost
+  
+
+5- it's ready for U now 
+
+6- start use mongo SHell commands 
+
+*        MongoDB Comannds 
+
+1- to show the database you created :
+> show dbs;
+
+2- to show your dbs nams :
+> db.getName();
+
+
+3- to create a collection : 
+> db.createCollection("Hello");
+4- to delete a database :
+> db.dropDatabase();
+5- to show the collectios :
+> show collections
+
+
+6- db.preson.stats()
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,175 @@
+ $                      		This the first day of admin one ~!!				
+
+$ Don't try to memorize everything! 
+
+
+
+$ alias : print the alias you have 
+ to make any alias :
+	alias ll='ls -al'
+	alias rm='rm -i'
+	alias md='mkdir'
+	alias mf='touch'
+after all put them on .bashrc  in ~/
+
+1- 
+$ how to open real tty : ->
+  	Alt + Ctrl + f3 ..
+$ how to close this tty : ->
+  	Alt + ctrl + f2 or f1 
+--------------------------------------------------------------------
+
+-2 Some  commands  
+	
+$ cd : 
+Change the shell working directory
+  ~/ == /home/username
+ to go to Desktop from anywhere :
+ cd ~/Desktop
+
+$ pwd :
+ print name of current/working direc‐tory
+-------------
+$ mkdir:
+ create directories 
+-p  no error if  existing,  make  parent directories as needed
+لو مش موجود اعمله ..
+-------------
+$ touch : 
+create the file not directory
+-------------
+$ cp: 
+ copy files and directories
+ -i  prompt before overwrite.
+ -r copies /xxx directıry to /yyy directory
+$ mv: 
+move (rename) files ...
+ -i  prompt before overwrite.
+ -f  do not prompt before overwriting.
+
+$ rm : 
+remove files or directories
+ -f gnore  nonexistent  files and argu‐ments, never prompt.
+ -i prompt before every removal
+ -r remove  directories  and  their contents recursively
+$ rmdir:
+ remove empty directories only.
+-p  remove  DIRECTORY and its ancestors 'rmdir -p a/b/c'is similar to'rmdir a/b/c a/b a'
+
+   rmdir command: rmdir stands for "remove directory". It is used to remove empty directories. The rmdir command can only delete empty directories, meaning directories that do not contain any files or subdirectories. If a directory contains files or subdirectories, rmdir will not delete it and will give an error message.
+$ uname -a : 
+ shows Linux system info
+-r : shows kernel release info
+$ uptime:
+ displays system running/life time
+$ hostname:
+ shows system host name
+$ last reboot :
+displays system reboot history
+$ mount:
+ shows mounted filesy-stems
+$ 
+-------------
+$ 
+$ cat :
+ show the file's contint
+
+$ more :
+ print first file's page
+$ head :
+ displays first lines
+$ tail :
+ displays last lines
+
+$date:
+ print  or  set the system date and time
+ to change the date :
+ $date -s "16 Apr 2023 12:00:00"
+
+$ id: 
+ show user&group ids of the current user
+$ last:
+ shows the last users logged on
+$ whoami: 
+shows who you are logged in as
+$ who :
+shows who is logged into the system
+$ w:
+shows who is logged in and what they do
+$ which :
+locate a command
+- ex: 
+which passwd , which python
+---------------------------------------------------------------
+
+3- Commands 
+$  ls 
+  -a  lists also hidden files, do not ignore entries starting with .
+  -l   use a long listing format - 
+  -r   reverse order while sorting بيعكس الترتيب
+  -R   list subdirectories recursivel عرص الدلائل الفرعية
+  -la lists files and directories detailly
+
+  
+ ----------------------------------------------------------------------
+
+$   Some commands Wiht (Ctrl)
+
+
+Ctrl + c  is kill process
+Ctrl + z  is stop process
+-------------------------------------------------------------
+$  editors :
+[nano - vi/vim - gedit]
+
+$ when you need help :
+man and command --help 
+
+-to search anyhelp by phrase :
+  man -k "anything here" example - man -k "remove file"
+  man -f command  it shows to you a summary  about command
+  man -s5 passwd 
+  man -f  shadow shadowed password file
+  
+  $ cal:
+  displays a calendar and the date of Easter
+  - cal 4 2001 
+
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  $ add Users 
+ $ useradd -c “KH” -m KHaled: 
+  creates khaled account with
+comment "KH",
+$ usermod -aG Networkers Gokhan :
+adds account “Gokhan” to the “Networkers” group
+you must to be root to create user 
+  - useradd is creates user 
+-- (/etc/login.defs) that content  useradd's configs
+
+[CREATE_HOME yes ] it creats home directory auto in /etc/login.defs
+
+
+$ chown user:
+changes ownership of a file/directory
+- chown user:group filename:
+changes user and group for a file or
+directory
+
+
+$ File Permissions Examples:
+- 777 | Owner, Group, Everyone has rwx permissions
+- 744 | Owner has rwx permission, Group, Everyone has r permission
+- 755 | Owner has rwx permission,Group, Everyone has rx permissions
+- 776 | Owner, Group has rwx permission, Everyone has rw
+
+
+
+
+
+
+
+
+
+
+  
+ 
