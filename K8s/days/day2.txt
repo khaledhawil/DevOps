@@ -1,0 +1,46 @@
+*                Deployment in k8s 
+
+
+1 - Recreate 
+
+- The Recreate strategy updates all of the Pods in a Deployment at once
+
+
+
+
+2- Rolling update
+
+- The Rolling Update strategy updates the Pods in a Deployment gradually,
+ by replacing a few Pods at a time with the updated configuration.
+This allows the application to remain available during the update process
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
