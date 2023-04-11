@@ -1,21 +1,19 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
-metadata:
-  name: nginx-deployment
-
-
+metadata :
+   name : "deploy"
 spec:
+  replicas: 7
   selector:
-    matchLabels:
-      app: nginx
-  replicas: 3
+   matchLabels:
+     dev: web
   template:
     metadata:
       labels:
-        app: nginx
-  spec:
+        dev: web
+    spec:
       containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: web
+          image: ubuntu
+          ports:
+           - containerPort: 80
