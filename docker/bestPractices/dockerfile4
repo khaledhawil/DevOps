@@ -1,0 +1,34 @@
+# Use a minimal base image
+FROM alpine:3.14.2
+
+# Set environment variables
+ENV APP_HOME=/app
+ENV NODE_ENV=production
+ENV PORT=3000
+
+# Use specific tags for your base image
+LABEL maintainer="Your Name <youremail@example.com>"
+LABEL org.label-schema.name="my-app"
+LABEL org.label-schema.description="My App Description"
+LABEL org.label-schema.version="1.0.0"
+
+# Use multiple layers
+RUN apk add --no-cache nodejs npm
+WORKDIR $APP_HOME
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+# Use a health check
+HEALTHCHECK --interval=30s --timeout=3s CMD curl -f http://localhost:$PORT/health || exit 1
+
+# Expose port and start the app
+EXPOSE $PORT
+CMD [ "npm", "start" ]
+
+# Clean up after yourself
+RUN apk del nodejs npm
+RUN rm -rf /var/cache/apk/*
+
+# Use a .dockerignore file
+COPY .dockerignore ./

@@ -58,8 +58,6 @@ Use the COPY command instead of the ADD command when copying files into your Doc
 - The ADD command can be more complex and can introduce security vulnerabilities.
 
 
-
-
 7- Use environment variables: 
 Use environment variables in your Dockerfile to configure your application. 
 - This will make it easier to modify your application's configuration without modifying the Docker image.
@@ -88,4 +86,17 @@ Use a health check in your Dockerfile to ensure that your application is running
 
 # Set a health check for the app
 $ HEALTHCHECK --interval=30s --timeout=3s CMD wget --quiet --tries=1 --spider http://localhost:3000/health || exit 1
+
+
+
+
+
+
+
+
+
+
+
+
+
 
