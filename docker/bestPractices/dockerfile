@@ -1,0 +1,23 @@
+# Use a specific version of the Node.js image as the base image
+FROM node:14-alpine AS base
+
+# Set a working directory for the app inside the container
+WORKDIR /app
+
+# Install production dependencies
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Use a new layer for development dependencies
+FROM base AS dev
+ENV NODE_ENV=development
+RUN npm install --only=development
+
+# Copy the application code to the container
+COPY . .
+
+# Expose the default port for the app
+EXPOSE 3000
+
+# Set the command to run when the container starts
+CMD ["node", "index.js"]

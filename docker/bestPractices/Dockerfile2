@@ -1,0 +1,41 @@
+# Use a small base image
+FROM alpine:3.14
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/app
+
+# Install system dependencies
+RUN apk update && apk add --no-cache \
+    gcc \
+    musl-dev \
+    libffi-dev \
+    openssl-dev \
+    python3 \
+    python3-dev \
+    py3-pip \
+    curl \
+    bash
+
+
+
+# Create a non-root user
+RUN adduser -D myuser
+USER myuser
+
+# Set the working directory
+WORKDIR /app
+
+# Install application dependencies
+COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+# Copy the application code
+COPY . .
+
+# Expose the port
+EXPOSE 8000
+
+# Set the command to run when the container starts
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
