@@ -87,7 +87,7 @@ ENV NAME World
 CMD ["python", "app.py"]
 To build an image from a Dockerfile, run the following command in the same directory as the Dockerfile:
 
-docker build -t your-image-name .
+$ docker build -t your-image-name .
 Replace your-image-name with a name for your Docker image. The -t flag specifies the name and optionally a tag in the 'name:tag' format.
 
 After building the image, you can run a container from it with the following command:

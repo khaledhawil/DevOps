@@ -2,13 +2,13 @@
 FROM alpine:3.14
 
 # Set environment variables
-ENV APP_HOME=/app
-ENV APP_VERSION=1.0.0
+ENV APP_HOME=/app \
+ APP_VERSION=1.0.0
 
 # Use specific tags for your base image
-LABEL maintainer="John Doe <johndoe@example.com>"
-LABEL description="My awesome app"
-LABEL version=$APP_VERSION
+LABEL maintainer="John Doe <johndoe@example.com>" \
+ description="My awesome app" \
+ version=$APP_VERSION
 
 # Use multiple layers
 RUN apk add --no-cache \
@@ -20,8 +20,8 @@ RUN apk add --no-cache \
     && rm -r /root/.cache
 
 # Use COPY instead of ADD
-COPY app $APP_HOME/app
-COPY requirements.txt $APP_HOME
+COPY app $APP_HOME/app \
+requirements.txt $APP_HOME
 
 # Use a .dockerignore file
 COPY .dockerignore $APP_HOME/.dockerignore
