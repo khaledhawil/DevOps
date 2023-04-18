@@ -12,10 +12,12 @@ It allows you to configure various network settings such as IP address, gateway,
 $ nmcli :
 command-line tool for controlling NetworkManager
 # ex: to create static ip 
-nmcli connection add con-name Test ifname enp0s3 type ethernet ipv4.method manual ipv4.addresses 192.168.1.150/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8
+$ nmcli connection add con-name Test ifname enp0s3 type ethernet ipv4.method manual ipv4.addresses 192.168.1.150/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8
+- to create one with wifi :
+$ nmcli connection add con-name myfi ifname wlp3s0  type wifi ssid "DODO U"  ipv4.method manual ipv4.addresses 192.168.1.169/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8,192.168.1.1,1.1.1.1
 
 to change it to auto :
-nmcli connection modify Test ipv4.method auto 
+$ nmcli connection modify Test ipv4.method auto 
 
 
 $ free -h : 

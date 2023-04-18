@@ -1,0 +1,29 @@
+*                        automation commands with Docker 
+
+- to run multi containers with on command :
+$ for i in 1{1..3} ; do docker run hello-world ; done
+
+- to show the containers by id :
+$  docker ps -aq
+
+- to delete everything on docker :
+$ docker system prune -a
+
+- to fine a container with status=exited :
+$ docker ps --filter "status=exited" | grep 'minutes ago'
+
+- to delete the containters with their id:
+$ docker ps --filter "status=exited" | grep 'minutes ago' | awk '{print $1}'  | xargs --no-run-if-empty docker rm
+
+- another way :
+$ docker rm $(docker ps -q -f status=exited)
+
+
+
+
+
+
+
+
+
+
