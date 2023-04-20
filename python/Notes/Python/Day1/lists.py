@@ -51,7 +51,7 @@ l1.extend(l2)
 
 "13- sort the list ---> list items must form the same type"
 # l1.sort()
-# l1.sort(reverse=True)
+# l1.sort(reverse=True)  
 
 "14- reverse the list"
 l1.reverse()

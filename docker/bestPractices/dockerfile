@@ -11,7 +11,7 @@ RUN npm ci --only=production
 # Use a new layer for development dependencies
 FROM base AS dev
 ENV NODE_ENV=development
-RUN npm install --only=development
+#RUN npm install --only=development
 
 # Copy the application code to the container
 COPY . .

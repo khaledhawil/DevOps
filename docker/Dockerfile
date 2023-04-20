@@ -28,8 +28,8 @@ EXPOSE $PORT
 CMD [ "npm", "start" ]
 
 # Clean up after yourself
-RUN apk del nodejs npm
-RUN rm -rf /var/cache/apk/*
+RUN apk del nodejs npm \ 
+ && rm -rf /var/cache/apk/*
 
 # Use a .dockerignore file
 #COPY .dockerignore ./
