@@ -43,7 +43,7 @@ INSERT INTO `php_docker_table` (`id`, `title`, `body`, `date_created`) VALUES
 (2, 'second post', 'second body text', '2024-09-03'),
 (2, 'third post', 'third body text', '2023-4-24'),;
 
-CREATE TABLE `php_docker_table` (
+CREATE TABLE `php_docker_table2` (
   `name` varchar(225),
   `job` varchar(255) NOT NULL,
   `age` int,
