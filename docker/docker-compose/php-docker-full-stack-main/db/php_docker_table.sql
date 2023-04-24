@@ -37,10 +37,16 @@ CREATE TABLE `php_docker_table` (
 --
 -- Dumping data for table `php_docker_table`
 --
+INSERT INTO `php_docker_table` (`name`, `job`, `age`, `date_created`) VALUES
+("Eng-Mohamed Wael", 'Sr-Devops', '28', '2023-4-24'),
+("Eng-Khaled Hawil", 'fresh Devops', '22', '2024-4-24'),;
 
 INSERT INTO `php_docker_table` (`id`, `title`, `body`, `date_created`) VALUES
-(1, 'first post', 'first body text', '2022-09-01'),
-(2, 'second post', 'second body text', '2022-09-03');
+(1, 'first post', 'first body text', '2023-05-01'),
+(2, 'second post', 'second body text', '2024-09-03'),
+(2, 'third post', 'third body text', '2023-4-24'),;
+
+
 
 --
 -- Indexes for dumped tables
