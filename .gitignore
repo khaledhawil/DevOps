@@ -1,3 +1,11 @@
 docker-swarm
 *docker-swarm
 *.idea
+
+*.idea
+*.vagrant
+/.vagrant
+*target
+/target
+*machines
+/machines
