@@ -1,0 +1,12 @@
+apiVersion: v1
+
+kind: Pod
+metadata:
+  name: my-pod
+
+spec:
+  containers:
+    - name: ubu
+      image: ubuntu
+      command: ["sleep" , "1500"]
+
