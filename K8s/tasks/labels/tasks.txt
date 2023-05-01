@@ -1,0 +1,117 @@
+
+- Show all labels for the node node01:
+$ k get po nodes node01 --show-labels
+
+
+- Label worker node node01 with label type=critical
+$ k label node node01 type=critical
+
+
+- Remove label type=critical from worker node node01
+$ kubectl label node node01 type- # it'll remove the type label
+
+# Namespaces
+- Create and label Label namespace alpha with label type:critical
+$ kubectl create namespace alpha
+$ kubectl label namespace alpha type=critical
+$ kubectl get namespace alpha --show-labels
+
+
+# Pods 
+
+- Create a new pod with name nginx-labels and using the nginx image and labels tier=frontend
+$ k run nginx-labels --image=nginx --labels=tier=frontend
+# verification
+$ kubectl get pod nginx-labels --show-labels
+
+
+- Create pod nginx-labels with nginx image and label name=nginx, tier=frontend, env=dev
+$ k run nginx-labels --image=nginx --labels=tier=frontend,name=nginx,env=dev
+# verification
+$ kubectl get pod nginx-labels --show-labels
+
+
+- Show all labels of the pod nginx-labels
+$ kubectl get pod nginx-labels --show-labels
+
+- Change the labels of pod 'nginx-labels' to be version=v2
+$ k label pod nginx-labels version=2 --overwrite
+
+- Get the label env for the pods (show a column with env labels)
+$ kubectl get pod -L env
+$ kubectl get pod --label-columns=en
+$ kubectl get pod -L name # by the name
+
+- Get only the version=2 pods
+
+$ k get po -l version=2
+# OR
+$ kubectl get pod -l 'version in (v2)'
+#OR
+$ kubectl get pod --selector=version=v2
+
+- Remove the name label from the nginx-labels pod
+$ k label  po  nginx-labels name-
+
+Clean up
+
+$ kubectl delete namespace alpha
+$ kubectl delete pod nginx-labels --force --grace-period=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

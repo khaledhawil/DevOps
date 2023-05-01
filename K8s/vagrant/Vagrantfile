@@ -1,0 +1,80 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+               # Create the master node
+               config.vm.define "master" do |master|
+                 master.vm.box = "generic/ubuntu2004"
+                 master.vm.hostname = "k8s-master"
+                 master.vm.network "private_network", ip: "192.168.33.10"
+                 master.vm.provider "virtualbox" do |vb|
+                   vb.memory = "2048"
+                   vb.cpus = "2"
+                 end
+                 master.vm.provision "shell", inline: <<-SHELL
+                   # Disable swap
+                   sudo swapoff -a
+                   sudo sed -i '/ swap / s/^/#/' /etc/fstab
+             
+                   # Install dependencies
+                   sudo apt-get update
+                   sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
+             
+                   # Add Kubernetes signing key
+                   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+             
+                   # Add Kubernetes repository
+                   echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+             
+                   # Install Kubernetes
+                   sudo apt-get update
+                   sudo apt-get install -y kubectl kubelet kubeadm
+             
+                   # Initialize the master node
+                   sudo kubeadm init --apiserver-advertise-address=192.168.33.10 --pod-network-cidr=10.244.0.0/16
+             
+                   # Set up kubectl configuration
+                   mkdir -p $HOME/.kube
+                   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+                   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+             
+                   # Install Calico network plugin
+                 #  kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+                 SHELL
+               end
+             
+               # Create the worker node
+               config.vm.define "worker" do |worker|
+                 worker.vm.box = "generic/ubuntu2004"
+                 worker.vm.hostname = "k8s-worker"
+                 worker.vm.network "private_network", ip: "192.168.33.11"
+                 worker.vm.provider "virtualbox" do |vb|
+                   vb.memory = "2048"
+                   vb.cpus = "2"
+                 end
+                 worker.vm.provision "shell", inline: <<-SHELL
+                   # Disable swap
+                   sudo swapoff -a
+                   sudo sed -i '/ swap / s/^/#/' /etc/fstab
+             
+                   # Install dependencies
+                   sudo apt-get update
+                   sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
+             
+                   # Add Kubernetes signing key
+                   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+             
+                   # Add Kubernetes repository
+                   echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+             
+                   # Install Kubernetes
+                   sudo apt-get update
+                   sudo apt-get install -y kubectl kubelet kubeadm
+             
+                   # Join the worker node to the cluster
+                   # sudo kubeadm join 192.168.33.10:6443 --token <token> --discovery-token-ca-cert-hash <hash>
+                 SHELL
+               end
+             end
+             

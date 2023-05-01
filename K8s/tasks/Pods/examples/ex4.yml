@@ -4,6 +4,8 @@ metadata:
 #   creationTimestamp: null
   labels:
     run: nginx-resources
+    app: nginx-app
+    owner: Khaled
   name: nginx-resources
 spec:
   containers:
