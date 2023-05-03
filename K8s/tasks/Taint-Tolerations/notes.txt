@@ -1,0 +1,161 @@
+* Here w'll Taka About Taint And Tolerations 
+
+
+
+"Taints and Tolerations" :
+that allows users to set specific requirements for running applications on a particular node in a Kubernetes cluster. 
+This system works by labeling the desired node with a "taint" and setting a "toleration" on the applications that you want to run on that node.
+
+# Essentially, 
+-  when you add a taint to a node in Kubernetes, you are declaring that this node has special requirements that make it unavailable to all applications. 
+# For example, it may have specific security requirements, or it may have specific requirements for memory or processing power.
+
+- When you add a toleration to a Kubernetes application, you are declaring that the application can tolerate the matching taint on the node. 
+# In this way, you can ensure that only the applications that need to meet specific requirements run on the appropriate node.
+
+
+"In general"
+Taints and Tolerations in Kubernetes are used to provide an extra level of security and flexibility to your applications. 
+You can use this feature to ensure that your applications run only on the appropriate node, protect your Kubernetes nodes from overload, 
+and provide you with the ability to provide specialized capabilities to the applications that need them.
+
+
+- ------------------------------------------------------- How To Use Them? --------------------------------------------------------------------------------
+
+# Taint
+Taint the node(s) with the required label(s): 
+Use the kubectl taint command to add a taint to the node(s) with the required label(s). 
+For example, to add a taint to a node with label "specialnode", use the following command:
+
+$ kubectl taint nodes specialnode key=value:taint-effect
+
+Here "key=value" : 
+is a key-value pair for the taint, 
+and "taint-effect" can be "NoSchedule", "PreferNoSchedule", or "NoExecute".
+# Taint-Effects:
+- NoSchedule:
+This effect means that no new pods will be scheduled on a node that has the taint, 
+unless the pod has a matching toleration. 
+Pods that are already running on the node will continue to run.
+
+- PreferNoSchedule 
+This effect means that the Kubernetes scheduler will try to avoid scheduling new pods on a node that has the taint, 
+but it is not a hard requirement. 
+Pods that are already running on the node will continue to run
+ 
+- NoExecute
+This effect means that any pods that are not tolerated by the taint will be evicted from the node. 
+This can happen if the pod is already running on the node when the taint is applied, 
+or if the pod is scheduled on the node after the taint is applied.
+# ------------------------------------------- NoSchedule Vs NoExecute --------------------------------------------------------
+In summary: 
+
+# NoSchedule :
+
+in that it only prevents new pods from being scheduled on the node, 
+- while existing pods are allowed to continue running. 
+
+# NoExecute, 
+on the other hand, 
+- is a more strict form of taint that will remove existing pods that do not tolerate the taint
+
+
+
+#Toleration
+- Add a toleration to the pod: 
+Use the tolerations field in the pod's YAML file to specify the toleration for the matching taint on the node. 
+For example, to add a toleration to a pod that matches the taint added in step 1, use the following YAML:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: my-image
+  tolerations:
+  - key: "key"  
+    operator: "Equal"
+    value: "value"
+    effect: "NoSchedule"  # Here, "key", "value", and "effect" should match the taint added in step 1.
+
+
+
+
+- Deploy the pod to the node: 
+
+Use the kubectl apply command to deploy the pod to the node with the matching taint and toleration. 
+For example, to deploy the pod "my-pod" to the node with the taint "specialnode", use the following command:
+
+$ kubectl apply -f my-pod.yaml --node-selector='specialnode=true'
+
+
+
+Here, "my-pod.yaml" is the YAML file with the pod configuration, and "--node-selector" selects the node with the label "specialnode".
+
+That's it! 
+Now, the pod will be scheduled to run only on the node(s) that match the taint and toleration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

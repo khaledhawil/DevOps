@@ -1,2 +1,4 @@
 $ lscpu # this command to show all about the CPU
 $ nproc # tihs will show to U how many cpu U have 
+$ sudo dpkg -i file-name.deb # to install app by cli
+
