@@ -1,0 +1,119 @@
+
+- How many pods exist on the system?
+$ k get po 
+
+- How many ReplicaSets exist on the system?
+$ k get rs
+
+- How about now? How many ReplicaSets do you see?
+ 
+
+
+- How many PODs are DESIRED in the new-replica-set?
+
+
+
+
+- What is the image used to create the pods in the new-replica-set?
+
+
+
+
+
+- How many PODs are READY in the new-replica-set?
+
+
+- How many PODs are READY in the new-replica-set? 
+
+
+
+
+
+
+
+-  Delete any one of the 4 PODs.
+
+
+
+
+- How many PODs exist now?
+
+
+
+
+- Why are there still 4 PODs, even after you deleted one?
+
+
+
+- Create a ReplicaSet using the replicaset-definition-1.yaml file located at /root/.
+There is an issue with the file, so try to fix it.
+
+
+
+
+
+
+
+- Fix the issue in the replicaset-definition-2.yaml file and create a ReplicaSet using it.
+
+
+- Delete the two newly created ReplicaSets - replicaset-1 and replicaset-2
+
+
+- Fix the original replica set new-replica-set to use the correct busybox image.
+
+
+
+- Fix the original replica set new-replica-set to use the correct busybox image.
+
+
+
+- Scale the ReplicaSet to 5 PODs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,186 @@
+
+- Check number of replica sets in the default namespace
+
+$ k get rs
+
+- Create a replica set named replica-set-demo using a pod named ngnix using a nginx image and labeled as tier=frontend with a single replica.
+
+# apiVersion: app/v1
+# kind: ReplicaSet
+# metadata:
+#    name: replica-set-demo
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       tair: frontend
+#   template:
+#     metadate:
+#        labels:
+#            tier: frontend
+#     spec:
+#       containers:            
+#         - name : nginx
+#           image: nginx
+
+
+- Scale up the replica-set-demo from 1 replica to 2 replicas
+
+$ kubectl scale --replicas=2 replicaset.apps/replica-set-demo
+$ kubectl scale --replicas=2 rs replica-set-demo
+# you can edit in file and run apply command
+
+- Scale up the replica-set-demo from 2 replicas to 1 replica
+$ kubectl scale --replicas=1 rs replica-set-demo
+
+- Create a replica set using the below definition and fix any issues.
+
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+
+# Check the apiVersion using kubectl explain replicasets which is apps/v
+Update the version and apply again.
+
+
+- Create a replica set using the below definition and fix any issues.
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+
+# The replica set selector field tier: frontend does not match the pod labels tier: nginx. Correct either of them and reapply
+
+
+
+
+
+
+Clean up
+
+kubectl delete replicaset replica-set-demo replicaset-1 replicaset-2
+rm replica-set-demo.yaml
+
+
+
+
+
+
+
+
+
+
+
+- How many pods exist on the system?
+$ k get po 
+- How many ReplicaSets exist on the system?
+$ k get rs
+
+- How about now? How many ReplicaSets do you see?
+$ kubectl get replicasets # there is no rs
+
+- How many PODs are DESIRED in the new-replica-se
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
