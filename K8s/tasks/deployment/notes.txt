@@ -1,0 +1,63 @@
+- =================================================== What is a Deployment? ======================================================================
+
+A Deployment in Kubernetes is an object that manages a set of replicas of your application. 
+Deployments allow you to declaratively manage the rollout and scaling of your application, 
+and provide features for updating and rolling back to previous versions of your application.
+
+
+
+
+- =================================================== How does a Deployment work? ======================================================================
+
+A Deployment manages a ReplicaSet, which in turn manages a set of Pods. 
+The ReplicaSet ensures that a specified number of replica Pods are running at any given time, 
+and can scale the number of replicas up or down based on demand
+
+
+
+When you create a Deployment, 
+you specify a Pod template that defines the characteristics of the Pods that the Deployment will manage. 
+The Deployment creates a ReplicaSet based on this template, and then starts creating and managing Pods based on the ReplicaSet.
+
+
+- =================================================== How do you create a Deployment? ======================================================================
+
+by the command :
+$ kubectl create deployment
+$ kubectl create deployment my-deployment --image=my-image:latest --replicas=3
+$ kubectl set image deployment/my-deployment my-container=my-image:v2 # to update the container image for a Deployment:
+ 
+# and by the yml file:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: my-image:latest
+
+
+
+
+
+
+
+
+- How do you roll back a Deployment?
+
+$ kubectl rollout undo deployment/my-deployment
+
+
+
+

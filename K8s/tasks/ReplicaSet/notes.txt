@@ -37,6 +37,8 @@ $ kubectl scale --replicas=3 replicaset/my-replicaset
 # This command will scale the ReplicaSet to have three replicas instead of two.
 
 
+- You Can use another command to edit im repica:
+$ K edit rs rs-name
 
 
 
@@ -44,7 +46,8 @@ $ kubectl scale --replicas=3 replicaset/my-replicaset
 
 
 
-
+ $ kubectl get pods -l tier=frontend # to show the pods that have labels  tier=frontend
+ $ kubectl get pod --selector=tier=frontend
 
 
 

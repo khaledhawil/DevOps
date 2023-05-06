@@ -19,7 +19,7 @@ $ kubectl run custom-nginx --image=nginx --port=8080
 - ex3 
 Check which node the pod is hosted on
 $ kubectl get pods -o wide
-
+$ k get pods -o wide
 - ex4 
 Get only the pods name
 $ kubectl get pods -o name

@@ -49,6 +49,7 @@ Install Kubernetes:
 https://computingforgeeks.com/how-to-install-minikube-on-ubuntu-debian-linux/
 ===============================================================================================================================
 # <======================= minikube Commands =======================>
+
 minikube version ===> To check the version of minikube
 minikube start ===> To start the minikube cluster
 minikube start --container-runtime cri-o ===> To start the minikube cluster with cri-o runtime instead of docker
@@ -63,6 +64,7 @@ kubectl version ===> To check the version of kubectl
 kubectl cluster-info ===> To check the cluster info
 ===============================================================================================================================
 # <======================= Kubectl Pods =======================>
+k api-resources
 kubectl get pods == Kubectl get po ===> To check the pods in the clusterd
 kubectl get pods -n kube-system ===> To check the pods in the kube-system namespace in the cluster
 kubectl get pods -o wide ===> To check the pods in the cluster with more details
