@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod 
+metadata: 
+  name: two-container
+
+spec:
+  restartPolicy: Never
+  volumes:
+    - name : shared-area
+      emptyDir: {}
+  containers:
+    - name: nginx-cont
+      image: nginx
+      volumeMounts:
+        - name: shared-area
+          mountPath: /usr/share/nginx/html
+    - name: ubuntu-cont
+      image: ubuntu
+      volumeMounts:
+       - name: shared-area
+         mountPath: /pod-area
+      command: ["/bin/sh"]
+      args: ["-c","echo Hello From Devops Machine > /pod-area/index.html"]

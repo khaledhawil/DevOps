@@ -1,0 +1,34 @@
+1- How many Namespaces exist on the system?
+$ k get ns 
+
+2- How many pods exist in the kube-system namespace?
+$ k get pods --namespace=kube-system | wc -l 
+
+$ expr $(k get pods --namespace=kube-system | wc -l )  - 1
+# this because  the Name line 
+# NAME                               READY   STATUS    RESTARTS       AGE
+
+
+3- Create a deployment with
+Name: beta
+Image: redis
+Replicas: 2
+Namespace: finance
+Resources Requests:
+CPU: .5 vcpu
+Mem: 1G
+Resources Limits:
+CPU: 1 vcpu
+Mem: 2G
+
+
+
+
+
+
+
+
+
+
+
+

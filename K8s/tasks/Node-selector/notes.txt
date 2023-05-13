@@ -1,0 +1,36 @@
+- ----------------------------------------- Node Selector ---------------------------------------------------------------
+In Kubernetes, 
+a Node Selector is a way to specify which nodes in a cluster a particular pod should be scheduled on. 
+When you create a pod, you can use a node selector to specify a set of key-value pairs 
+that must match the labels on a node for the pod to be scheduled on that node.
+
+
+
+Node selectors are useful when you want to control the placement of pods on specific nodes based on node characteristics such as
+hardware, availability, or other custom requirements. 
+For example, you might want to schedule pods that require GPUs on nodes that have GPU hardware,
+ or you might want to schedule high-priority workloads on nodes with more available resources
+
+
+
+= ------------------------------------------- How to use --------------------------------------------------------------------------
+
+
+To use a node selector, you specify it in the pod's YAML configuration file using the nodeSelector field.
+ Here is an example:
+#  apiVersion: v1
+#  kind: Pod
+#  metadata:
+#    name: my-pod
+#  spec:
+#    containers:
+#    - name: my-container
+#      image: my-image
+#    nodeSelector:
+#      disktype: ssd
+
+
+
+
+
+

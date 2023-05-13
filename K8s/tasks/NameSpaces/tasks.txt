@@ -1,0 +1,77 @@
+- Check the namespaces on the cluster
+
+$ k get ns 
+
+- Create namespace named alpha
+
+$ k create ns alpha 
+
+- Get pods from alpha namespace
+$ kubectl get po  -n alpha
+$ kubectl get all -n alpha
+
+- Get pods from all namespaces
+$ kubectl get pods --all-namespaces
+
+- Label namespace alpha with label type:critical
+
+$ kubectl label namespace alpha type=critical
+
+- Delete namespace alpha
+
+$ k delete ns alpha
+
+
+
+
+- Create a namespaces named research :
+$ k create ns research
+
+
+- How many pods exist in the research namespace?
+
+$ k get pods --namespace=research
+
+
+- Create a POD in the finance namespace.
+$ k run nginx --image=nginx  --namespace=research
+
+- Which namespace has the blue pod in it?
+$ k get pods --all-namespace | grep blue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
