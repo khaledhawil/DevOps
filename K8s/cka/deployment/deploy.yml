@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyapp
+spec:
+  replicas: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:  
+      app: new
+  template:
+    metadata:
+      labels:
+        app: new
+    spec:
+      containers:
+        - name: py-app
+          image: khaledhawil/pyapp:1.2.1
+          ports:
+           - containerPort: 80
+          env:
+           - name: APP_COLOR
+             value: pink 
+           - name : luka
+             value: /khaled
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

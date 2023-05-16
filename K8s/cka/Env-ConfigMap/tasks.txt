@@ -1,0 +1,88 @@
+- Check the configmaps on the cluster in the default namespace
+$ k get cm 
+$ kubectl get configmaps
+
+- Check the configmaps on the cluster in all the namespaces
+$ k get cm --all-namespaces
+$ k get cm -A
+
+- Create a new pod nginx-1 with nginx image and add env variable for DB_HOST=db.example.com, DB_USER=development, DB_PASSWD=password
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginx-1
+spec: 
+ containers:
+   - name: nginx
+     image: nginx
+     env:
+        - name: DB_HOST
+          value: db.example.com
+        - name: DB_USER
+          value: development
+        - name: DB_PASSWD
+          value: password
+
+- Create a configmap named db-config-1 with data DB_HOST=db.example.com, DB_USER=development, DB_PASSWD=password
+$ k create cm db-config --from-literal=DB_Host=db.ex.db  --from-literal=DB_PASSS=passworf
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: db-config-1
+# data:
+#   DB_HOST: db.example.com
+#   DB_PASSWD: password
+#   DB_USER: development
+
+$ kubectl describe configmap db-config-1
+
+
+- Create a configmap named db-config-2 with data from file db.properties
+$ k create cm db-config-2  --from-file=db.properties
+
+
+- Create a new pod nginx-2 with nginx image and add env variable for DB_HOST from configmap map db-config-1
+
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginx-1
+spec: 
+ containers:
+   - name: nginx
+     image: nginx
+     env:
+        - name: DB_HOST
+          valueFrom:
+           configMapKeyRef: 
+             name: db-config-1
+             key: DB_HOST
+
+
+- Create a new pod nginx-3 with nginx image and add all env variables from from configmap map db-config-1
+
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginx-1
+spec: 
+ containers:
+   - name: nginx
+     image: nginx
+     envFrom:
+        - configMapRef:
+          name: db-config-1
+
+
+- Create a new pod nginx-4 with nginx image and mount the configmap db-config-1 as a volume named db-config and mount path /config
+
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginx-1
+spec: 
+ containers:
+   - name: nginx
+     image: nginx
+
+

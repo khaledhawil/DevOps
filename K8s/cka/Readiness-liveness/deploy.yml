@@ -14,18 +14,19 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: khaledhawil/pyapp
+        image: khaledhawil/pyapp:1.2.1
         ports:
         - containerPort: 8080
         readinessProbe:
           httpGet:
-            path: /healthz
+            path: /khaled
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 10
         livenessProbe:
           httpGet:
-            path: /healthz
+            path: /khaled
             port: 8080
           initialDelaySeconds: 10
           periodSeconds: 20
+          failureThreshold: 5

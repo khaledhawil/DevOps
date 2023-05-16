@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app-pod
+spec:
+  initContainers:
+  - name: init-mysql
+    image: mysql:5.7
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: mysecretpassword
+    command: ["mysql_install_db"]
+    volumeMounts:
+    - name: mysql-data
+      mountPath: /var/lib/mysql
+  containers:
+  - name: my-app
+    image: my-app-image
+    ports:
+    - containerPort: 8080
+    env:
+    - name: MYSQL_DATABASE
+      value: myappdb
+    - name: MYSQL_USER
+      value: myappuser
+    - name: MYSQL_PASSWORD
+      value: myapppassword
+    volumeMounts:
+    - name: mysql-data
+      mountPath: /var/lib/mysql
+  volumes:
+  - name: mysql-data
+    emptyDir: {}

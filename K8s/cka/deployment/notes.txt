@@ -1,0 +1,136 @@
+- =================================================== What is a Deployment? ======================================================================
+
+A Deployment in Kubernetes is an object that manages a set of replicas of your application. 
+Deployments allow you to declaratively manage the rollout and scaling of your application, 
+and provide features for updating and rolling back to previous versions of your application.
+
+
+
+
+- =================================================== How does a Deployment work? ======================================================================
+
+A Deployment manages a ReplicaSet, which in turn manages a set of Pods. 
+The ReplicaSet ensures that a specified number of replica Pods are running at any given time, 
+and can scale the number of replicas up or down based on demand
+
+
+
+When you create a Deployment, 
+you specify a Pod template that defines the characteristics of the Pods that the Deployment will manage. 
+The Deployment creates a ReplicaSet based on this template, and then starts creating and managing Pods based on the ReplicaSet.
+
+
+- =================================================== How do you create a Deployment? ======================================================================
+
+by the command :
+$ kubectl create deployment
+$ kubectl create deployment my-deployment --image=my-image:latest --replicas=3
+$ kubectl set image deployment/my-deployment my-container=my-image:v2 # to update the container image for a Deployment:
+ 
+# and by the yml file:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: my-image:latest
+
+
+
+
+
+
+
+
+- How do you roll back a Deployment?
+
+$ kubectl rollout undo deployment/my-deployment
+
+# ====================================================== Rolling update Deployment ============================================================================
+
+
+In Kubernetes (k8s), a rolling update deployment is a strategy for updating a running application without downtime. 
+This deployment strategy ensures that a new version of the application is rolled out incrementally, one replica at a time, 
+while the previous version of the application is still running.
+
+To perform a rolling update deployment in Kubernetes, 
+you need to create a new deployment that specifies the new version of the application. 
+You can then use the kubectl apply command to apply the new deployment configuration.
+
+During the rolling update deployment, 
+Kubernetes will ensure that the new replica sets are healthy and ready to receive traffic before terminating the old replica sets. 
+This process continues until all the old replica sets have been replaced by the new replica sets.
+
+# Ex 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:  
+      app: new
+  template:
+    metadata:
+      labels:
+        app: new
+    spec:
+      containers:
+        - name: py-app
+          image: khaledhawil/pyapp:1.2.1
+          ports:
+           - containerPort: 80
+$ kubectl set image deploy pyapp py-app=khaledhawil/pyapp:1.2.0 # this after U have the new image set it on deploy
+$ kubectl rollout status deployment/pyapp # this command to show what happning when U Set a new image 
+$ and this strategy will replaice the new deploy with old pod by pod 
+
+
+- --------------------------------------------------------- Recreate Deployment ----------------------------------------------------------------------------------------------------------
+
+Recreating a Deployment in Kubernetes means that you are creating a new Deployment with the same name as an existing one, 
+and you want to replace the existing Deployment with the new one. 
+This is typically done when you need to update the configuration of the Deployment, 
+such as updating the container image or the number of replicas, or when you need to roll back to a previous version of the Deployment.
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyapp
+spec:
+  replicas: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:  
+      app: new
+  template:
+    metadata:
+      labels:
+        app: new
+    spec:
+      containers:
+        - name: py-app
+          image: khaledhawil/pyapp:1.2.1
+          ports:
+           - containerPort: 80
+# This file i added the strategy type 
+# to create this deploy $ k apply -f file-name 
+# to update this deploy edit in file and run the command again
+# it'll create the deploy at once by terminating all pods and run all of them again 
+
+$ $ k rollout undo deployment.apps/pyapp # this command when U need to roll back to old version 
+$ $ k rollout history deployment.apps/pyapp $
