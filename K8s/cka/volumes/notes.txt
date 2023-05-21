@@ -100,4 +100,6 @@ In your pod or deployment YAML, specify the PVC name in the volumes section, and
 
 * Persistent storage is suitable for databases, file systems, or any application that requires data to be retained and accessible across pod restarts, rescheduling, or node failures.
 
+- In summary, PVs are created and managed by the cluster administrator, while PVCs are created by users to request storage resources. 
+- PVCs act as a dynamic volume provisioning mechanism that allows users to consume the storage resources defined by PVs without directly interacting with them.
 $ kubectl explain pod.spec.volumes

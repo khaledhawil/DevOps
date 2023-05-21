@@ -89,6 +89,9 @@ Recreate: is a deployment strategy that deletes old pods before creating new one
 It is the default strategy used by kubectl run command.
 ===============================================================================================================================
 kubectl run nginx-app --image=nginx --port=80 ===> To create a deployment with name nginx-app and image nginx and port 80
+kubectl run nginx --image=nginx --restart=Never -n mynamespace ====> --restart=Never: This flag specifies the restart policy for the resource. 
+# The value "Never" means that the container will not be automatically restarted if it exits or fails. 
+# Once the container stops or terminates, it will not be recreated
 kubectl create deployment nginx-app --image=nginx ===> To create a deployment with name nginx-app and image nginx
 kubectl get deployments ===> To check the deployments in the cluster
 kubectl delete deployment nginx-app ===> To delete the deployment with name nginx-app
