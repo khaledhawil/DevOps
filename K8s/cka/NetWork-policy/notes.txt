@@ -1,0 +1,55 @@
+In Kubernetes, 
+network policies are used to control the network traffic between pods and enforce rules for communication. They provide a way to define and manage the network connectivity within a cluster.
+
+
+- Network policies:
+ allow you to specify the allowed ingress (incoming) and egress (outgoing) traffic to and from pods based on various criteria, such as pod selectors, namespaces, IP addresses, and port numbers. 
+ By default, Kubernetes allows unrestricted communication between pods in the cluster. 
+ Network policies help you enforce security and isolate workloads by defining explicit rules.
+
+
+-  To use network policies in Kubernetes,
+ you need to ensure that your cluster supports and has the necessary networking plugin installed. 
+ Network policies are implemented by network plugins, so the availability and features of network policies may vary depending on the chosen network plugin.
+
+
+
+-  Some commonly used network plugins that support network policies are:
+
+
+- Calico: 
+Calico is a popular network plugin that provides network policy enforcement for Kubernetes. 
+It allows you to define fine-grained rules using labels, CIDR ranges, ports, and more.
+
+- Cilium: 
+Cilium is another network plugin that supports network policies. 
+It integrates with the Linux kernel's BPF (Berkeley Packet Filter) technology to provide advanced networking and security features.
+
+- Flannel: 
+Flannel is a simple and lightweight network plugin that can also support network policies. 
+It uses overlay network technology to enable communication between pods across different nodes.
+
+
+
+
+# apiVersion: networking.k8s.io/v1
+# kind: NetworkPolicy
+# metadata:
+#   name: allow-frontend
+# spec:
+#   podSelector:
+#     matchLabels:
+#       app: frontend
+#   ingress:
+#   - from:
+#     - podSelector:
+#         matchLabels:
+#           app: frontend
+#     ports:
+#     - protocol: TCP
+#       port: 80
+
+
+
+
+

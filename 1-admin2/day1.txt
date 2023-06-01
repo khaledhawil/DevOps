@@ -22,4 +22,4 @@ $ nmcli connection modify Test ipv4.method auto
 
 $ free -h : 
  
- # echo 1 | sudo tee /proc/sys/vm/drop_caches
+ echo 1 | sudo tee /proc/sys/vm/drop_caches

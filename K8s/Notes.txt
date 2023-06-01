@@ -15,6 +15,7 @@ The API server is the only Kubernetes component that talks directly to the stora
 "هو اللي بيتصل بالداتابيز وبيعمل الكومندز اللي بتعملها الكونسول"
 # "ده اللي أنا بيديله الكومندز بتاعتي وهو ينفذها"
 # "أي ريكوست بعمله علي الكونسول هو اللي بينفذه"
+
 ================================================================================================================================
 Kublet: is an agent that runs on each node in the cluster. It makes sure that containers are running in a pod. 
 It is the primary “node agent” that runs on each node. 
@@ -290,3 +291,14 @@ Example:
 2- main container: is used to run the code that is downloaded by the init container
 ===============================================================================================================================
 
+
+
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.56.10:6443 K3S_TOKEN="K10e07211322c0bd3afbacef221ae5c1e8c75a49c242090cdfa2225d87b195486c8::server:daa05f264db79b49ea9c9712c039d5e4"  K3S_NODE_NAME="worker1"  sh -
+
+
+
+
+
+
+
+curl -sfL  https://get.k3s.io |  INSTALL_K3S_EXEC="--disable traefik" K3S_KUBECONFIG_MODE="644"  sh -s -

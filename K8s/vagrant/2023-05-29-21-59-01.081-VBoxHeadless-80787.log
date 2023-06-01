@@ -1,0 +1,12 @@
+Log created: 2023-05-29T21:59:01.818919000Z
+Process ID:  80787 (0x13b93)
+Parent PID:  3607 (0xe17)
+Executable:  /usr/lib/virtualbox/VBoxHeadless
+Arg[0]: /usr/lib/virtualbox/VBoxHeadless
+Arg[1]: --comment
+Arg[2]: vagrant_node1_1685387025360_30406
+Arg[3]: --startvm
+Arg[4]: 7b00a887-52d6-4337-baa0-83be5f9db8ab
+Arg[5]: --vrde
+Arg[6]: config
+AddRef: illegal refcnt=3221225469 state=2
