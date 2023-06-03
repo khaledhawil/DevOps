@@ -5,6 +5,10 @@ docker-swarm
 *.idea
 *.vagrant
 /.vagrant
+.vagrant/
+.vagrant
+*.log
+
 *target
 /target
 *machines
