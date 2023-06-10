@@ -1,0 +1,8 @@
+
+- Crontab:
+is a Linux command used to schedule recurring tasks or jobs. 
+The name "crontab" stands for "cron table" because it manages the cron daemon's list of tasks.
+
+The cron daemon is a background process in Linux that executes commands or scripts at predefined time intervals. 
+These intervals can be as specific as a particular minute, hour, day, month, or day of the week. By using crontab, 
+you can create, modify, and manage these scheduled tasks

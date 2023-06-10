@@ -19,9 +19,15 @@ $ nmcli connection add con-name myfi ifname wlp3s0  type wifi ssid "DODO U"  ipv
 to change it to auto :
 $ nmcli connection modify Test ipv4.method auto 
 
+$ curl wttr.in/samannud # to show the weather  
 
 $ free -h : 
  
  echo 1 | sudo tee /proc/sys/vm/drop_caches
 - to change the mac addr 
 sudo macchanger -m c2:d1:bc:2d:bf:55 wlp3s0
+
+$ [ $(date +%I) -le 07 ] &&  ls  # if the date less then 7 then do ls command 
+
+ 
+
