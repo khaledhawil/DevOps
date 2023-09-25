@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: daemo
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      name: elasticsearch
+  template:
+    metadata:
+      labels:
+        name: elasticsearch
+    spec: 
+      containers:
+        - name : elasticsearch
+          image: k8s.gcr.io/fluentd-elasticsearch:1.20
+          
+
+
+          

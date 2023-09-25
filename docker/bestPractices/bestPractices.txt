@@ -1,0 +1,102 @@
+*                      Best practices with Dockerfile
+
+
+Writing a Dockerfile with best practices involves following a set of guidelines
+that ensure your Docker image is optimized for performance, security, and maintainability.
+- Here are some tips on how to write a Dockerfile with best practices:
+
+
+#-================================= ten ways ==============================================================>
+
+1- Use a minimal base image:
+Choose a base image that is as small as possible, such as Alpine Linux,
+- to reduce the size of your Docker image.
+# Use a minimal Alpine Linux image as the base image
+$ FROM alpine:latest
+
+2- Use specific tags for your base image: 
+Specify a specific tag for the base image you are using, such as alpine:3.13,
+- to ensure that your image is always built from a known and consistent version of the base image.
+
+# Use a specific version of the Node.js image as the base image
+$ FROM node:14-alpine
+
+
+3- Avoid using the root user: 
+Use a non-root user for your Docker container to minimize the risk of security vulnerabilities. 
+- You can create a new user in your Dockerfile using the USER command.
+# Create group and user
+$ RUN groupadd -r  group-name  && useradd -g group-name  user-name
+# set ownership and permissions 
+$ RUN chown -R User:User /app
+# switch to user 
+$ USER user-name
+
+4- Use multiple layers: 
+Break up your Dockerfile into multiple layers to make it easier to update and maintain. 
+Each layer should contain a specific set of instructions: 
+- such as installing dependencies or configuring the environment.
+
+
+# Use a specific version of the Node.js image as the base image
+$ FROM node:14-alpine AS base
+ # Use a new layer for development dependencies
+$ FROM base AS dev
+
+5- Clean up after yourself: 
+Use the RUN command to clean up any temporary files or packages that are no longer needed. 
+- This will reduce the size of your Docker image and improve performance.
+
+# Install dependencies
+$ RUN npm install --only=production && \
+    npm cache clean --force && \
+    apk del .gyp
+
+
+6- Use COPY instead of ADD: 
+Use the COPY command instead of the ADD command when copying files into your Docker image. 
+- The ADD command can be more complex and can introduce security vulnerabilities.
+
+
+7- Use environment variables: 
+Use environment variables in your Dockerfile to configure your application. 
+- This will make it easier to modify your application's configuration without modifying the Docker image.
+
+# Set environment variables
+ENV NODE_ENV production
+ENV PORT 3000
+
+
+8- Use a .dockerignore file: 
+Create a .dockerignore file to exclude unnecessary files and directories from your Docker image. 
+- This will reduce the size of your Docker image and improve performance.
+
+
+
+9- Use multi-stage builds: 
+Use multi-stage builds to reduce the size of your Docker image 
+- by only including the necessary dependencies and files in the final image.
+
+
+
+10- Use a health check: 
+Use a health check in your Dockerfile to ensure that your application is running correctly. 
+- This will help you detect and fix issues before they cause downtime.
+
+
+# Set a health check for the app
+$ HEALTHCHECK --interval=30s --timeout=3s CMD wget --quiet --tries=1 --spider http://localhost:3000/health || exit 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+

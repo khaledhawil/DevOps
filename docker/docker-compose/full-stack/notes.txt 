@@ -1,0 +1,4 @@
+1- create mongo db 
+2- create backend deploy and service ClusterIP
+- create deployment of frontend  and Service NodePort
+

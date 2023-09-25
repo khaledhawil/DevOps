@@ -1,0 +1,19 @@
+# Ex-1 
+#----  -------Instructions ----------------
+# Choose a container image (e.g. redis, nginx, mongo, etc.)
+# Create a pod (in the default namespace) using the image you chose
+# Verify the pod is running
+
+apiVersion: v1 
+kind: Pod
+
+metadata:
+  name: my-fist-pod
+spec:
+  containers:
+    - name : nginx-container
+      image: nginx
+
+# $ kubectl create -f pod2.yml
+# kubectl get pods my-first-pod -o wide
+# kubectl run nginx --image=nginx --restart=Never

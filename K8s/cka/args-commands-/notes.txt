@@ -1,0 +1,77 @@
+
+# <========================================================= Docker CMD and ENTRYPOINT Revision ===================================================================================>
+CMD: is the default command that will be executed when you run the container. 
+You can override the CMD command when you run the container.
+ENTRYPOINT: is the command that will be executed when you run the container. 
+You can't override the ENTRYPOINT command when you run the container. (by Default)
+by default the ENTRYPOINT is /bin/sh -c
+# ===============================================================================================================================
+# <====================================================== Docker CMD and ENTRYPOINT Examples =======================================================================================================>
+let say we have a docker image with the following Dockerfile:
+FROM ubuntu
+entrypoint: ["echo", "Hello World"]
+
+If we run the container with the following command: 
+docker run ubuntu ===> The output will be: Hello World
+# <========================================================= Docker CMD Override =========================================================================================================>
+let say we have a docker image with the following Dockerfile:
+FROM ubuntu
+entrypoint: ["echo"]
+CMD ["Hello World"]
+
+if we run the container with the following command:
+docker run ubuntu ===> The output will be: Hello World it will run the entrypoint command "echo" and concatenate it with the CMD command "Hello World" so the output will be "echo Hello World"
+
+if we want to override the message "Hello World" with another message like "Hello Docker", we can run the container with the following command:
+docker run ubuntu "Hello Docker" ===> The output will be: "Hello Docker" because it will run the entrypoint command "echo" and concatenate it with the CMD command "Hello Docker" after overriding the CMD command so the output will be "echo Hello Docker"
+
+so we could override the CMD command when we run the container. 
+and accually, the CMD command here is arrgument to the entrypoint command.
+but what if we want to override the entrypoint command?
+# <=========================================================== Docker ENTRYPOINT Override ==========================================================================================>
+let say we have a docker image with the following Dockerfile:
+FROM ubuntu
+entrypoint: ["echo"]
+CMD ["Hello World"]
+
+and we want to override the entrypoint command with another command like "ls", we can run the container with the following command:
+docker run --entrypoint ls ubuntu ===> The output will be: "ls" because it will run the entrypoint command "ls" and concatenate it with the CMD command "Hello World" after overriding the entrypoint command so the output will be "ls Hello World"
+
+if we want to override the entrypoint command and the CMD command, we can run the container with the following command:
+docker run --entrypoint ls ubuntu -l ===> The output will be: "ls -l" because it will run the entrypoint command "ls" and concatenate it with the CMD command "-l" after overriding the entrypoint command so the output will be "ls -l"
+# <============================================================= Args and Command in k8s  ==================================================================>
+
+In Kubernetes, 
+args and command are fields that can be specified in a container definition to set the command and arguments that will be run when the container starts.
+Commnad ===> specifies the actual command to be run, such as ls or sh, and should be specified as an array of strings.
+Args ====>  specifies the arguments to be passed to the command, also as an array of strings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

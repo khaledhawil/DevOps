@@ -1,0 +1,114 @@
+*                       lt's go to technical
+
+
+- the documentaion of k8s 
+https://kubernetes.io/docs/home/
+
+- installing  : 
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+sudo apt update
+sudo apt install -y kubelet kubeadm kubectl
+
+
+- Basics commands 
+
+1- to create deployment :
+
+$ kubectl create deployment --image=nginx nginx-app  # to create a deployment 
+$ kubectl get deployment  
+$ kubectl delete deployment --all # to delete all deployments
+
+
+2- pods :
+
+$ kubectl get pods
+$ kubectl get po
+$ kubectl get po -o wide # more detailse
+
+3- service 
+
+$ kubectl get service 
+
+
+4- replicaset :
+$ kubectl  get  replicaset
+$ kubectl scale deployment  nginx-app --replicas=3    # to increce the number of replica
+
+
+
+5- all 
+$ kubectl get all
+
+
+# here an example 0f k8s.yml file 
+
+apiVersion: v1    #  Specifies the version of the Kubernetes API that should be used to create the resource.
+kind: Deployment  #  Specifies the kind of resource that should be created, in this case a "Deployment".
+
+metadata:          # Specifies the metadata for the resource, including its name, labels, and annotations.
+  name: nginx-deployment
+spec:               # Specifies the desired state of the deployment.
+  selector:          # Specifies the selector to use when identifying which pods to 
+    matchLabels:
+      app: nginx
+  replicas: 3         #  Specifies the number of replicas that should be created.
+
+  template:
+    metadata:           # Specifies the metadata for the pod, including its labels.
+      labels:
+        app: nginx
+    spec:                # Specifies the container configuration for the pod.
+
+      containers:         #   Specifies the list of containers to run in the pod.  
+            
+      #  Specifies the name of the container.
+      - name: nginx        
+        image: nginx:latest # image: Specifies the Docker image to use for the container.
+        ports:              # ports: Specifies the list of ports that should be exposed by the container.
+        
+        
+        # containerPort: Specifies the port number that should be exposed.
+        - containerPort: 80 
+
+        Events:
+        Type    Reason     Age   From               Message
+        ----    ------     ----  ----               -------
+        Normal  Scheduled  69s   default-scheduler  Successfully assigned default/nginx-pod to minikube
+        Normal  Pulling    68s   kubelet            Pulling image "nginx"
+        Normal  Pulled     61s   kubelet            Successfully pulled image "nginx" in 6.899917291s (6.899936272s including waiting)
+        Normal  Created    61s   kubelet            Created container nginx
+        Normal  Started    61s   kubelet            Started container nginx
+
+
+- to create this file  :
+$ kubectl create -f podia.yml
+
+$ kubectl describe  po  nginx-pod # to describe pod's info
+$ kubectl replace -f podia.yml  --force # to replace a ymal file to a new configur
+$ kubectl apply -f podia.yml  # at end we'll use it 
+
+$ kubectl exec -it nginx -- /bin/bash # to excute the pod 
+$ kubectl logs nginx-pod   # logs of pod 
+$ kubectl  get po nginx-pod --show-labels # to show the labels 
+$ kubectl  label po nginx-pod owner=Khaled  # to set a label to pod and you can add more labels
+$ kubectl get po --selector owner=Khaled  # to find a pod by label
+$ kubectl get po -l owner=Khaled  # to find a pod by label
+$ kubectl get po -l owner!=Khaled  # to find a pod by label with not equal
+$ kubectl get po -l  'owner in (Khaled)' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

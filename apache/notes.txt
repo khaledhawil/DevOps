@@ -1,0 +1,7 @@
+* Apache 
+
+- the installation 
+
+$ sudo apt install apache2
+
+

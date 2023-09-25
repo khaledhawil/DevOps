@@ -1,0 +1,43 @@
+# Use a minimal base image
+FROM alpine:3.14
+
+# Set environment variables
+ENV APP_HOME=/app \
+ APP_VERSION=1.0.0
+
+# Use specific tags for your base image
+LABEL maintainer="John Doe <johndoe@example.com>" \
+ description="My awesome app" \
+ version=$APP_VERSION
+
+# Use multiple layers
+RUN apk add --no-cache \
+    python3 \
+    && python3 -m ensurepip \
+    && rm -r /usr/lib/python*/ensurepip \
+    && pip3 install --no-cache-dir \
+    flask \
+    && rm -r /root/.cache
+
+# Use COPY instead of ADD
+COPY app $APP_HOME/app \
+requirements.txt $APP_HOME
+
+# Use a .dockerignore file
+COPY .dockerignore $APP_HOME/.dockerignore
+RUN cd $APP_HOME && ls -la
+
+# Use multi-stage builds
+FROM alpine:3.14 AS release
+ENV APP_HOME=/app
+COPY --from=0 $APP_HOME $APP_HOME
+
+# Use a health check
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD wget -qO- http://localhost:5000/health || exit 1
+
+# Set the working directory
+WORKDIR $APP_HOME
+
+# Start the application
+CMD ["python3", "app/main.py"]

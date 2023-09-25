@@ -1,0 +1,161 @@
+# Helm
+- Helm is a package manager and orchestration tool for Kubernetes,
+Helm, on the other hand, 
+simplifies the deployment and management of applications on Kubernetes by packaging applications
+ and their dependencies into a single unit called a "chart."
+
+ # A Helm chart is a collection of files
+ - that describe a set of Kubernetes resources, such as deployments, services, and configmaps, along with customizable templates and values. 
+ - These charts can be versioned and shared, making it easier to distribute and reproduce application deployments in different environments.
+
+* Here's a breakdown of Helm's main components:
+
+1- # Charts: 
+- As mentioned earlier, 
+- a Helm chart is a collection of Kubernetes resource definitions and templates. 
+- It can include default configurations, variable placeholders (values), and templates that allow users to customize deployments.
+
+2- # Values: 
+- Values are parameters that can be customized when deploying a Helm chart. 
+- They allow users to provide inputs to templates within the chart, such as specifying the number of replicas, service names, and environment variables.
+
+3- # Templates: 
+- Helm templates are used to generate Kubernetes manifest files by applying user-defined values to the chart's templates. 
+- This allows for dynamic generation of Kubernetes resource definitions based on the provided values.
+
+4- # Release: 
+- A release is an instance of a Helm chart deployed onto a Kubernetes cluster. 
+- Each release can have its own set of values, enabling multiple instances of the same application with different configurations.
+
+5- # Repository: 
+- Helm repositories are collections of versioned Helm charts. 
+- They can be hosted privately or publicly, and users can pull charts from these repositories to deploy applications.
+
+to add reop:
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+to update REpos :
+$ helm repo update
+- to pull app's files 
+$ helm pull --untar bitnami/nginx
+- to override the value :
+$ helm install new-app nginx/ --set labels.intake=devops
+
+- to rollback to another revision 
+$ h rollback new-app 1 # 1 = number of revion
+
+$ helm upgrade devops-iti --debug --dry-run devops-iti/
+# Lint vs template vs dry Run 
+- Lint:
+ Checks your Helm chart for issues and adherence to best practices.
+- Template:
+ Generates Kubernetes manifests from your Helm chart templates and values.
+- Dry Run: 
+Simulates the deployment of a Helm chart to the cluster without actually making changes.
+
+
+$ helm lint  devops-iti/
+==> Linting devops-iti/
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+
+
+
+
+
+* Functions on Helm :
+
+- {{ quote .Values.app.name }}
+- {{ lower .Values.app.name }} 
+
+- {{ upper .Values.app.name }}
+
+- {{ randAlpha 10 | lower }}
+
+- {{ .Values.image.repository | upper | quote | shuffle }} ==> image:  GN"XNI"
+
+
+- default Function:
+Used to provide default values for variables in case they are not defined.
+
+replicaCount: {{ default 3 .Values.replicaCount }}
+
+# If 
+{{- if .Values.image.pullPolicy }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+{{- end }}
+
+
+# if and else if 
+{{- if eq .Values.resources "true" }}
+resources:
+  requests:
+    memory: "64Mi"
+    cpu: "250m"
+  limits: 
+    memory: "128Mi"
+    cpu: "500m"
+{{- else if eq .Values.resources "false"}}
+resources:
+  requests:
+    memory: "20Mi"
+    cpu: "80m"
+  limits: 
+    memory: "40Mi"
+    cpu: "100m"
+{{- end }}
+
+- ----------------------------
+{{- if   .Values.image.pullPolicy  }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+{{- else   }}
+        imagePullPolicy: Always 
+{{- end }}
+
+
+# Range
+
+-- ----------------------------------------------
+
+data:
+{{- range .Values.date }}
+ - {{ . }} 
+{{- end }}
+
+
+{{- range $x,$y := .Values.labels }}
+    {{ $x }}: {{ $y | quote }}
+{{- end }}
+
+
+
+
+
+# With 
+{{- with .Values.app }}
+  {{- with .ui }}
+    background: {{ .bg }}
+    frontground: {{ .fg }}
+  {{- end }}
+    database: {{ .db.name  | quote }}
+    connction: {{ .db.conn }}
+    release: {{ $.Release.Name }}
+{{- end}}
+
+
+# _helper.tpl
+
+ - this to get data from value file "labels" 
+{{- define "labels"}}
+{{- range $x,$y := .Values.labels }}
+{{ $x}}: {{ $y | quote }}
+{{- end }}
+{{- end }} 
+
+- and to  get this data from .tpl file to another file 
+
+
+{{- include "labels" . | indent 6 }}
+
+
+

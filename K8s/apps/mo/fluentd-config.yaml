@@ -1,0 +1,16 @@
+<source>
+  @type tail
+  format json
+  path /var/log/fluentd/your_log_file.log
+  pos_file /var/log/fluentd/your_log_file.log.pos
+  tag your_log
+</source>
+
+<match your_log>
+  @type elasticsearch
+  host elasticsearch-hostname
+  port 9200
+  logstash_format true
+  logstash_prefix your_log
+  flush_interval 5s
+</match>

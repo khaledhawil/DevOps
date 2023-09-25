@@ -1,0 +1,142 @@
+*         i'll talk about K8s  
+
+1- let's install it 
+- go to k8s's website
+
+2- what is a container orchestration :
+- is the process of managing and automating the deployment, scaling, and management of containerized applications.
+
+3- what is a K8s? 
+K8s, or Kubernetes, is an open-source container orchestration platform that was originally
+developed by Google and is now maintained by the Cloud Native Computing Foundation (CNCF)
+It provides a powerful platform for automating the deployment, scaling, and management of containerized applications.
+At its core, Kubernetes provides a set of APIs and tools that enable developers and operators to deploy and manage containerized applications in a declarative manner
+Users can define the desired state of their application using YAML files, and Kubernetes will automatically reconcile the actual state with the desired state,
+ making any necessary changes to ensure that the application is running correctly.
+
+
+4- Features of K9s :
+
+- Automatic scaling:
+Kubernetes can automatically scale the number of containers running based on demand, ensuring that your application can handle traffic spikes without requiring manual intervention.
+
+- Rolling updates:
+Kubernetes can perform rolling updates, allowing you to update your application without downtime by gradually replacing old containers with new ones.
+
+- Load balancing:
+Kubernetes can automatically distribute traffic across your containers, ensuring that your application remains available and responsive even during peak traffic periods.
+
+- Self-healing:
+Kubernetes can detect and replace failed containers automatically, ensuring that your application remains running and responsive even in the face of hardware or software failures.
+
+- Resource management:
+Kubernetes allows you to specify resource requirements for your containers, ensuring that they have access to the resources they need to run effectively.
+
+- Config management:
+Kubernetes allows you to manage configuration information for your containers, ensuring that they have access to the correct environment variables, secrets, and other configuration data.
+
+- Storage management:
+Kubernetes provides a flexible storage management system that allows you to easily provision and manage persistent storage for your containers. 
+
+- Container networking:
+Kubernetes provides a flexible and powerful networking model that allows your containers to communicate with each other and with external systems.
+
+- API-driven: 
+Kubernetes provides a powerful API that allows you to manage your applications programmatically, integrating with your existing automation and management tools.
+
+
+
+* Architecture of K8s :
+
+1 - Master node: 
+ The Kubernetes master node is responsible for managing the overall state of the Kubernetes cluster. It contains several components, including:
+
+- API server:
+ The API server is the central management point for the Kubernetes cluster. It exposes the Kubernetes API, which can be used to manage the cluster programmatically.
+
+- etcd: 
+ etcd is a distributed key-value store that is used to store the configuration data for the Kubernetes cluster.
+
+- Scheduler:
+ The scheduler is responsible for scheduling pods (groups of containers) to run on worker nodes based on the available resources and scheduling policies.
+
+- Controller manager: 
+ The controller manager runs a set of controllers that are responsible for maintaining the desired state of the cluster, such as ensuring that the correct number of replicas are running.
+
+2- Worker nodes:
+ Worker nodes are the hosts that run the containers. They contain several components, including:
+
+- Kubelet: 
+The Kubelet is the primary agent that runs on each worker node. It is responsible for starting and stopping containers on the node, as well as reporting the node's status back to the master node.
+
+- Container runtime:
+The container runtime is the software that is responsible for running the containers, such as Docker or containerd.
+
+- kube-proxy:
+The kube-proxy is responsible for managing network communication between pods and services within the cluster.
+
+3- Pods:
+Pods are the smallest deployable units in Kubernetes. They can contain one or more containers, and they are scheduled to run on worker nodes by the scheduler.
+
+
+4- Services: 
+Services provide a way to expose pods to the network. They provide a stable IP address and DNS name that can be used to access the pods, even as they are moved around the cluster.
+
+
+Overall, the Kubernetes architecture is designed to be highly scalable and resilient, allowing it to manage large numbers of containers across multiple hosts with ease.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

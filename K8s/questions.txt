@@ -1,0 +1,115 @@
+- What is Kubernetes? Why organizations are using it?
+Kubernetes is an open-source system that provides users with the ability to manage, scale and deploy containerized applications.
+
+- To understand what Kubernetes is good for, let's look at some examples:
+
+You would like to run a certain application in a container on multiple different locations and sync changes across all of them, no matter where they run
+Performing updates and changes across hundreds of containers
+Handle cases where the current load requires to scale up (or down)
+
+- When or why NOT to use Kubernetes?
+
+If you manage low level infrastructure or baremetals, Kubernetes is probably not what you need or want
+If you are a small team (like less than 20 engineers) running less than a dozen of containers, 
+Kubernetes might be an overkill (even if you need scale, rolling out updates, etc.). 
+You might still enjoy the benefits of using managed Kubernetes, 
+but you definitely want to think about it carefully before making a decision on whether to adopt it.
+
+
+- What is a Kubernetes Cluster?
+
+"A Kubernetes cluster is a set of node machines for running containerized applications. If you’re running Kubernetes, you’re running a cluster. At a minimum, a cluster contains a worker node and a master node."
+
+- What is a Node?
+
+A node is a virtual or a physical machine that serves as a worker for running the applications.
+It's recommended to have at least 3 nodes in a production environment
+
+- What the master node is responsible for?
+
+# The master coordinates all the workflows in the cluster:
+Scheduling applications
+Managing desired state
+Rolling out new updates
+
+
+- Describe shortly and in high-level, what happens when you run kubectl get nodes
+
+[ 
+1- Your user is getting authenticated
+2- Request is validated by the kube-apiserver
+3- Data is retrieved from etcd 
+]
+
+
+- True or False? Every cluster must have 0 or more master nodes and at least 1 worker
+
+-False. A Kubernetes cluster consists of at least 1 master and can have 0 workers (although that wouldn't be very useful...)
+
+
+- What are the components of the master node (aka control plane)?
+
+API Server - the Kubernetes API. All cluster components communicate through it
+Scheduler - assigns an application with a worker node it can run on
+Controller Manager - cluster maintenance (replications, node failures, etc.)
+etcd - stores cluster configuration
+
+
+- What are the components of a worker node (aka data plane)?
+
+Kubelet - an agent responsible for node communication with the master.
+Kube-proxy - load balancing traffic between app components
+Container runtime - the engine runs the containers (Podman, Docker, ...)
+
+
+
+# Pods
+- Explain what is a Pod:
+A Pod is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers
+
+- Deploy a pod called "my-pod" using the nginx:alpine image
+$ kubectl run my-pod --image=nginx:alpine
+
+- What are your thoughts on "Pods are not meant to be created directly"?
+
+Pods are usually indeed not created directly. 
+You'll notice that Pods are usually created as part of another entities such as Deployments or ReplicaSets.
+If a Pod dies:
+Kubernetes will not bring it back. 
+This is why it's more useful for example to define ReplicaSets that will make sure that a given number of Pods will always run, 
+even after a certain Pod dies.
+
+
+- How many containers can a pod contain?
+
+A pod can include multiple containers but in most cases it would probably be one container per pod.
+
+There are some patterns where it makes to run more than one container like the "side-car" pattern where you might want to perform logging or some other operation that is executed by another container running with your app container in the same Pod.
+
+- What use cases exist for running multiple containers in a single pod?
+
+- Sidecar containers:
+A sidecar container is a container that runs alongside the main application container in the same pod and shares the same lifecycle. 
+It can provide additional functionality such as logging, monitoring, or security.
+
+- Helper containers: 
+A helper container is a container that performs a specific task for the main application container. For example, 
+a helper container could be used to generate SSL certificates for the main application container.
+
+- Shared storage: 
+When multiple containers need to share the same storage, it can be more efficient to run them in the same pod. 
+This allows them to share the same volume mounts.
+
+- Co-located services: 
+When multiple services need to communicate with each other over the loopback interface, 
+running them in the same pod can improve performance and simplify network configuration.
+
+- Batch jobs: 
+When running batch jobs, it can be more efficient to run multiple containers in the same pod. For example, 
+a container could be used to download the data, while another container could be used to process the data.
+
+Running multiple containers in a single pod can also simplify deployment and management, as all containers in the pod are scheduled and scaled together.
+
+
+
+

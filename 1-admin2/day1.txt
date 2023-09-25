@@ -1,0 +1,35 @@
+Network configuration on Linux, network interfaces
+
+
+
+to configure network interfaces:
+there are a few ways:
+$ nmtui:
+Text User Interface for controlling NetworkManager
+It allows you to configure various network settings such as IP address, gateway, DNS, and more.
+
+
+$ nmcli :
+command-line tool for controlling NetworkManager
+# ex: to create static ip 
+$ nmcli connection add con-name Test ifname enp0s3 type ethernet ipv4.method manual ipv4.addresses 192.168.1.150/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8
+- to create one with wifi :
+$ nmcli connection add con-name myfi ifname wlp3s0  type wifi ssid "DODO U"  ipv4.method manual ipv4.addresses 192.168.1.169/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8,192.168.1.1,1.1.1.1
+
+to change it to auto :
+$ nmcli connection modify Test ipv4.method auto 
+
+$ curl wttr.in/samannud # to show the weather  
+
+$ free -h : 
+ 
+ echo 1 | sudo tee /proc/sys/vm/drop_caches
+- to change the mac addr 
+sudo macchanger -m c2:d1:bc:2d:bf:55 wlp3s0
+
+
+
+$ [ $(date +%I) -le 07 ] &&  ls  # if the date less then 7 then do ls command 
+
+ 
+

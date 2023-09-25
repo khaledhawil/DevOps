@@ -1,0 +1,1000 @@
+ 1001  less --4  /etc/passwd
+ 1002  man passwd ; man -s5 passwd
+ 1003  man passwd; man 5 passwd
+ 1004  man -k "passwd"
+ 1005  apropos passwd
+ 1006  date %R
+ 1007  date $ %R 
+ 1008  date $%R 
+ 1009  cd 
+ 1010  nano .bashrc 
+ 1011  date +%R
+ 1012  date +%r
+ 1013  nano .bashrc 
+ 1014  bash
+ 1015  ls -F
+ 1016  ls
+ 1017  man -k "remove file"
+ 1018  man -f cd
+ 1019  man -f man
+ 1020  man -f cp
+ 1021  man rmdir 
+ 1022  w
+ 1023  who
+ 1024  whoami
+ 1025  su
+ 1026  shutdown +20
+ 1027  mysql
+ 1028  cd /home/luka/Desktop/
+ 1029  cd /tmp/
+ 1030  cd ~tmp
+ 1031  cd ~ tmp
+ 1032  cd ~/tmp
+ 1033  cd tmp
+ 1034  cd 
+ 1035  cd Desktop/
+ 1036  cd ../../tmp
+ 1037  cd 
+ 1038  cd /var/log/
+ 1039  ll
+ 1040  cat syslog
+ 1041  ls
+ 1042  cat syslog.1
+ 1043  cd fox
+ 1044  ll
+ 1045  cd fox1/
+ 1046  ls
+ 1047  ls 
+ 1048  cd ..
+ 1049  cp fox fox1
+ 1050  cp fox fox1/
+ 1051  cp -r  fox fox1/
+ 1052  cp -r  fox/ fox1/
+ 1053  ll
+ 1054  md 
+ 1055  md fox3
+ 1056  ;;
+ 1057  ll
+ 1058  cp -r fox3/ fox2
+ 1059  ll fox2/
+ 1060  cp -r fox3/ fox2/
+ 1061  ll fox2/
+ 1062  cp -r fox3/ fox1/
+ 1063  ll
+ 1064  mv fox1/ fox2/
+ 1065  cd
+ 1066  sudo apt-get install libpam-fprintd libfprintd-dev libfprintd-doc libfprint-demo
+ 1067  sudo apt-get update
+ 1068  sudo apt-get install libpam-fprintd libfprintd-dev libfprintd-doc libfprint-demo
+ 1069  sudo apt install -y fprintd libpam-fprintd
+ 1070  sudo apt purge --auto-remove fprintd libfprint-2-2
+ 1071  cd Downloads/
+ 1072  git clone https://gitlab.freedesktop.org/libfprint/fprintd.git
+ 1073  cd fprintd && git checkout 1.90.1 && cd ..
+ 1074  git clone https://gitlab.freedesktop.org/libfprint/libfprint.git
+ 1075  cd libfprint && git checkout v1.90.5 && cd ..
+ 1076  sudo gedit libfprint/libfprint/drivers/elan.h
+ 1077  sudo apt-get install gtk-doc-tools
+ 1078  sudo apt install build-essential cmake gettext libdbus-1-dev libdbus-glib-1-dev libdebconfclient0 libgirepository1.0-dev libglib2.0-dev libgusb-dev libnss3-dev libpam-wrapper libpam0g-dev libpixman-1-dev libpolkit-gobject-1-dev libsystemd-dev meson python3-dbusmock python3-pip python3-pypamtest
+ 1079  meson libfprint libfprint/_build
+ 1080  sudo ninja -C libfprint/_build install
+ 1081  meson fprintd fprintd/_build
+ 1082  sudo ninja -C fprintd/_build install
+ 1083  sudo pam-auth-update
+ 1084  sudo apt purge --auto-remove fprintd libfprint-2-2
+ 1085  sudo apt update
+ 1086  cd fprintd && git checkout 1.90.1 && cd ..
+ 1087  cd libfprint && git checkout v1.90.5 && cd ..
+ 1088  sudo gedit libfprint/libfprint/drivers/elan.h
+ 1089  sudo apt-get install gtk-doc-tools
+ 1090  sudo apt install build-essential cmake gettext libdbus-1-dev libdbus-glib-1-dev libdebconfclient0 libgirepository1.0-dev libglib2.0-dev libgusb-dev libnss3-dev libpam-wrapper libpam0g-dev libpixman-1-dev libpolkit-gobject-1-dev libsystemd-dev meson python3-dbusmock python3-pip python3-pypamtest
+ 1091  meson libfprint libfprint/_build
+ 1092  sudo ninja -C libfprint/_build install
+ 1093  meson libfprint libfprint/_build
+ 1094  sudo ninja -C libfprint/_build install
+ 1095  meson fprintd fprintd/_build
+ 1096  sudo ninja -C fprintd/_build install
+ 1097  sudo pam-auth-update
+ 1098  lsusb
+ 1099  sudo apt remove fprintd
+ 1100  sudo add-apt-repository ppa:uunicorn/open-fprintd
+ 1101  sudo apt-get update
+ 1102  sudo apt install open-fprintd fprintd-clients python3-validity
+ 1103  fprintd-enroll
+ 1104  	
+ 1105  sudo pam-auth-update
+ 1106  reboot
+ 1107  cd /home/lol1/
+ 1108  ll /home/
+ 1109  cd /home/lol1/
+ 1110  ll
+ 1111  cd fox
+ 1112  ll fox
+ 1113  cd fox
+ 1114  bash
+ 1115  su samy
+ 1116  su - samy
+ 1117  cd lol
+ 1118  su lol 
+ 1119  su lol1
+ 1120  su
+ 1121  visudo
+ 1122  su
+ 1123  docker container start  hopeful_dewdney 
+ 1124  docker exec   -it  hopeful_dewdney sh
+ 1125  lsusb
+ 1126  sudo add-apt-repository ppa:uunicorn/open-fprintd
+ 1127  sudo apt-get update
+ 1128  sudo apt install open-fprintd fprintd-clients python3-validity
+ 1129  fprintd-enroll
+ 1130  sudo apt install open-fprintd fprintd-clients python3-validity fprintd-enroll
+ 1131  sudo apt update
+ 1132  sudo apt install open-fprintd fprintd-clients python3-validity fprintd-enroll
+ 1133  sudo pam-auth-update
+ 1134  sudo apt-get install libfprint0 fprint-demo libpam-fprintd gksu-polkit
+ 1135  sudo add-apt-repository ppa:fingerprint/fprint
+ 1136  lsusb
+ 1137  sudo apt install fprintd libpam-fprintd
+ 1138  fprintd-enroll
+ 1139  sudo pam-auth-update --enable fprintd
+ 1140  wget http://dell.archive.canonical.com/updates/pool/public/libf/libfprint-2-tod1-goodix/libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
+ 1141  sudo apt install ./libfprint-2-tod1-goodix_0.0.4-0ubuntu1somerville1_amd64.deb
+ 1142  fprintd-enroll
+ 1143  sudo apt-get install libfprint0 fprint-demo libpam-fprintd gksu-polkit
+ 1144  sudo service fprintd status
+ 1145  systemctl  status fprintd
+ 1146  systemctl  enable fprintd
+ 1147  systemctl  start  fprintd
+ 1148  systemctl  status fprintd
+ 1149  systemctl  start  --now  fprintd
+ 1150  sudo service fprintd restart
+ 1151  systemctl  status fprintd
+ 1152  sudo service fprintd status
+ 1153  lsusb
+ 1154  sudo apt install fprintd
+ 1155  sudo apt install libpam-fprintd
+ 1156  sudo pam-auth-update
+ 1157  cat /etc/pam.d
+ 1158  cat /etc/pam.d/sudo
+ 1159  sudo nano  /etc/pam.d/sudo
+ 1160  sudo nano  /etc/pam.d/sshd
+ 1161  sudo nano  /etc/pam.d/sudo
+ 1162  sudo fprintd-enroll
+ 1163  sudo apt install fwupd
+ 1164  fwupdmgr get-devices
+ 1165  fwupdmgr refresh --force
+ 1166  fwupdmgr update
+ 1167  ll
+ 1168  cd
+ 1169  docker container start hopeful_dewdney 
+ 1170  docker container start hopeful_dewdney
+ 1171  docker exec  -it hopeful_dewdney  sh
+ 1172  man which
+ 1173  history 
+ 1174  man chgrp
+ 1175  man umask 
+ 1176  sudo apt upgrade
+ 1177  id samy
+ 1178  su samy
+ 1179  su
+ 1180  su samy
+ 1181  touch file
+ 1182  man |
+ 1183  tee
+ 1184  man tee
+ 1185  su
+ 1186  su
+ 1187  ansiweather -l "الناوية"
+ 1188  nano .bashec
+ 1189  nano .bashrc 
+ 1190  bash
+ 1191  ansiweather -l "الناوية"
+ 1192  ansiweather -l "samannud"
+ 1193  weather(){ curl -s "http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-<YOURZIPORLOCATION>}"|perl -ne '/<title>([^<]+)/&&printf "%s: ",$1;/<fcttext>([^<]+)/&&print $1,"\n"';}
+ 1194  ansiweather -l "samannud"
+ 1195  man ansiweather 
+ 1196  ansiweather -l "samannud" -f 5
+ 1197  ansiweather -l "الناوية" -f 5
+ 1198  id
+ 1199  cd Desktop/linux/admin1/files/
+ 1200  ll
+ 1201  nano data.txt 
+ 1202  sudo nano data.txt 
+ 1203  sudo newusers data.txt 
+ 1204  cat /etc/passwd
+ 1205  sudo newusers data.txt 
+ 1206  cat /etc/passwd
+ 1207  sudo newusers data.txt 
+ 1208  sudo nano data.txt 
+ 1209  sudo newusers data.txt 
+ 1210  cat /etc/passwd
+ 1211  sudo useradd fox
+ 1212  sudo usermod   -aG mosh   -s /bin/bash  fox
+ 1213  id fox
+ 1214  chgrp sudo dox
+ 1215  chgrp sudo fox
+ 1216  sudo gpasswd -a fox admin
+ 1217  id
+ 1218  id fox
+ 1219  sudo gpasswd -a fox sudo
+ 1220  ansiweather "الناوية"
+ 1221  ansiweather  -م  "ا
+ 1222  ansiweather  -l  "الناوية"
+ 1223  which ls
+ 1224  whereis ls.
+ 1225  whereis ls
+ 1226  sudo visudo 
+ 1227  nano data.txt 
+ 1228  ll
+ 1229  bash
+ 1230  wego
+ 1231  weather
+ 1232  sudo apt install weather-util
+ 1233  weather
+ 1234  weather cairo
+ 1235  weather cairo,Egypt
+ 1236  weather Egypt
+ 1237  weather fips1312400
+ 1238  weather الناويه
+ 1239  weather الناوية
+ 1240  sudo apt purge  weather-util
+ 1241  vweather
+ 1242  sudo apt install vweather
+ 1243  sudo apt-get install wego
+ 1244  wego
+ 1245  curl wttr.in/Paris
+ 1246  curl wttr.in/samanuud
+ 1247  curl wttr.in/Samanuud
+ 1248  curl wttr.in/Samannud
+ 1249  curl wttr.in/الناوية
+ 1250  curl wttr.in/الناوية سمنود
+ 1251  curl wttr.in/سمنود
+ 1252  curl wttr.in/samannud
+ 1253  bash
+ 1254  curl wttr.in/Al Nawiya
+ 1255  curl wttr.in/Al-Nawiya
+ 1256  curl wttr.in/AlNawiya
+ 1257  curl wttr.in/ElNawiya
+ 1258  curl wttr.in/Elnawiya
+ 1259  curl wttr.in/الناويه
+ 1260  curl wttr.in/الناوية
+ 1261  curl wttr.in/قرية الناوية
+ 1262  curl wttr.in/samannud
+ 1263  nano .bashrc 
+ 1264  bash
+ 1265  nano .bashrc 
+ 1266  bash
+ 1267  nano .bashrc 
+ 1268  ll
+ 1269  bash
+ 1270  ll
+ 1271  cd Desktop/
+ 1272  ll
+ 1273  ls -lafD
+ 1274  ls -lafd
+ 1275  ls -lad
+ 1276  ls -ladF
+ 1277  ls -lF
+ 1278  ls -lFh
+ 1279  ls -lFhd
+ 1280  ll
+ 1281  file /etc/passwd
+ 1282  man  file
+ 1283  df -h
+ 1284  man find
+ 1285  find /home/  -ctime -10
+ 1286  find /home/  -ctime -10 >Result
+ 1287  find /home/  -ctime -10 >Result 2>error
+ 1288  ll
+ 1289  cat Result 
+ 1290  rm -rf Result 
+ 1291  find /home/  -ctime -10 | wc -l
+ 1292  find /home/  -perm /6600
+ 1293  ps aux | grep -v $(whoami)
+ 1294  ps -p $(pgrep -u $(whoami))
+ 1295  pgrep -u $(whoami)
+ 1296  locate -i kh
+ 1297  man fine
+ 1298  man finf
+ 1299  man finfd
+ 1300  man find
+ 1301  find . -name example.txt
+ 1302  ll
+ 1303  find . -name mypass
+ 1304  find . -name mypasswd 
+ 1305  find  -name mypasswd 
+ 1306  find  -name *.mp3
+ 1307  find -iname k 
+ 1308  find -iname k /home/luka/
+ 1309  find /home/luka/  -iname  *.mp3
+ 1310  find /home/luka/  -iname  *.txt
+ 1311  find /home/luka/  -iname  *.web
+ 1312  find /home/user -type d -name example
+ 1313  find /home/fox -type d -name example
+ 1314  sudo find /home/fox -type d -name example
+ 1315  ll
+ 1316  ls 
+ 1317  Android     Downloads   mypasswd   Templates
+ 1318  find -user fox -not -group fox
+ 1319  su 
+ 1320  ps aux
+ 1321  touch contant
+ 1322  touch network.txt
+ 1323  apt list --upgradable
+ 1324  find /home/
+ 1325  ll
+ 1326  docker container  start hopeful_dewdney 
+ 1327  docker exec  -it  hopeful_dewdney  sh 
+ 1328  docker container  start momo 
+ 1329  docker exec  -it  momo  sh 
+ 1330  docker exec  -it hopeful_dewdney  sh
+ 1331  nano /etc/resolv.conf 
+ 1332  man -s5 /etc/hosts
+ 1333  cat /etc/hosts
+ 1334  hsotname
+ 1335  hostname
+ 1336  man  hostname
+ 1337  cat /etc/os-release 
+ 1338  os
+ 1339  nano .bashrc 
+ 1340  bash
+ 1341  os
+ 1342  nano /etc/hostname 
+ 1343  cat /etc/os-release 
+ 1344  service NetworkMangager
+ 1345  service NetworkManager
+ 1346  service NetworkManager status
+ 1347  ip a
+ 1348  ssh root@172.17.0.3
+ 1349  apt list --installed | grep openssh-server
+ 1350  sudo service ssh status
+ 1351  sudo netstat -ltnp | grep sshd
+ 1352  ufw allow port /tcp
+ 1353  ssh root@172.17.0.3
+ 1354  sudo ufw allow 2244/tcp
+ 1355  sudo ufw allow 22/tcp
+ 1356  ssh root@172.17.0.3
+ 1357  sudo ufw reload
+ 1358  sudo ufw status
+ 1359  sudo ufw start
+ 1360  sudo ufw reload 
+ 1361  sudo ufw enable 
+ 1362  sudo ufw status
+ 1363  ssh root@172.17.0.3
+ 1364  sudo ufw allow 172.17.0.3
+ 1365  ping 172.17.0.3
+ 1366  ssh root@172.17.0.3
+ 1367  ssh fox1@172.17.0.3
+ 1368  cd ubuntu/.vagrant/
+ 1369  cd ..
+ 1370  vagrant up
+ 1371  vagrant ssh
+ 1372  cd
+ 1373  cd centos/
+ 1374  vagrant up
+ 1375  vagrant ssh
+ 1376  vagrant up
+ 1377  vagrant ssh
+ 1378  vagrant destroy
+ 1379  vagrant up
+ 1380  vagrant ssh
+ 1381  w
+ 1382  cd
+ 1383  ssh root@10.0.2.15
+ 1384  sudo apt  install bash-completion bash-completion-extra
+ 1385  sudo apt  install bash-completion bash-completion-extras
+ 1386  ssh root@10.0.2.15
+ 1387  ssh vagrent@10.0.2.15
+ 1388  ssh vagrant@10.0.2.15
+ 1389  ssh vagrant@127.0.0.1
+ 1390  ssh vagrant@10.0.2.2
+ 1391  ssh vagrant@10.0.2.15
+ 1392  ifconfig 
+ 1393  man pkill
+ 1394  man pidof
+ 1395  kill -9 22128 19807 19775 19752 13462 13429 12573 12548 10175 8283 5800 5748 5521 5513 5507 5487 5450 5421 5401 5376 5345 5334 5333 5310 5306 5305 5289
+ 1396  w
+ 1397  who
+ 1398  pgrep -u luka
+ 1399  man pstree
+ 1400  pstree
+ 1401  man systemd
+ 1402  kill -9 1pstree |grep bas
+ 1403  pstree |grep bas
+ 1404  man fb
+ 1405  man fg
+ 1406  cd ../ubuntu/
+ 1407  vagrant ssh
+ 1408  su
+ 1409  man process
+ 1410  man ps
+ 1411  man grep
+ 1412  end
+ 1413  man end
+ 1414  man kill 
+ 1415  man -k "kill -15 "
+ 1416  man -k "kill -15"
+ 1417  man -k "kill "
+ 1418  man killall
+ 1419  killall firefox 
+ 1420  man killall
+ 1421  ps aux |grep -i chrome
+ 1422  man 7 signal
+ 1423  pstree |grep bash
+ 1424  sudo ln -s /etc/passwd /boot/passwd
+ 1425  cat /boot/passwd 
+ 1426  python -u "/home/luka/Desktop/cpp/test/f.py"
+ 1427  /usr/bin/python3 /home/luka/Desktop/cpp/test/f.py
+ 1428  ps 
+ 1429  jobs
+ 1430  sleep 100 &
+ 1431  jobs
+ 1432  ps
+ 1433  man jobs
+ 1434  top
+ 1435  ll /etc/bluetooth/
+ 1436  sudo rm -rf /etc/bluetooth/
+ 1437  which bluetooth
+ 1438  which bluetoothd
+ 1439  sudo rm-rf  /usr/bin/bluetooth
+ 1440  sudo rm -rf  /usr/bin/bluetooth
+ 1441  sudo rm -rf  /usr/sbin/bluetoothd sudo apt-get install bluez bluez-tools rfkill
+ 1442  sudo apt-get install bluez bluez-tools rfkill
+ 1443  which bluez
+ 1444  sudo apt purge  bluez bluez-tools rfkill
+ 1445  sudo systemctl status  bluetooth
+ 1446  sudo apt-get install bluez bluez-tools rfkill
+ 1447  sudo systemctl status bluetooth
+ 1448  sudo systemctl enable bluetooth
+ 1449  sudo systemctl restart bluetooth
+ 1450  sudo systemctl status bluetooth
+ 1451  reboot
+ 1452  nano /etc/systemd/system/bluetooth.service.d/noplugin-avrc.conf
+ 1453  nano /etc/systemd/system/bluetooth.target.wants/bluetooth.service 
+ 1454  sudo nano /etc/systemd/system/bluetooth.target.wants/bluetooth.service 
+ 1455  mv /var/lib/bluetooth /var/lib/bluetooth.bak
+ 1456  sudo mv /var/lib/bluetooth /var/lib/bluetooth.bak
+ 1457  sudo nano /etc/pulse/default.pa
+ 1458  systemctl status bluetooth.service 
+ 1459  systemctl daemon-reload
+ 1460  systemctl status bluetooth.service 
+ 1461  sudo systemctl daemon-reload
+ 1462  sudo systemctl restart bluetooth.service
+ 1463  sudo nano /etc/pulse/default.pa
+ 1464  sudo nano /etc/systemd/system/bluetooth.target.wants/bluetooth.service 
+ 1465  sudo systemctl restart bluetooth.servic
+ 1466  systemctl status bluetooth.service 
+ 1467  sudo systemctl daemon-reload
+ 1468  systemctl status bluetooth.service 
+ 1469  which bluetoothd
+ 1470  nano /usr/sbin/bluetoothd 
+ 1471  cd ubuntu/
+ 1472  vagrant up
+ 1473  vagrant ssh
+ 1474  sudo systemctl status bluetooth
+ 1475  bluez_monitor.enabled = true
+ 1476  sudo apt install   pulseaudio-module-bluetooth
+ 1477  sudo apt  pruge  pulseaudio-module-bluetooth
+ 1478  sudo apt purge  pulseaudio-module-bluetooth
+ 1479  sudo apt install   pulseaudio-module-bluetooth
+ 1480  sudo killall pulseaudio
+ 1481  pulseaudio --start    
+ 1482  sudo systemctl restart bluetooth
+ 1483  nano /etc/pulse/default.pa
+ 1484  sudo nano /etc/pulse/default.pa
+ 1485  killall pulseaudio
+ 1486  sudo apt-get --purge --reinstall install pulseaudio-module-bluetooth alsa-base pulseaudio
+ 1487  mv ~/.config/pulse ~/.config/pulse.old
+ 1488  exec --no-startup-id pactl load-module module-bluetooth-policy
+ 1489  sudo apt install libspa-0.2-bluetooth
+ 1490  bluetoothctl
+ 1491  systemctl status bluetooth.
+ 1492  systemctl status bluetooth.service 
+ 1493  systemctl reload bluetooth.service 
+ 1494  systemctl start  bluetooth.service 
+ 1495  bluetoothctl
+ 1496  dir
+ 1497  systemctl status bluetooth.service 
+ 1498  cat /etc/bash.bashrc 
+ 1499  su lol5
+ 1500  echo $PS1
+ 1501  nano /etc/bash.bashrc 
+ 1502  cat /etc/bash.bashrc 
+ 1503  PS1="\u@:)?"
+ 1504  ll
+ 1505  su -l
+ 1506  $PATH
+ 1507  env
+ 1508  bash
+ 1509  man tar
+ 1510  cd ubuntu/
+ 1511  vagrant destroy 
+ 1512  vagrant up
+ 1513  vagrant ssh
+ 1514  vagrant up
+ 1515  vagrant ssh
+ 1516  systemctl status bluetooth.service 
+ 1517  systemctl restart bluetooth.service 
+ 1518  systemctl reload bluetooth.service 
+ 1519  killall pulseaudio
+ 1520  systemctl restart bluetooth.service 
+ 1521  systemctl status bluetooth.service 
+ 1522  reboot 
+ 1523  sudo apt purge  bluez bluez-tools rfkill
+ 1524  sudo apt  pruge  pulseaudio-module-bluetooth
+ 1525  sudo apt purge  pulseaudio-module-bluetoot
+ 1526  sudo apt-get --purge --reinstall install pulseaudio-module-bluetooth alsa-base pulseaudio
+ 1527  apt install   pulseaudio-module-bluetooth
+ 1528  sudo apt install   pulseaudio-module-bluetooth
+ 1529  sudo apt  pruge  pulseaudio-module-bluetooth
+ 1530  sudo apt  remove  pulseaudio-module-bluetooth
+ 1531  sudo apt  update 
+ 1532  sudo apt  upgrade 
+ 1533  reboot 
+ 1534  ls -lR
+ 1535  cd Desktop/
+ 1536  ls -R
+ 1537  ls -Rl
+ 1538  ls -Rla
+ 1539  sudo apt updare
+ 1540  sudo apt update
+ 1541  apt-secure
+ 1542  man apt-key
+ 1543  sudo apt update
+ 1544  sudo apt upgrade 
+ 1545  ll
+ 1546  file عزوز.mp4 
+ 1547  file s1.sh 
+ 1548  file My\ English\ idems 
+ 1549  cd
+ 1550  ip a s
+ 1551  ifconfig 
+ 1552  ifconfig  -a
+ 1553  ip a s
+ 1554  ip route sh
+ 1555  nmcli 
+ 1556  nmtui
+ 1557  man nmtui
+ 1558  man nmcli
+ 1559  nmcli connection show 
+ 1560  nmcli connection up Wi-Fi1
+ 1561  cat /etc/netplan/
+ 1562  cat /etc/netplan/01-network-manager-all.yaml 
+ 1563  cd ubuntu/
+ 1564  vagrant up
+ 1565  vagrant ssh
+ 1566  find fingerprint
+ 1567  dc
+ 1568  cd
+ 1569  find fingerprint
+ 1570  sudo add-apt-repository --remove https://ppa.launchpadcontent.net/fingerprint/fprint/ubuntu
+ 1571  ifconfig 
+ 1572  nmcli 
+ 1573  cd Desktop/linux/
+ 1574  mkdir admin2
+ 1575  cd admin2
+ 1576  touch day1.txt
+ 1577  code . $
+ 1578  cd
+ 1579  nmcli 
+ 1580  ip route 
+ 1581  cd ..
+ 1582  git add .
+ 1583  git commit -m "adding day1 of admin2"
+ 1584  git push origin master 
+ 1585  route -n
+ 1586  ping 192.168.1.66
+ 1587  ping 192.168.1.67
+ 1588  ip a s
+ 1589  os
+ 1590  docker container  start hopeful_dewdney 
+ 1591  docker exec     -it    hopeful_dewdney sh
+ 1592  ip route list 
+ 1593  route -n
+ 1594  cd ubuntu/
+ 1595  vagrant  up
+ 1596  vagrant ssh
+ 1597  cat /etc/passwd
+ 1598  sudo userdel lol lol11 lol4 lol5 lol6 
+ 1599  cat /etc/passwd
+ 1600  sudo userdel lol 
+ 1601  sudo userdel lol lol11 
+ 1602  sudo userdel  lol11 
+ 1603  sudo userdel lol4  
+ 1604  sudo userdel  lol5  
+ 1605  sudo userdel lol6 
+ 1606  cat /etc/passwd
+ 1607  cd Desktop/linux/
+ 1608  ll
+ 1609  cd test/
+ 1610  l
+ 1611  ll
+ 1612  cd ..
+ 1613  ls -alR
+ 1614  ls admin
+ 1615  ls admin1
+ 1616  ls admin2
+ 1617  cd admin1
+ 1618  ll
+ 1619  cd files/
+ 1620  ll
+ 1621  nano data.txt 
+ 1622  sudo nano data.txt 
+ 1623  sudo newusers data.txt 
+ 1624  tail -2 /etc/passwd
+ 1625  cd 
+ 1626  ls
+ 1627  mkdir test
+ 1628  ll
+ 1629  cd test/
+ 1630  mf vox mox
+ 1631  ll
+ 1632  chown mox:mox mox 
+ 1633  ll
+ 1634  sudo chown mox:mox mox 
+ 1635  ll
+ 1636  sudo chown vox:vox xo
+ 1637  sudo chown vox:vox vox 
+ 1638  ll
+ 1639  su  - mox
+ 1640  l
+ 1641  ll
+ 1642  echo "Heeeeeeeeeeeeeeeey eng mohamed" >mox
+ 1643  sudo echo "Heeeeeeeeeeeeeeeey eng mohamed" >mox
+ 1644  ll ~/
+ 1645  ll /home/
+ 1646  cd
+ 1647  chmod o+wr
+ 1648  chmod o+wr /home/luka/
+ 1649  ll /home/
+ 1650  chmod o-wr /home/luka/
+ 1651  ll
+ 1652  ll/ h
+ 1653  ll /home/
+ 1654  mkdir /home/test
+ 1655  sud o mkdir /home/test
+ 1656  sudo mkdir /home/test
+ 1657  ll
+ 1658  cd /home/
+ 1659  ll
+ 1660  sudo chgrp testgroup  /home/test/
+ 1661  ll
+ 1662  chmod g+w test/
+ 1663  sudo chmod g+w test/
+ 1664  ll
+ 1665  cd test/
+ 1666  ll
+ 1667  md mox vox
+ 1668  sudo md mox vox
+ 1669  sudo touch  mox vox
+ 1670  ll
+ 1671  sudo chgrp testgroup mox vox 
+ 1672  ll
+ 1673  sudo chmod g+wrx
+ 1674  sudo chmod g+wrx mox x
+ 1675  sudo chmod g+wrx mox vox 
+ 1676  ll
+ 1677  sudo  chown vox:vox vox 
+ 1678  sudo  chown mox:mox mox 
+ 1679  ll
+ 1680  sudo chgrp testgroup mox vox 
+ 1681  ll
+ 1682  mv mox mox.txt
+ 1683  ll
+ 1684  sudo groupadd test1 test2
+ 1685  sudo groupadd test1 
+ 1686  sudo groupadd test2 
+ 1687  sudo chomd -aG test1 mox 
+ 1688  sudo chmod -aG test1 mox 
+ 1689  sudo usermod  -aG test1 mox 
+ 1690  sudo usermod  -aG test2 vox 
+ 1691  cat /etc/passwd
+ 1692  tail -2 /etc/passwd
+ 1693  tail -2 /etc/group
+ 1694  id mox
+ 1695  id vox
+ 1696  cd
+ 1697  sudo chage -m15 -M30 -W3  -I4 -E 2023-4-16 mox 
+ 1698  chage -l mox
+ 1699  sudo chage -l mox
+ 1700  sudo userdel mox 
+ 1701  sudo userdel vox
+ 1702  top
+ 1703  ps aux | wc -l
+ 1704  افخح
+ 1705  htop
+ 1706  ps aux | wc -l
+ 1707  df --local --exclude-type=tmpfs --exclude-type=devtmpfs --human-readable | sort --reverse --human-numeric-sort
+ 1708  find /home/luka/    *.mp3
+ 1709  ll /home/
+ 1710  cd test/
+ 1711  ll
+ 1712  du -h --max-depth=1 / | sort -hr
+ 1713  mf eng-mohamed.txt
+ 1714  cd
+ 1715  find / -name "eng-mohamed.txt"
+ 1716  find /home -name "eng-mohamed.txt"
+ 1717  find /home -name "eng-mohamed.txt" |grep eng-mohamed.txt
+ 1718  find /home -name "eng-mohamed.txt" | grep eng-mohamed.txt
+ 1719  local eng-mohamed
+ 1720  locate  eng-mohamed
+ 1721  sudo apt install plocate
+ 1722  locate  eng-mohamed
+ 1723  locate  eng-mohamed |grep txt
+ 1724  locate  eng-mohamed | grep   mohamed
+ 1725  docker -v
+ 1726  ll
+ 1727  chmod o+w test/
+ 1728  ll
+ 1729  cd test/
+ 1730  ll
+ 1731  sudo groupadd testgroup
+ 1732  sudo usermod -a -G testgroup luka
+ 1733  id luka 
+ 1734  sudo chgrp testgroup /home/luka/test/mox
+ 1735  sudo chmod g+x /home/luka/test/mox
+ 1736  ll
+ 1737  sudo usermod -a -G testgroup mox
+ 1738  cd ..
+ 1739  sudo chmod g+x /home/luka/test
+ 1740  ll
+ 1741  cd ubuntu/
+ 1742  vagrant ssh
+ 1743  free -h
+ 1744  history 
+ 1745  history  | grep echo 1 
+ 1746  history  | grep echo
+ 1747  echo 1 | sudo tee /proc/sys/vm/drop_caches
+ 1748  free -h
+ 1749  echo 1 | sudo tee /proc/sys/vm/drop_caches
+ 1750  free -h
+ 1751  echo 1 | sudo tee /proc/sys/vm/drop_caches
+ 1752  (echo 'deb [arch=amd64, trusted=yes] https://nuts.vysor.io/apt ./' | sudo tee /etc/apt/sources.list.d/vysor.list) && sudo apt update && sudo apt install vysor
+ 1753  du -sh *
+ 1754  echo 1 | sudo tee /proc/sys/vm/drop_caches
+ 1755  free -h
+ 1756  reboot 
+ 1757  free -h
+ 1758  df -h
+ 1759  docker ps
+ 1760  id
+ 1761  man docker
+ 1762  systemctl status bluetooth.
+ 1763  systemctl status bluetooth.service 
+ 1764  sudo systemctl status bluetooth.service 
+ 1765  sudo systemctl start --now  bluetooth.service 
+ 1766  sudo systemctl status bluetooth.service 
+ 1767  sudo systemctl start --now  bluetooth.service 
+ 1768  sudo systemctl status bluetooth.service 
+ 1769  sudo systemctl restart  bluetooth.service 
+ 1770  sudo systemctl status bluetooth.service 
+ 1771  sudo systemctl start bluetooth.service
+ 1772  sudo systemctl status bluetooth.service 
+ 1773  sudo systemctl enable bluetooth.service
+ 1774  sudo systemctl status bluetooth.service 
+ 1775  sudo systemctl start bluetooth.service
+ 1776  sudo systemctl status bluetooth.service 
+ 1777  sudo journalctl -u bluetooth.service
+ 1778  sudo systemctl status bluetooth.service 
+ 1779  systemctl start bluetoothinxi -Fzx
+ 1780  sudo systemctl status bluetooth.service 
+ 1781  inxi -Fzx
+ 1782  rfkill
+ 1783  bluetoothctl
+ 1784  scan off
+ 1785  docker run   -it  ubuntu:latest sh
+ 1786  docker run -it redis
+ 1787  free -h
+ 1788  cd Desktop/linux/
+ 1789  md docker
+ 1790  cd docker/
+ 1791  mf day1
+ 1792  mf day1.txt
+ 1793  rm day1
+ 1794  l
+ 1795  code .
+ 1796  docker run ubuntu echo "Hello, World!"
+ 1797  docker ps
+ 1798  docker ps -a
+ 1799  man journalctl
+ 1800  man ipcs
+ 1801  ipcs 
+ 1802  ipcs  --all
+ 1803  docker run        -i ubuntu 
+ 1804  docker run        -it ubuntu 
+ 1805  docker run        -id ubuntu 
+ 1806  docker run -it centos /bin/bash
+ 1807  man docker
+ 1808  docker --help
+ 1809  du -sh *
+ 1810  groups
+ 1811  sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,media-session,bin,locales,tests}}
+ 1812  docker run -d -p 80:80    nginx
+ 1813  curl http://localhost
+ 1814  docker run -d ubuntu
+ 1815  docker ls
+ 1816  docker  container ls
+ 1817  docker  container ls -a
+ 1818  docker container  prune 
+ 1819  docker  container ls -a
+ 1820  docker container  prune 
+ 1821  docker  container ls -a
+ 1822  curl http://localhost
+ 1823  docker container  stop happy_chatelet 
+ 1824  curl http://localhost
+ 1825  id
+ 1826  cat /etc/group
+ 1827  cat /etc/group |grep docker
+ 1828  docker info 
+ 1829  docker image ls
+ 1830  docker images
+ 1831  docker rmi e3d9fe55396f
+ 1832  docker rmi edd30f88d2d3
+ 1833  docker rmi 32b550d898a4
+ 1834  docker images
+ 1835  docker rmi 7150681e7eaf
+ 1836  docker images
+ 1837  docker --help
+ 1838  docker COMMAND --help
+ 1839  docker ps
+ 1840  docker ps -a
+ 1841  docker container  ls 
+ 1842  docker container  ls  -a
+ 1843  docker container  create -it ubuntu bash
+ 1844  docker container  ls 
+ 1845  docker container  ls  -a
+ 1846  docker ps -a
+ 1847  docker container  run fc25eb7b9f26
+ 1848  docker container  run brave_williamson
+ 1849  docker container  run  -it  fc25eb7b9f26
+ 1850  docker  run  -it  fc25eb7b9f26
+ 1851  docker ps -a
+ 1852  docker  run  -it  fc25eb7b9f26
+ 1853  docker  exec  -it  fc25eb7b9f26
+ 1854  docker  exec  -it  fc25eb7b9f26 sh
+ 1855  docker ps
+ 1856  docker ps -a
+ 1857  docker exec -it fc25eb7b9f26 sh
+ 1858  docker start  -it fc25eb7b9f26 sh
+ 1859  docker start  -it fc25eb7b9f26 
+ 1860  docker start  -i fc25eb7b9f26 
+ 1861  docker container  ls 
+ 1862  docker container  ls  -a
+ 1863  docker container  run -it python sh
+ 1864  docker container  ls -a
+ 1865  docker rm b0a5d81ecedf
+ 1866  docker container  ls -a
+ 1867  docker rm 9f340d36489e
+ 1868  docker container  stop  happy_chatelet 
+ 1869  docker rm 9f340d36489e
+ 1870  docker container  ls -a
+ 1871  ps -elf | grep docker 
+ 1872  ps -elf | grep contaier
+ 1873  ps -elf | grep contaierd
+ 1874  ps -el | grep contaierd
+ 1875  ps -ef | grep contaierd
+ 1876  ps -f | grep contaierd
+ 1877  ps -fl | grep contaierd
+ 1878  rfkill unblock bluetooth
+ 1879  sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
+ 1880  sudo apt update
+ 1881  sudo apt install pipewire pipewire-audio-client-libraries
+ 1882  systemctl --user daemon-reload
+ 1883  systemctl --user --now disable pulseaudio.service pulseaudio.socket
+ 1884  pactl info
+ 1885  bluetooth
+ 1886  bluetoothctl 
+ 1887  systemctl status bluetooth.service 
+ 1888  sudo systemctl restart bluetooth.service
+ 1889  systemctl status bluetooth.service 
+ 1890  sudo systemctl restart bluetooth.service
+ 1891  systemctl status bluetooth.service 
+ 1892  pactl list short | grep -i a2dp-sink
+ 1893  Install the pipewire-pulse 
+ 1894  sudo apt Install the pipewire-pulse 
+ 1895  sudo apt Install pipewire-pulse 
+ 1896  sudo apt install pipewire-pulse 
+ 1897  sudo apt update
+ 1898  sudo apt purge vysor
+ 1899  sudo apt upgrade
+ 1900  reboot 
+ 1901  docker run      --name lol  -h moca      ubuntu 
+ 1902  docker run   -it   --name lol  -h moca      ubuntu 
+ 1903  docker exec  -it lol sh
+ 1904  docker ps
+ 1905  docker ps -a
+ 1906  docker exec  -it 05cae63fc1de sh
+ 1907  docker start  -it 05cae63fc1de sh
+ 1908  docker start   05cae63fc1de sh
+ 1909  docker start   05cae63fc1de 
+ 1910  docker exec  -it 05cae63fc1de sh
+ 1911  docker run   05cae63fc1de 
+ 1912  docker plugin 
+ 1913  docker container  run  -it  --name lo -h lox ubuntu bash
+ 1914  docker image ls
+ 1915  docker rmi 320c88312bfe
+ 1916  docker image ls
+ 1917  docker inspect  feb
+ 1918  docker container run  -d --name web  -p 8000:80 nginx 
+ 1919  docker container run  -d --name web add-host web:172.17.0.4   -p 8000:
+ 1920  docker container run  -d --name web  -p 8000:80 nginx 
+ 1921  docker container run -it --name client  --add-host  web:172.17.0.4 centos:latest 
+ 1922  docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+ 1923  docker container  run -it --name alp1 --network host alpine
+ 1924  docker container  run -it --name pyflask python bash
+ 1925  docker commit pyflask khaledhawil:pyflask:v1.0
+ 1926  docker commit pyflask khaledhawil/pyflask:v1.0
+ 1927  docker container  run -it  --name pyf khaledhawil/pyflask
+ 1928  docker container  run -it  --name pyf khaledhawil/pyflask:v1.0
+ 1929  cd docker/
+ 1930  ls
+ 1931  cd f
+ 1932  cd dockerfile/
+ 1933  ls
+ 1934  docker build .
+ 1935  docker build -t khaledhawil/pyflask:v1.0 .
+ 1936  docker build -t khaledhawil/pyflask:v1.2 .
+ 1937  docker container  ls -a
+ 1938  docker image   ls -a
+ 1939  docker rmi baeb96d69092
+ 1940  docker rmi b29e4cd5a273
+ 1941  docker rmi baeb96d69092
+ 1942  docker rmi 0f2c7f307e4d
+ 1943  docker rmi 6a4d504045ae
+ 1944  docker rmi e479273695df
+ 1945  docker rmi daa629fd1ee0
+ 1946  docker rmi daa629fd1ee0 -f
+ 1947  docker image ls -a 
+ 1948  docker rmi e479273695df
+ 1949  cat /proc/sys/vm/watermark_boost_factor
+ 1950  cat /proc/sys/v
+ 1951  cat /proc/sys/vm/laptop_mode 
+ 1952  ls
+ 1953  docker build -t pyflask .
+ 1954  cd dockerfile/
+ 1955  docker build -t pyflask .
+ 1956  docker container run pyflask
+ 1957  docker images
+ 1958  docker image ls -a
+ 1959  docker rmi e479273695df
+ 1960  docker rmi 6723f262f1ee
+ 1961  docker images --filter=reference=
+ 1962  docker images --filter=reference=none
+ 1963  docker images --filter=reference=6723f262f1ee
+ 1964  docker rmi b29e4cd5a273
+ 1965  docker rmi 2c8c71d8342f
+ 1966  docker rmi b29e4cd5a273
+ 1967  docker image ls -a
+ 1968  docker rmi 6b7dfa7e8fdb
+ 1969  docker image ls -a
+ 1970  docker run -it pyflask bash
+ 1971  docker run -d pyflask 
+ 1972  docker run -id pyflask 
+ 1973  docker ps
+ 1974  docker rmi pyflask:latest 
+ 1975  docker rmi pyflask
+ 1976  docker ps
+ 1977  docker container  prune 
+ 1978  docker rmi pyflask
+ 1979  docker ps
+ 1980  docker container  stop  672db3b5c5d6
+ 1981  docker container  stop  ec9e7c0657ce
+ 1982  docker ps
+ 1983  docker container  prune 
+ 1984  docker rmi pyflask
+ 1985  docker image ls -a
+ 1986  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+ 1987  sudo chmod +x /usr/local/bin/docker-compose
+ 1988  docker-compose --version
+ 1989  docker-compose -v
+ 1990  time
+ 1991  uptime
+ 1992  type -a kill
+ 1993  type -a ps
+ 1994  type -a grep
+ 1995  type -a ll
+ 1996  man type
+ 1997  man type -a
+ 1998  type --help
+ 1999  ip a 
+ 2000  history >histo.txt

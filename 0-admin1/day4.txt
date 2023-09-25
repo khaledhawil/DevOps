@@ -1,0 +1,68 @@
+$         configuring the Bash shell
+
+#startup file 
+$ Global : 
+- /etc/bashrc:
+Anything here applyis to all users
+- /etc/profile 
+$ user-specific
+- ~/.bashrc 
+- ~/.bash-profile
+
+
+$ variables
+- env variables
+- user varibles
+ 
+
+$ login shell :
+#A login shell also reads and executes the commands from the user's login files,
+-such as ~/.bash_profile, ~/.bash_login, or ~/.profile.
+#ex
+When Bash is invoked as a Login shell;
+→ Login process calls /etc/profile
+→ /etc/profile calls the scripts in /etc/profile.d/
+→ Login process calls ~/.bash_profile
+→ ~/.bash_profile calls ~/.bashrc
+→ ~/.bashrc calls /etc/bashrc
+#ex.
+Login shells include the following.
+• Shells created by explicitly telling to login.
+examples: $ su - | $ su -l | $ su --login | $ su USERNAME - | $ su -l USERNAME | $ su --login USERNAME | $ sudo -i
+-------------------------------------------------------------------
+
+
+$non login shell :
+#non-login shells will still read other shell configuration files,
+-such as ~/.bashrc.
+#ex
+When bash is invoked as a Non login shell;
+→ Non-login process(shell) calls ~/.bashrc
+→ ~/.bashrc calls /etc/bashrc
+→ /etc/bashrc calls the scripts in /etc/profile.d/
+• Shells created using the below command syntax.
+examples:$ su |$ su USERNAME
+____________________________________________________________________________________________
+- Archiving in linux 
+$ tar 
+#ex: to create tar archive
+$ tar -cvf file.tar  filename....
+#ex: to extract tar file :
+$ tar -xvf file.tar
+#ex : to archive tar to xz
+$ tar -xcJvf  file.tar  file/
+-c :
+craete 
+-v :
+verbosely list files processed
+-f:
+use archive file or device ARCHIVE
+-t:
+List  the contents of an archive
+-x:
+Extract files from an archive.
+-p:
+preserve the premissions of files and directories whene extracting
+-z:
+
+

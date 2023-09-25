@@ -1,0 +1,94 @@
+*                 Docker Compose 
+
+$ docker-compose up -d
+$ docker-compose down
+$ docker-compose exec contr-name ping -c 3 another-contnr :
+to piing from contnr to another contnr 
+- Overall, Docker Compose is a powerful tool for managing multi-container Docker applications,
+- making it easier for developers to define and deploy complex applications in a consistent and reproducible manne
+- Configure services: You can use Docker Compose to configure the settings for each service,
+~  such as environment variables, ports, volumes, and dependencies.
+- Manage networks: Docker Compose allows you to create custom networks for your application,
+~ and specify which services are connected to which networks.
+
+- Manage volumes: You can use Docker Compose to manage the volumes used by your services,
+~ including creating new volumes and mounting existing volumes.
+
+Start and stop services: With a single command, you can start all the services in your application, or stop them all when you're done.
+- It allows you to define multi-container applications in a YAML file 
+^ (called a compose file)
+- It lets you start all the services in your app with a single command
+$ (docker-compose up)
+
+
+- Sure! Here's a simple example of a Docker Compose file that defines two services,
+* a web server and a database:
+
+version: '3'
+
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: mydatabase
+* anothe one |
+
+
+      version: '3'
+
+      services:
+        app:
+          build:
+            context: .
+            dockerfile: Dockerfile
+          image: myapp
+          container_name: myapp
+          restart: always
+          command: python manage.py runserver 0.0.0.0:8000
+          environment:
+            DEBUG: 'true'
+            SECRET_KEY: 'mysecretkey'
+          volumes:
+            - .:/code
+            - static_volume:/code/static
+          ports:
+            - "8000:8000"
+          networks:
+            - mynetwork
+          depends_on:
+            - db
+        db:
+          image: postgres
+          container_name: mydb
+          restart: always
+          environment:
+            POSTGRES_USER: myuser
+            POSTGRES_PASSWORD: mypassword
+            POSTGRES_DB: mydb
+          volumes:
+            - db_volume:/var/lib/postgresql/data
+          networks:
+            - mynetwork
+      
+      volumes:
+        db_volume:
+        static_volume:
+      
+      networks:
+        mynetwork:
+          driver: bridge
+
+
+
+
+
+
+
+

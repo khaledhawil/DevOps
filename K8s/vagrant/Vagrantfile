@@ -1,0 +1,317 @@
+
+# Vagrant.configure("2") do |config|
+
+#   # Define the Kubernetes nodes
+#   config.vm.define "master" do |master|
+#     master.vm.box = "ubuntu/focal64"
+#     master.vm.hostname = "master"
+#     master.vm.network "private_network", ip: "192.168.56.1"
+#     master.vm.provider "virtualbox" do |v|
+#       v.memory = 2048
+#       v.cpus = 2
+#     end
+#   end
+
+#   config.vm.define "worker" do |worker|
+#     worker.vm.box = "ubuntu/focal64"
+#     worker.vm.hostname = "worker"
+#     worker.vm.network "private_network", ip: "192.168.57.1"
+#     worker.vm.provider "virtualbox" do |v|
+#       v.memory = 2048
+#       v.cpus = 2
+#     end
+#   end
+
+# end
+
+# Vagrant.configure("2") do |config|
+#   config.vm.box = "ubuntu/focal"
+
+#   config.vm.define "master" do |master|
+#     master.vm.hostname = "master"
+#     master.vm.network "private_network", ip: "192.168.56.2"
+
+#     master.vm.provider "virtualbox" do |vb|
+#       vb.memory = "2048"
+#       vb.cpus = "2"
+#     end
+
+#     master.vm.provision "shell", inline: <<-SHELL
+#       # Install Docker
+#       apt-get update
+#       apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+#       curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#       add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#       apt-get update
+#       apt-get install -y docker-ce docker-ce-cli containerd.io
+
+#       # Install Kubernetes components
+#       curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+#       echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+#       apt-get update
+#       apt-get install -y kubelet kubeadm kubectl
+#     SHELL
+
+#     master.vm.provision "shell", inline: <<-SHELL
+#       # Initialize Kubernetes master
+#       kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.33.10
+
+#       # Copy kubeconfig to user's home directory
+#       mkdir -p /home/vagrant/.kube
+#       cp -i /etc/kubernetes/admin.conf /home/vagrant/.kube/config
+#       chown vagrant:vagrant /home/vagrant/.kube/config
+
+#       # Install Flannel network plugin
+#       kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+#     SHELL
+#   end
+
+#   config.vm.define "worker" do |worker|
+#     worker.vm.hostname = "worker"
+#     worker.vm.network "private_network", ip: "192.168.56.3"
+
+#     worker.vm.provider "virtualbox" do |vb|
+#       vb.memory = "2048"
+#       vb.cpus = "2"
+#     end
+
+#     worker.vm.provision "shell", inline: <<-SHELL
+#       # Install Docker
+#       apt-get update
+#       apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+#       curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#       add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#       apt-get update
+#       apt-get install -y docker-ce docker-ce-cli containerd.io
+
+#       # Install Kubernetes components
+#       curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+#       echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+#       apt-get update
+#       apt-get install -y kubelet kubeadm kubectl
+#     SHELL
+
+#     # worker.vm.provision "shell", inline: <<-SHELL
+#     #   # Join Kubernetes cluster
+#     #   kubeadm join 192.168.33.10:6443 --token <token> --discovery-token-ca-cert-hash <hash>
+#     # SHELL
+#   end
+# end
+
+# wlp3s0
+
+# Vagrant.configure("2") do |config|
+
+#   # Define the Kubernetes master
+#   config.vm.define "master" do |master|
+#     master.vm.box = "ubuntu/focal64"
+#     master.vm.hostname = "master"
+#     master.vm.network "public_network", bridge: "wlp3s0: Wi-Fi (DODO U)"
+#     master.vm.provider "virtualbox" do |v|
+#       v.memory = 2048
+#       v.cpus = 2
+#     end
+#   #   # Install Kubernetes master components
+#   #   master.vm.provision "shell", inline: <<-SHELL
+#   #     curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+#   #     echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+#   #     sudo apt-get update
+#   #     sudo apt-get install -y kubelet kubeadm kubectl
+#   #   SHELL
+#   end
+
+#   # Define the Kubernetes worker
+#   config.vm.define "worker" do |worker|
+#     worker.vm.box = "ubuntu/focal64"
+#     worker.vm.hostname = "worker"
+#     worker.vm.network "public_network", bridge: "wlp3s0: Wi-Fi (DODO U)"
+#     worker.vm.provider "virtualbox" do |v|
+#       v.memory = 1024
+#       v.cpus = 2
+#     end
+#   #   # Install Kubernetes worker components
+#   #   worker.vm.provision "shell", inline: <<-SHELL
+#   #     curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+#   #     echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+#   #     sudo apt-get update
+#   #     sudo apt-get install -y kubelet kubeadm kubectl
+#   #   SHELL
+#   end
+
+# end
+
+# ----
+
+
+
+
+# Vagrant.configure("2") do |config|
+#   # Define the first VM
+#   config.vm.define "node1" do |node1|
+#     node1.vm.box = "ubuntu/focal64" # Ubuntu 20.04 LTS box
+#     node1.vm.network "private_network", ip: "192.168.56.101"
+#     node1.vm.provider "virtualbox" do |vb|
+#       vb.memory = "2048"
+#     end
+#   end
+
+#   # Define the second VM
+#   config.vm.define "node2" do |node2|
+#     node2.vm.box = "ubuntu/focal64" # Ubuntu 20.04 LTS box
+#     node2.vm.network "private_network", ip: "192.168.56.102"
+#     node2.vm.provider "virtualbox" do |vb|
+#       vb.memory = "1024"
+#     end
+#   end
+
+#   # Provisioning script for Kubernetes setup
+#   config.vm.provision "shell", inline: <<-SHELL
+#     # Update the system
+#     sudo apt-get update -y
+
+#     # Install Docker
+#     sudo apt-get install docker.io -y
+#     sudo systemctl enable --now docker
+
+#     # Install kubeadm, kubelet, and kubectl
+#     sudo apt-get install -y apt-transport-https curl
+#     curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+#     echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+#     sudo apt-get update -y
+#     sudo apt-get install -y kubelet kubeadm kubectl
+#     sudo apt-mark hold kubelet kubeadm kubectl
+
+#     # Disable swap
+#     sudo swapoff -a
+#     sudo sed -i '/ swap / s/^/#/' /etc/fstab
+
+#     # Initialize the Kubernetes cluster on the first node
+#     if [[ "$(hostname)" == "node1" ]]; then
+#       sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --ignore-preflight-errors=NumCPU
+
+#       # Set up kubeconfig for the vagrant user
+#       mkdir -p /home/vagrant/.kube
+#       sudo cp -i /etc/kubernetes/admin.conf /home/vagrant/.kube/config
+#       sudo chown vagrant:vagrant /home/vagrant/.kube/config
+
+#       # Install Calico network plugin
+#       kubectl apply -f https://docs.projectcalico.org/v3.20/manifests/calico.yaml
+#     fi
+
+#     # Join the other nodes to the cluster
+#     if [[ "$(hostname)" != "node1" ]]; then
+#       sudo kubeadm join 192.168.56.101:6443 --token <YOUR_TOKEN> --discovery-token-ca-cert-hash <YOUR_DISCOVERY_TOKEN_HASH> --ignore-preflight-errors=NumCPU
+#     fi
+#   SHELL
+# end
+
+# Vagrant.configure("2") do |config|
+#   config.vm.define "vm1" do |node1|
+#     node1.vm.box = "ubuntu/focal64"
+#     node1.vm.network "private_network", ip: "192.168.56.10"
+#     node1.vm.provider "virtualbox" do |vb1|
+#       vb1.memory = 1024  # Set memory allocation to 1GB
+#       vb1.cpus = 1      # Set CPU allocation to 1 core
+#     end
+#   end
+
+#   config.vm.define "vm2" do |node2|
+#     node2.vm.box = "ubuntu/focal64"
+#     node2.vm.network "private_network", ip: "192.168.56.11"
+#     node2.vm.provider "virtualbox" do |vb2|
+#       vb2.memory = 2048  # Set memory allocation to 2GB
+#       vb2.cpus = 2      # Set CPU allocation to 2 cores
+#     end
+#   end
+# end
+
+
+# Vagrant.configure("2") do |config|
+#   config.vm.define "master" do |master|
+#     master.vm.box =  "ubuntu/bionic64"
+#     master.vm.hostname = "master"
+#     master.vm.network "private_network", ip: "192.168.56.2"
+#     master.vm.provider "virtualbox" do |vb|
+#       vb.memory = 2048  # Set memory allocation to 2GB
+#       vb.cpus = 2      # Set CPU allocation to 2 cores
+#     end
+#   end
+
+#   config.vm.define "worker" do |worker|
+#     worker.vm.box = "ubuntu/bionic64"
+#     worker.vm.hostname = "worker"
+#     worker.vm.network "private_network", ip: "192.168.56.3"
+#     worker.vm.provider "virtualbox" do |vb|
+#       vb.memory = 1024  # Set memory allocation to 1GB
+#       vb.cpus = 1    # Set CPU allocation to 1 core
+#     end
+#   end
+# end
+
+
+Vagrant.configure("2") do |config|
+  # تعريف صورة النظام الأساسي لاستخدامها مع Vagrant
+  config.vm.box = "debian/buster64"
+
+  # تكوين خصائص النظام الأساسي
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"  # حجم الذاكرة بالميجابايت
+    vb.cpus = 1        # عدد النوى المخصصة للجهاز الافتراضي
+  end
+
+  # إعداد نقاط الدخول إلى العقدة الأولى
+  config.vm.define "node1" do |node1|
+    node1.vm.hostname = "node1"
+    node1.vm.network "private_network", ip: "192.168.57.101"
+  end
+
+  # إعداد نقاط الدخول إلى العقدة الثانية
+  config.vm.define "node2" do |node2|
+    node2.vm.hostname = "node2"
+    node2.vm.network "private_network", ip: "192.168.57.102"
+  end
+  # إعداد نقاط الدخول إلى العقدة الثالثة
+  config.vm.define "node3" do |node3|
+    node3.vm.hostname = "node3"
+    node3.vm.network "private_network", ip: "192.168.57.103"
+  end
+end
+
+
+
+
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrant.configure("2") do |config|
+#   config.vm.define "master" do |master|
+#     master.vm.box = "debian/buster64"
+#     master.vm.hostname = "master"
+#     master.vm.network "private_network", ip: "192.168.57.101"
+#     master.vm.provider "virtualbox" do |vb|
+#       vb.memory = "2048"
+#       vb.cpus = 2
+#     end
+#   end
+
+#   config.vm.define "worker1" do |worker1|
+#     worker1.vm.box = "debian/buster64"
+#     worker1.vm.hostname = "worker1"
+#     worker1.vm.network "private_network", ip: "192.168.57.102"
+#     worker1.vm.provider "virtualbox" do |vb|
+#       vb.memory = "1024"
+#       vb.cpus = 1
+#     end
+#   end
+
+#   config.vm.define "worker2" do |worker2|
+#     worker2.vm.box = "debian/buster64"
+#     worker2.vm.hostname = "worker2"
+#     worker2.vm.network "private_network", ip: "192.168.57.103"
+#     worker2.vm.provider "virtualbox" do |vb|
+#       vb.memory = "1024"
+#       vb.cpus = 1
+#     end
+#   end
+# end

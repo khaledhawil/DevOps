@@ -1,0 +1,28 @@
+- Environment variables are a way to pass configuration information to a container, such as database connection settings or API keys. 
+By using environment variables, 
+you can decouple your application code from its configuration, which makes it easier to deploy your application across multiple environments.
+
+
+
+For example, to set the DATABASE_URL environment variable to postgres://user:password@host:port/database in a container, 
+you would define the container specification like this:
+
+containers:
+  - name: my-container
+    image: my-image
+    env:
+      - name: DATABASE_URL
+        value: postgres://user:password@host:port/database
+
+
+        
+
+
+
+
+
+
+
+
+
+

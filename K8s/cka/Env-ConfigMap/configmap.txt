@@ -1,0 +1,41 @@
+In Kubernetes,
+a ConfigMap is a way to store configuration data that can be consumed by a container at runtime. 
+ ConfigMaps are used to decouple configuration from container images, 
+ which makes it easier to manage configuration across different environments and reduces the need for image rebuilds.
+
+ A ConfigMap can be used to store key-value pairs, files, or entire directories of configuration data. 
+ The data can be consumed by a container in a number of ways, 
+ including as environment variables, command-line arguments, or mounted files.
+
+
+To create a ConfigMap, you can define it using a YAML manifest file and use the kubectl create command to create it in the cluster. 
+Here's an example of a ConfigMap that stores a set of environment variables
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: my-configmap
+# data:
+#   DATABASE_URL: postgres://user:password@host:port/database
+#   API_KEY: abcdefg1234567
+- -----------------------------------------------
+containers:
+  - name: my-container
+    image: my-image
+    env:
+      - name: DATABASE_URL
+        valueFrom:
+          configMapKeyRef:
+            name: my-configmap
+            key: DATABASE_URL
+
+
+
+
+To create config-map by imprative way :
+$ k create cm or configmap config-name --from-file=path
+$ k get cm  config-map -o yaml
+$ k describe cm config-map
+$ k create cm --help
+
+
+

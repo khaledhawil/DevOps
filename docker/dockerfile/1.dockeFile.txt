@@ -1,0 +1,97 @@
+# Here i'll write all instruction of docker file 
+
+
+1- FROM :
+# Specify the base image
+
+2- WORKDIR /app
+
+# it liks cd in linux
+# Set the working directory for subsequent instructions
+
+
+
+# Copy package.json and package-lock.json files to the Docker image
+3- COPY package*.json ./
+
+# Install dependencies
+4- RUN npm install
+
+# Copy the rest of the application files to the Docker image
+5- COPY . .
+
+# Expose port 3000 to the host machine
+6- EXPOSE 3000
+
+# Set the default command to run when the Docker container starts
+7- CMD ["npm", "start"]
+
+
+Base image: The FROM instruction specifies the base image to use as a starting point for the new image. This can be an official image from Docker Hub or a custom image.
+- Example: 
+$FROM ubuntu:20.04
+
+Maintainer: The LABEL instruction can be used to provide metadata about the image, such as the maintainer's name and email. 
+- Example:
+$ LABEL maintainer="John Doe <john.doe@example.com>"
+
+Environment variables: The ENV instruction sets environment variables that will be available to processes running inside the container.
+- Example: 
+$ ENV MY_VARIABLE=my_value
+
+Working directory: The WORKDIR instruction sets the working directory for subsequent instructions like RUN, CMD, and ENTRYPOINT.
+- Example: 
+$ WORKDIR /app
+
+Installing dependencies: The RUN instruction executes commands to install packages, build applications, or perform other tasks. This creates a new layer in the image. 
+- Example:
+$  RUN apt-get update && apt-get install -y python3 python3-pip.
+
+Copying files: The COPY instruction copies files from the host system to the image.
+- Example: 
+$ COPY . /app
+
+Exposing ports: The EXPOSE instruction informs Docker that the container listens on specific network ports at runtime.
+- Example:
+$  EXPOSE 80
+
+User: The USER instruction sets the user that will run subsequent instructions or the container's default user.
+- Example: 
+$ USER myuser
+
+Running commands: The CMD and ENTRYPOINT instructions define the default command that is executed when a container is launched from the image. CMD provides default arguments for ENTRYPOINT or runs a command if ENTRYPOINT is not specified. ENTRYPOINT configures the container to run as an executable, accepting arguments from CMD.
+- Example:
+$  ENTRYPOINT ["python3"] and CMD ["app.py"]
+
+A simple Dockerfile example:
+
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+To build an image from a Dockerfile, run the following command in the same directory as the Dockerfile:
+
+$ docker build -t your-image-name .
+Replace your-image-name with a name for your Docker image. The -t flag specifies the name and optionally a tag in the 'name:tag' format.
+
+After building the image, you can run a container from it with the following command:
+
+docker run -p host_port:container_port your-image-name
+Replace host_port with the port on your host machine, container_port with the port exposed in the Dockerfile, and your-image-name with the name you used when building the image.
+

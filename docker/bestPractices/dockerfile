@@ -1,0 +1,51 @@
+# Use a specific version of the Node.js image as the base image
+FROM node:14-alpine AS base
+
+# Set a working directory for the app inside the container
+WORKDIR /app
+
+# Install production dependencies
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Use a new layer for development dependencies
+FROM base AS dev
+ENV NODE_ENV=development
+#RUN npm install --only=development
+
+# Copy the application code to the container
+COPY . .
+
+# Expose the default port for the app
+EXPOSE 3000
+
+# Set the command to run when the container starts
+CMD ["node", "index.js"]
+
+# Use a small base image
+FROM alpine:3.13
+
+# Set the working directory
+WORKDIR /app
+
+# Create a non-root user
+RUN adduser -D myuser
+USER myuser
+
+# Install dependencies 
+# Cleaning up temporary files with --no-cache-dir
+RUN apk add --no-cache python3 py3-pip
+COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+# Copy the application code
+COPY app.py .
+
+# Set environment variables
+ENV FLASK_APP=app.py
+
+# Expose the port
+EXPOSE 5000
+
+# Start the application
+CMD ["flask", "run", "--host=0.0.0.0"]

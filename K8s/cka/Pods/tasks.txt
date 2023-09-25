@@ -1,0 +1,165 @@
+$ Hello luka ,The time now is 19:02 and it's 30-4-2023
+
+https://github.com/jayendrapatil/kubernetes-exercises/blob/main/topics/pods.md
+
+
+* i'll write what i do today 
+
+- ex1 
+Create a pod named mongo using image mongo in a new Kubernetes namespace my-website:
+
+$ kubectl create namespace my-website
+$ kubectl run mongo --image=mongo --namespace=my-website
+
+- ex2
+Create a new pod custom-nginx using the nginx image and expose it on container port 8080.
+
+$ kubectl run custom-nginx --image=nginx --port=8080
+
+- ex3 
+Check which node the pod is hosted on
+$ kubectl get pods -o wide
+$ k get pods -o wide
+- ex4 
+Get only the pods name
+$ kubectl get pods -o name
+
+- ex5 
+Delete the pod with the name nginx
+$ kubectl delete pod nginx
+
+- ex6 
+Delete the pod with the name nginx in the alpha namespace
+$ kubectl delete pod nginx --namespace=alpha
+
+- ex7 
+Create pod nginx-labels with nginx image and label name=nginx, tier=frontend, env=dev
+
+$ kubectl run nginx-labels --image=nginx --labels=name=nginx,tier=frontend,env=dev,version=v1
+# OR by yml file 
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    env: dev
+    name: nginx
+    tier: frontend
+    version: v1
+  name: nginx-labels
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+$ kubectl apply -f nginx-labels.yaml
+- ex8
+Delete the pod with name nginx-labels with force and no grace period
+$  k delete pod nginx-labels --force --grace-period=0
+
+# ======================================This is important ==============================================================
+- ex9
+Create a pod with name nginx-file and image nginx using pod defination file
+$ kubectl run nginx-file --image=nginx --dry-run=client -o yaml > nginx-file.yaml # this will creating pod file and set all configs on it
+$ kubectl apply -f nginx-file.yaml
+
+
+- ex10
+Create a nginx pod with name nginx and copy the pod definition file to a nginx_definition.yaml file
+$ kubectl run nginx --image=nginx
+$ kubectl get nginx -o yaml > nginx_definition.yaml
+
+- ex11
+Create a ubuntu-1 pod with image ubuntu with command sleep 4800
+$ k run ubuntu-1 --image=ubuntu --command sleep 4800
+
+
+
+- ex12 
+#A web application requires a specific version of redis to be used as a cache. 
+#Create a pod with the following characteristics, and leave it running when complete:
+1-The pod must run in the web namespace.
+2-The name of the pod should be cache
+3-Use the redis image with the 3.2 tag
+4-Expose port 6379
+- 
+$ kubectl create namespace web
+$ kubectl  run  cache --image=redis:3.2 --port 6379 --namespace web
+$ kubectl get pods -n web # this to show pods in spicific namespase "web" is a namespace
+
+- ex13
+Create an nginx pod name nginx-resources with requests cpu=100m,memory=256Mi and limits cpu=200m,memory=512Mi
+$ k run nginx-resources  --image=nginx  --requests='cpu=100m,meomry=256mi' --limits='cpu=200m,memory=512mi'
+
+apiVersion: v1
+kind: Pod
+metadata:
+#   creationTimestamp: null
+  labels:
+    run: nginx-resources
+  name: nginx-resources
+spec:
+  containers:
+  - image: nginx
+    name: nginx-resources
+    resources:
+      limits:
+        cpu: 200m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 256Mi
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
+
+
+
+
+*   Clean up
+
+rm nginx-labels.yaml nginx-file.yaml nginx_definition.yaml nginx-resources.yaml
+kubectl delete pod mongo -n my-website --force --grace-period=0
+kubectl delete pod cache -n web --force --grace-period=0
+kubectl delete pod nginx -n alpha --force --grace-period=0
+kubectl delete namespace alpha web my-website
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

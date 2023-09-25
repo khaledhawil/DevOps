@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: khaledhawil/pyapp:1.2.1
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /khaled
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /khaled
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 20
+          failureThreshold: 5

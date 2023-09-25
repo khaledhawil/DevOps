@@ -1,0 +1,75 @@
+
+- Check number of deployments in the default namespace
+
+$ k get deploy
+
+
+- Create deployment named nginx-deployment with nginx image with 3 replicas
+
+$ k create deploy nginx-deployment --image=nginx  --replicas=3
+
+$ kubectl create deploy nginx-deployment --image nginx && kubectl scale deploy nginx-deployment --replicas 3
+
+
+cat << EOF > nginx-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx:1.20
+        name: nginx
+EOF
+
+$ kubectl apply -f nginx-deployment.yaml
+
+
+- View the YAML of nginx-deployment deployment
+
+$ kubectl get deploy nginx-deployment -o yaml
+
+
+- Create a new deployment for running nginx with the following parameters
+1- Name the deployment frontend and configure with 4 replicas
+2- Configure the pod with a container image of nginx:1.21
+3- Set an environment variable of NGINX PORT=8080 and also expose that port for the container above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

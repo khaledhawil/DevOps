@@ -1,0 +1,52 @@
+- -------------------------------------------------- Node Affinity ----------------------------------------------------------------------
+
+that allows you to specify more complex rules for pod scheduling than just using node selectors. 
+With node affinity, 
+you can define rules based on the labels of a node or the labels of other pods running on a node.
+
+- There are two types of node affinity in Kubernetes:
+
+1- RequiredDuringSchedulingIgnoredDuringExecution: 
+This means that the pod must be scheduled on a node that matches the node affinity rules. 
+If no nodes match the rules, the pod will not be scheduled.
+
+
+2- PreferredDuringSchedulingIgnoredDuringExecution: 
+This means that the pod should be scheduled on a node that matches the node affinity rules, 
+but if no such node is available, the pod can still be scheduled on a node that doesn't match the rules.
+
+
+Here's an example:
+
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: my-pod
+# spec:
+#   containers:
+#   - name: my-container
+#     image: my-image
+#   nodeAffinity:
+#     requiredDuringSchedulingIgnoredDuringExecution:
+#       nodeSelectorTerms:
+#       - matchExpressions:
+#         - key: disktype
+#           operator: In
+#           values:
+#           - ssd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

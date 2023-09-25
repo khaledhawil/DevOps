@@ -1,0 +1,105 @@
+In Kubernetes  a "volume" is an abstraction that represents a directory with data that can be accessed by containers in a pod. 
+It provides a way to store and share data between containers or persist data beyond the lifetime of a pod.
+
+
+- Kubernetes supports various types of volumes, including:
+
+# Non-Persistent Storage:
+Non-persistent storage, also known as ephemeral storage, is tied to the lifecycle of a pod. 
+It exists only as long as the pod is running and is lost when the pod is terminated or rescheduled. 
+- Non-persistent storage is typically provided using volume types like EmptyDir or hostPath.
+
+- EmptyDir: 
+An EmptyDir volume is created when a pod is scheduled on a node and is deleted when the pod terminates. 
+It is suitable for sharing temporary data between containers in a pod during the pod's lifetime.
+- ex
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: my-pod
+# spec:
+#   containers:
+#     - name: my-container
+#       image: my-image
+#       volumeMounts:
+#         - name: my-volume
+#           mountPath: /path/to/mount
+#   volumes:
+#     - name: my-volume
+#       emptyDir: {}
+
+
+- HostPath:
+A HostPath volume mounts a file or directory from the host node's filesystem into the pod. 
+The data stored in a HostPath volume is not portable across different nodes, and it is tied to the specific node where the pod is scheduled.
+- ex
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: my-pod
+# spec:
+#   containers:
+#     - name: my-container
+#       image: my-image
+#       volumeMounts:
+#         - name: my-volume
+#           mountPath: /path/to/mount
+#   volumes:
+#     - name: my-volume
+#       hostPath:
+#         path: /path/on/host
+
+
+* Non-persistent storage is useful for caching, temporary files, or any data that doesn't need to persist beyond the lifecycle of a pod.
+
+
+# Persistent Storage:
+Persistent storage allows data to persist beyond the lifecycle of a pod. 
+It enables stateful applications that require data to be stored and accessed even when pods are terminated, rescheduled, or moved between nodes. 
+Persistent storage is implemented using PersistentVolumes (PV) and PersistentVolumeClaims (PVC) in Kubernetes.
+
+
+- PersistentVolume (PV): 
+A PersistentVolume is a cluster-level resource provisioned by an administrator. 
+It represents a physical storage resource in the cluster, such as a network-attached storage (NAS) device or a storage area network (SAN). 
+PVs can be dynamically provisioned or pre-provisioned, depending on the cluster's configuration.
+
+- PersistentVolumeClaim (PVC): 
+A PersistentVolumeClaim is a request for storage by a user or application. 
+It binds to a suitable PersistentVolume based on the requested storage capacity, access modes, and other parameters. 
+PVCs provide an abstraction layer that decouples the application's storage requirements from the underlying physical storage implementation.
+- ex 
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: my-pvc
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 1Gi
+- ----------------------------------------
+In your pod or deployment YAML, specify the PVC name in the volumes section, and mount the volume inside the container using the volumeMounts section:
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: my-pod
+# spec:
+#   containers:
+#     - name: my-container
+#       image: my-image
+#       volumeMounts:
+#         - name: my-volume
+#           mountPath: /path/to/mount
+#   volumes:
+#     - name: my-volume
+#       persistentVolumeClaim:
+#         claimName: my-pvc
+
+
+* Persistent storage is suitable for databases, file systems, or any application that requires data to be retained and accessible across pod restarts, rescheduling, or node failures.
+
+- In summary, PVs are created and managed by the cluster administrator, while PVCs are created by users to request storage resources. 
+- PVCs act as a dynamic volume provisioning mechanism that allows users to consume the storage resources defined by PVs without directly interacting with them.
+$ kubectl explain pod.spec.volumes

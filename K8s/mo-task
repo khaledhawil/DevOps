@@ -1,0 +1,6 @@
+i want you to create the following 
+1- fluentd deployment on k8s
+ 2-create pv and pvc of local storage 
+ 3- create any log file on the storage 
+ 4- create elasticsearch and kibana deployment using helm chart   
+ 5- write fluentd configuration to push the logs to elasticsearch

@@ -1,0 +1,40 @@
+# =------------------------------------------------- Daemon Set ----------------------------------------------------------------------------------------
+
+A DaemonSet in Kubernetes is a type of controller that ensures that a copy of a specific pod is running on every node in a cluster. 
+This is useful for running system-level daemons or other workloads that should run on every node in the cluster
+
+
+When you create a DaemonSet, a pod is automatically created on each node in the cluster that matches the specified node selector. 
+The DaemonSet controller monitors the nodes in the cluster and automatically creates or deletes pods as nodes are added or removed.
+
+
+DaemonSets are commonly used for tasks such as logging, monitoring, or networking. 
+For example, you might use a DaemonSet to run a logging agent on each node in the cluster, 
+so that you can collect logs from all of the nodes in a centralized location.
+
+Here's an example YAML manifest for a simple DaemonSet that runs an nginx web server on each node in the cluster:
+# apiVersion: apps/v1
+# kind: DaemonSet
+# metadata:
+#   name: nginx
+# spec:
+#   selector:
+#     matchLabels:
+#       app: nginx
+#   template:
+#     metadata:
+#       labels:
+#         app: nginx
+#     spec:
+#       containers:
+#       - name: nginx
+#         image: nginx:latest
+#         ports:
+#         - containerPort: 80
+
+
+- In this example, 
+the DaemonSet controller will ensure that a pod running the nginx container is created on every node in the cluster that has a label of app=nginx.
+
+$ kubectl get daemonsets
+$ kubectl get ds

@@ -1,0 +1,184 @@
+$-                            The first day of Docker's Course   
+
+- (https://github.com/ahmedsami76/AraBigData/blob/main/Docker.ipynb)
+
+1- What is DOCKER? :
+- Docker is a platform or ecosystem around creating and running something called containers.
+- Docker is a tool designed to make it easier to create, deploy, and run applications by using containers.
+
+2- Why use Docker ?
+- Docker makes it really easy to install and run software without worrying about setup or dependencies
+- Short setup time
+- Different Dev/Test/Prod environments.
+ 
+3- Docker Client :
+- A Docker client is a command-line interface (CLI) tool that allows users to interact with Docker, 
+
+
+4- Docker Server:
+- Docker Server, also known as Docker Engine, is the core component of the Docker platform.
+- It is a client-server application that allows users to build, run, and manage Docker containers.
+- The Docker Server runs as a daemon on a host operating system and listens for requests from the Docker client. 
+- When a user issues a command to the Docker client, it sends the command to the Docker Server,
+- which then executes the command and manages the corresponding Docker containers and images.
+
+
+5- Docker Machine :
+- Docker Machine is a tool that allows users to create and manage virtual machines (VMs) that run the Docker Engine.
+- With Docker Machine, users can easily create a Docker host on a local machine or on a remote server, regardless of the underlying infrastructure
+
+6- Docker Image :
+- A Docker image is a lightweight, standalone, and executable package that contains everything needed to run an application,
+- including the code, runtime environment, libraries, and system tools. Docker images are created from a Dockerfile,
+- which is a text file that contains a set of instructions for building the image.
+- Docker images are designed to be portable and easy to deploy across different environments, such as development, testing, and production.
+- They can be stored in a Docker registry, such as Docker Hub or a private registry, and shared with others for use in building and running applications.
+- When a Docker image is run, it creates a Docker container, which is an isolated and self-contained environment that can run the application.
+- Docker containers are created from Docker images, and multiple containers can be run from the same image.
+
+
+7- Docker Hub :
+- Docker Hub is a cloud-based registry service that allows users to store, manage, and share Docker images.
+- It is the largest public repository of Docker images, with millions of users and tens of thousands of images available for use.
+
+8- Docker Compose :
+
+- Docker Compose is a tool for defining and running multi-container Docker applications.
+- It allows users to define an entire application stack, including the services, networks, 
+- and volumes, in a single YAML file, and then deploy the application with a single command.
+- With Docker Compose, users can easily define and run complex applications that consist of multiple services,
+- such as web servers, databases, and load balancers, and manage them as a single unit.
+- Docker Compose automates the process of building,
+- linking, and starting the containers, and provides a simple and scalable way to manage the application stack.
+- Docker Compose uses a declarative syntax to define the application stack,
+- which makes it easy to maintain and update the application over time.
+- Users can define the dependencies between the services,
+- specify environment variables and configuration options, and control the startup order of the containers.
+- Docker Compose also integrates with Docker Swarm, which is a native clustering and orchestration tool for Docker,
+- allowing users to deploy the application stack across multiple nodes in a swarm cluster.
+- Overall, Docker Compose is a powerful tool for managing multi-container Docker applications,
+- providing a simple and scalable way to define, deploy, and manage the entire application stack.
+ 
+
+9- Docker Engine :
+- Docker Engine is a lightweight runtime that allows users to create and run Docker containers on their local machine or in a production environment
+- Docker Engine consists of several components, including a server, a client, and a command-line interface (CLI). 
+
+10- Docker daemon :
+- Docker daemon (dockerd) is a background process that runs on a Docker host and manages the lifecycle of Docker containers.
+- It is responsible for building, running, and distributing Docker containers.
+
+11- What is a difference between Docker daemon  and Docker Engine?
+- Docker Engine is the overall technology/project
+- The Docker daemon is the key process that makes the Docker Engine work
+- In a sense, the Docker daemon is a key part of the Docker Engine - it's the service that "executes" the Engine and runs containers etc.
+- But Docker Engine is a broader term that refers to the whole technology and ecosystem
+
+$ A container lifecycle refers to the various stages that a container goes through from its creation to its deletion. These stages typically include:
+
+- Creation: A container is created from a Docker image, which contains the application or service and its dependencies. During this stage, the container is given a unique ID, network configuration, and storage resources.
+
+- Configuration: After the container is created, it can be configured with environment variables, networking settings, and other parameters that control how the container will behave.
+
+- Starting: Once the container is configured, it can be started, which launches the application or service inside the container.
+
+- Running: The container is considered to be running when the application or service is executing inside the container and responding to requests.
+
+- Paused: A container can be paused, which suspends all processes running inside the container, but maintains the container's state in memory.
+
+- Stopped: When a container is stopped, all processes running inside the container are terminated, and the container's resources are freed up.
+
+- Removal: When a container is no longer needed, it can be deleted, which removes all traces of the container and its resources from the system.
+
+- Throughout its lifecycle, a container can be managed and monitored using various tools and APIs provided by Docker and other containerization platforms. This allows developers and administrators to automate many aspects of container management and ensure that containers are running securely and efficiently.
+
+
+
+
+
+
+
+
+
+
+10- Basic Commands :
+$ docker run <image-name> : 
+- run container 
+
+
+$ docker  run <image-name> <command> :
+ Overriding default command
+- <command>: This is an optional command that will be executed inside the container when it starts up. If a command is not specified,
+- Docker will start the container with its default command, as specified in the Dockerfile used to build the image.
+ 
+
+$ docker run -d <image-name> : docker attach <container ID>
+ Attached and Detached
+- command is used to start a new container in "detached" mode from a specified Docker image.
+- which means that the container will run in the background and not attach to the console. 
+
+$ docker run -i <image-name> :
+ Interactive mode
+- -i This option specifies that the container should be started in "interactive" mode,
+- which means that the container's standard input (stdin) will be kept open and attached to the console.
+- This allows the user to interact with the container's command prompt or shell.
+
+
+$ docker  run -t : 
+Terminal  
+
+$ docker run -p host:container <image-name> :
+ Port mapping
+- This option specifies that a network port in the container should be mapped to a port on the host machine.
+- The host part of the option specifies the port on the host machine to map to, and the container part specifies
+- the port in the container to map from. For example, -p 8080:80 would map port 80 in the container to port 8080 on the host machine.
+
+$ docker run -v host:container <image-name> :
+Volume mapping
+- -v host:container: This option specifies that a directory or file on the host machine should be mounted into the container.
+- The host part of the option specifies the directory or file on the host machine to mount, 
+- and the container part specifies the location in the container to mount to.
+- For example, -v /home/user:/app would mount the /home/user directory on the host machine to the /app directory inside the container.
+
+$ docker inspect <container-name> :
+Inspect container 
+- inspect: This command is used to get detailed information about a container.
+
+
+$ docker stop CONTAINER :
+Stop container
+- stop: This command is used to stop a running container.
+
+$ docker images -a :
+List all images 
+- images: This command is used to list all Docker images.
+- -a: This option is used to show all images, including the ones that are not currently being used by any containers.
+
+
+
+$ docker ps -a :
+ List all containers 
+- ps: This command is used to list all Docker containers.
+- -a: This option is used to show all containers, including the ones that are not currently running.
+
+
+$ docker --name contnr-name :
+
+$ docker -h : 
+hostname of container 
+
+$ docker -c "" :with command
+
+
+
+
+
+
+
+
+
+
+
+
+
+

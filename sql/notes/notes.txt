@@ -1,0 +1,137 @@
+* here we'll talk about sql and sql's fremworks 
+
+
+
+1- first if U need to run MySQL by docker container :
+- You have to create a docker-compose file and following the insturactions
+
+# version: '3.7'
+
+# services:
+#   db:
+#     image: mysql:latest
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: root_password
+#       MYSQL_DATABASE: mydatabase
+#       MYSQL_USER: db_user
+#       MYSQL_PASSWORD: db_password
+#     ports:
+#       - "3306:3306"
+#     volumes:
+#       - ./data:/var/lib/mysql
+#   phpmyadmin:
+#     image: phpmyadmin/phpmyadmin:latest
+#     restart: always
+#     environment:
+#       PMA_HOST: db
+#       MYSQL_ROOT_PASSWORD: root_password
+#     ports:
+#       - "8080:80"
+#     depends_on:
+#       - db
+
+
+
+2- after you created docker compose :
+- run this command :
+$ docker-compose up -d # after this run $ docker logs contr-name to get URL Ip
+
+
+3- once you run them :
+- exec the mysql's container by this command :
+$ dcoker exec -it  container bash 
+4- after all you need to  create and define MySql in MySQL's container by this command:
+$ mysql -u root -p # after run this command enter Root's Pass
+
+5- it's ready for U now 
+
+6- start use MySql SHell commands 
+
+*        MySql DB Comannds 
+
+1- to show the database you created :
+> SHOW DATABASES;
+2- Creates a new database with the specified name:
+> CREATE DATABASE database_name;
+3-  Selects the specified database for use:
+> USE database name;
+4- Shows a list of all the tables in the currently selected database:
+> SHOW TABLES;
+
+5- Creates a new table with the specified columns and datatypes:
+> CREATE TABLE table_name (column1 datatype, column2 datatype, ...);
+
+6-Adds a new column to the specified table:
+> ALTER TABLE table_name ADD COLUMN column_name datatype;
+
+7- Inserts a new row into the specified table with the specified values:
+> INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);
+
+8- Selects all the rows and columns from the specified table:
+> SELECT * FROM table_name;
+
+9- Selects specific columns from the specified table where the specified condition is true:
+> SELECT column1, column2, ... FROM table_name WHERE condition;
+
+10- Updates the specified columns in the specified table where the specified condition is true:
+> UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
+
+11- Deletes rows from the specified table where the specified condition is true:
+>DELETE FROM table_name WHERE condition;
+
+12- Deletes the specified table from the currently selected database:
+> DROP TABLE table_name;
+
+13- to create user in database :
+> create user luka identified by '123' ;     # this with his pass 
+  
+14- to grant privileges to user :
+> GRANT SELECT, INSERT, UPDATE, DELETE ON mydatabase.mytable TO 'myuser'@'localhost';
+
+15- to give him all privileges :
+> GRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'localhost';
+
+16- to save this changees?
+> FLUSH PRIVILEGES;
+
+
+17- to remove this privileges from user: 
+> REVOKE SELECT ON mydatabase.* FROM 'myuser'@'localhost';  # and after this save this change with $> FLUSH PRIVILEGES;
+
+18- to show how many users do U have :
+> select user from mysql.user;
+
+19- to show the table's info:
+> DESCRIBE table-name;
+>SHOW COLUMNS FROM table-name ;
+20- to show the data's info:
+>SELECT * FROM table-name;
+21- to show specific '' from any table;
+> select * from table-name
+>where '' = '' ;
+
+
+
+- some tables:->
+# CREATE TABLE student(
+#                -> stu_id int PRIMARY KEY,
+#                -> stu_name VARCHAR(20) NOT NULL,
+#                -> email VARCHAR(30) UNIQUE,
+#                -> address VARCHAR(30) );
+
+- another one 
+
+# CREATE TABLE subject(
+#                -> sub_id int PRIMARY KEY,
+#                -> sub_name VARCHAR(10) not null,
+#                -> sub_desc VARCHAR(20),
+#                -> max_score int not NULL);
+
+
+
+
+
+
+
+

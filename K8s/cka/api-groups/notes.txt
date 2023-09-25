@@ -1,0 +1,16 @@
+- In Kubernetes, 
+API groups are a way to organize and categorize related resources within the Kubernetes API. 
+The Kubernetes API is designed to be extensible, allowing different components and plugins to introduce their own resources and functionality.
+
+API groups provide a mechanism to group related resources under a common prefix within the API. 
+Each API group typically represents a specific feature or subsystem within Kubernetes. 
+By organizing resources into API groups, it becomes easier to manage and maintain a large number of resources and prevents naming conflicts.
+
+
+/api endpoint,
+ while custom API groups are accessed through the /apis/{group}/{version} endpoint.
+
+
+
+
+

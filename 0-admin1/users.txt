@@ -1,0 +1,102 @@
+Linux Users
+البوست دا هايكون عن الـ user باغلب تفاصيله قهوتك معاك وركز معايا....
+الـ user عندي ف الـ Linux بيتقسم ل 3 انواع:
+
+1- root user:
+- دا عامل زي سوبرمان بيقدر يعمل اي حاجه ف الـ system بتاعي وليه permission ع اي حاجه.
+- الـ UID = 0.
+
+2- Service User:
+- ودا ليه permission ولكن مقتصره ع الـ service المسؤل عنها بس.
+- دا طبعا معمول عشان ازود الـ security عندي عشان لو لاقدر الله حصل عندي attack ع service معينه الـ user دا مايقدرش يعمل اي حاجه ف الـ system بتاعي.
+- 0 < UID < 1000.
+
+3- Standard User:
+- دا الـ user الغلبان اللي مش بيكون ليه اي permission غير ع الـ home بتاعه بس و الـ files اللي هو owner عليها.
+- UID >= 1000.
+
+- دي كدا انواع ال users اللي عندي.
+
+- سؤال مهم بقي ازاي بنعمل create لـ user اصلا واي بيحصل وقتها ف الـ background:
+- الاول لازم نبقي عارفين ان انا عشان اعمل add لـ user لازم اكون root او user واخد permission ويقدر يعمل دا لكن الـ user العادي مش هايقدر يعمل add لاي user.
+- عشان اعمل add بقي لـ user جديد في command مسؤل عن دا.
+$ useradd + username
+- دا الـ command اللي اقدر بيه اعمل add لـ user جديد.
+
+$ passwd + username
+- عشان اغير الـ password بتاع الـ user ودا اللي يقدر يستخدمه الـ root user او الـ user نفسه اللي هايغير الـ pass لنفسه ولكن ف الحاله دي لازم يعمل complicated password.
+
+- لما اعمل add لـ user جديد بيحصل عندي 5 حاجات:
+1- create new user and UID.
+2- create new group and GID.
+3- add the new user to the new group as a primary group.
+4- create home directory for the user.
+5- copy from /etc/skel to /home/username.
+
+- الـ user بتاعي بيضاف بشكل تلقائي في فايل الـ path بتاعه etc/passwd/.
+- الفايل دا بقي بيبقي فيه الـ user متقسم لـ 7 خانات:
+username:x:UID:GID:comment:/home/username:/bin/bash
+1- دا بيكون الاسم بتاع الـ user.
+2- دا الـ password بتاع الـ user بس مكانه x عشان بيتخزن ف فايل etc/shadow/ وبيكون encrypted.
+3- دا بيكون الـ UID.
+4- دا بيكون الـ GID.
+5- دا بيكون مكان الـ comment اللي ممكن اضيفه للـ user.
+6- دا الـ home الخاص بكل user.
+7- نوع الـ shell الـ يقدر يفتحها الـ user.
+- طبعا الحاجات اللي بتضاف ف الـ home بتاع الـ user بيكون واخدها copy من etc/skel/ وطبعا اقدر اغير دا او اي حاجه بتتعمل by default للـ user من فايل etc/default/useradd.
+
+- هانختم كلامنا ب id command ودا اقدر من خلاله اني اعرض معلومات الـ user.
+$ id + username
+وان شاء الله هاتكلم عن باقي الـ user command وكمان عن الـ group ف بوست تاني.
+###################################################################################################################################################3333
+Linux Users
+كلامنا انهارده هايكون استكمالا لكلام المره اللي فاتت اللي كان ازاي اعمل add ل new user وكمان عرفنا etc/passwd/ بيكون فيه اي.
+
+هانكمل الكلام بقي عن الـ group.
+- طبعا احنا عرفنا ان اي user جديد بيكون ليه group خاص بيه طيب اي هي بقي انواع الـ groups دي.
+انا عندي نوعين من الـ groups:
+1- Primary Group:
+- ودي خاصه بكل user واللي الـ user بيضاف ليه بشكل تلقائي لما اعمل add لـ new user.
+- ف الغالب بيكون الـ GID بتاعها هو هو نفس الـ UID واقدر اغيره.
+- اقدر اضيف فيها ازيد من user بس مش منطقي ان دا يحصل عشان اي user ف الـ group دا بيبقي ليه access ع الـ files اللي جواها كانك بتدي مفتاح شقتك لشخص تاني ودا طبعا not recommend.
+- الـ user الواحد بيكون ليه primary group واحده ولكن ممكن يكون ليه ازيد من secondary group عادي جدا.
+- ماقدرش امسحها طول ما الـ user بتاعها موجود.
+
+2- Secondary Group:
+- دي عباره عن group بيكون فيها user واحد او اكتر عشان يكون ليهم نفس الـ permission ونفس الـ access ع مجموعه من الـ files.
+- طبعا بيكون ليها GID.
+
+طيب ازاي نقدر نعمل add لـ group جديد
+$ groupadd + groupname
+دا ال command اللي اقدر اعمل من خلاله add لل group.
+اي بقي بيحصل لما بعمل groupadd
+انا عندي file بيضاف فيه كل الـ groups بتاعتي وهو etc/group/ ودا بيتقسم لـ 4 خانات وهما:
+groupname:password:GID:Userlist
+
+1- الـ Groupname دا بيكون فيه اسم الـ Group.
+2- الـ Password دا بيكون فيه الـ password بتاع الـ group لو حبيت اعملها password.
+3- الـ GID دا بيكون الـ ID بتاع الـ Group.
+4- الـ userlist دا بيكون فيه list بكل الـ users اللي ف الـ group بس مش هايظهر حاجه فيها لو primary group لـ user لكن لو secondary group وفيها ازيد من user هايظهر فيها.
+
+طب انا دلوقتي عملت group جديد وعاوز اعدل فيها ودا بيكون عن طريق groupmod وطبعا ليه options ممكن نعرفها عن طريق ان احنا نعمل man ونعرف كل تفاصيل ال command.
+
+$ groupmod -n + newname + groupoldname
+- دا عشان اغير اسم الـ group بتاعي بعد ما اعملها add.
+
+$ gpasswd -a + username + groupname
+- عشان اضيف user معين في group معين وتكون secondary group ليه (a-) دي اختصار لـ add.
+
+$ gpasswd -M + users + groupname
+- عشان اضيف ازيد من user مره واحده ف group معين وتكون secondary group ليه (M-) دي اختصار ل Members.
+
+$ gpasswd -A + users + groupname
+- عشان اخلي user معين admin ع group معين (A-) دي اختصار ل Administrator.
+- الـ groupadmin يقدر يعمل addusers او deleteusers من الـ group بدون ما يكون Member فيها.
+
+$ gpasswd -d + users + groupname
+- عشان اعمل delete لـ user معين من الـ group.
+
+كل دا بقي بيظهر عندي ف etc/shadow/ وبيتكون من 4 خانات بردو:
+groupname:password:admin:members
+طيب دلوقتي انا عاوز اعمل delete للـ group دا بيكون عن طريق
+$ groupdel + groupname

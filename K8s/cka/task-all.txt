@@ -1,0 +1,63 @@
+1- First, create a Namespace for your application using the kubectl create namespace command. For example, kubectl create namespace my-app-namespace.
+$ k create ns my-app-namespace
+
+2- Create a ConfigMap that holds your application's configuration data, such as environment variables or other settings. 
+Use the kubectl create configmap command.#  For example, kubectl create configmap my-app-config --from-literal=APP_PORT=8080.
+
+$ k create cm my-app-config  --from-literal=APP_PORT=8080
+
+
+3- Create a Deployment that defines the desired state of your application's pods. 
+Use the kubectl create deployment command and specify the image and other details of your application. 
+For example, kubectl create deployment my-app-deployment --image=my-app-image:v1 --replicas=3.
+
+$ kubectl create deployment my-app-deployment --image=khaledhawil/pyapp:1.2.0 --replicas=3
+
+
+4- Apply labels to your Deployment and ConfigMap resources using the kubectl label command. 
+For example, kubectl label deployment my-app-deployment app=my-app and kubectl label configmap my-app-config app=my-app.
+
+$ k label deploy my-app-deployment app=my-app 
+$ k label cm my-app-config app=my-app
+
+5- Create a Service that exposes your application to the outside world. 
+Use the kubectl create service command and specify the port and target port of your application.
+For example, kubectl create service clusterip my-app-service --tcp=8080:8080.
+
+$ k create svc    my-app-service  --type NodePort    --tcp=8080:8080
+
+6- Finally, taint the nodes where your application's pods are running, to ensure that only your application's pods are scheduled on those nodes. 
+Use the kubectl taint command and specify the node name and taint effect. 
+For example, kubectl taint node my-app-node app=my-app:NoSchedule.
+
+$ k taint node minikube app=my-app:NoSchedule
+
+# ============================================= the Task file =================================================================
+
+# first create the Namespace 
+
+long-task.YAML
+
+
+
+further
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

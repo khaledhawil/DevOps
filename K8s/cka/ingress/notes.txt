@@ -1,0 +1,47 @@
+
+An Ingress controller is a component in Kubernetes that manages external access to services within a cluster. It acts as a reverse proxy and load balancer, routing incoming traffic to the appropriate services based on rules defined in the Ingress resource.
+
+In summary, an Ingress controller is a component in Kubernetes that acts as a reverse proxy and load balancer, routing incoming traffic to the appropriate services based on rules defined in the Ingress resource. 
+While an Ingress controller implements the Ingress resource and handles traffic routing, it is not the same as a standalone reverse proxy. The Ingress controller works in conjunction with the Ingress resource to provide a simplified and automated way of configuring traffic routing in a Kubernetes cluster.
+
+
+
+- How to use it : 
+
+
+
+apiVersion: networking.k8s.io/v1 
+kind: Ingress
+metadata:
+  name: example-ingress
+spec:
+  rules:
+    - host: example.com
+      http:
+        paths:
+          - path: /path
+            pathType: Prefix
+            backend:
+              service:
+                name: my-service
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - example.com
+      secretName: my-tls-secret
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

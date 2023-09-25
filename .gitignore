@@ -1,0 +1,23 @@
+docker-swarm
+*docker-swarm
+*.idea
+.git
+*.idea
+*.vagrant
+/.vagrant
+.vagrant/
+.vagrant
+*.log
+
+*target
+/target
+*machines
+/machines
+/mysql-data/
+/mysql-data
+*mysql-data/
+*/exercises/
+ K8s/exercises/
+books/
+/books
+./K8s/exercises/

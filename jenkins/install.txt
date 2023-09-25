@@ -1,0 +1,10 @@
+docker pull jenkins 
+docker volume create jenkins_data
+docker run -d -p 8080:8080 -p 50000:50000 -v jenkins:/var/jenkins_home --name jenkins_container jenkins/jenkins:lts
+#         this for me :   this for container
+#            8000:8080     # for-localhost:for-container
+
+$ cat /var/lib/jenkins/secrets/initialAdminPassword
+
+88ef2c044e5540ae947ed3dd41de56bc
+

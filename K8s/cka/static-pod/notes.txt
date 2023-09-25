@@ -1,0 +1,32 @@
+# =-------------------------------------------------- Static Pod ---------------------------------------------------------------------------------------------
+A static pod in Kubernetes is a pod that is created and managed directly by the kubelet on a specific node. 
+Unlike regular pods, which are managed by the Kubernetes control plane and scheduled on any available node in the cluster,
+static pods are bound to a specific node and are not managed by the control plane.
+- ----------------------
+
+Static pods can be useful for running system-level components or for bootstrapping a Kubernetes cluster before the control plane is up and running. 
+They are created and managed by the kubelet using YAML manifests stored on the node's file system.
+
+
+To create a static pod, 
+you simply create a YAML manifest file describing the pod and save it to the appropriate directory on the node's file system.
+ By default, the kubelet looks for static pod manifests in the /etc/kubernetes/manifests directory.
+
+Here's an example YAML manifest for a simple nginx static pod: # the file named nginx.yaml
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: nginx
+# spec:
+#   containers:
+#   - name: nginx
+#     image: nginx:latest
+#     ports:
+#     - containerPort: 80
+
+To create the static pod, save this YAML manifest to /etc/kubernetes/manifests/nginx.yaml on the node where you want to run it. 
+The kubelet will automatically detect the manifest file and create the pod.
+
+
+$ kubectl run --restart=Never --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml
+

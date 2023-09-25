@@ -1,0 +1,2 @@
+mox:123:1016:1016:created by newusers for Eng-Mohamed:/home/mox:/bin/bash
+vox:123:1015:1015:created by newusers for Eng-Mohamed:/home/vox:/bin/bash

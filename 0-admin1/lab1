@@ -1,0 +1,109 @@
+
+# 1- What is the difference between cat and more command?
+- It is used to display the contents of one or more files on the terminal. The cat command displays the entire contents of a file at once
+- more is a command that displays the contents of a file one screen at a time . more displays the first screenful of the file and waits for the user to press the spacebar before displaying the next screenful of the file.
+# 2- What is the difference between rm and rmdir using man?
+-  rm stands for "remove". It is used to remove files and directories. The rm command can delete a single file, multiple files, or an entire directory and its contents recursively. It is a powerful command that can permanently delete files without confirmation
+- rmdir stands for "remove directory".
+ It is used to remove empty directories.
+  The rmdir command can only delete empty directories, meaning directories that do not contain any files or subdirectories. If a directory contains files or subdirectories, rmdir will not delete it and will give an error message.
+# 3- Create the following hierarchy under your home directory:
+ /dir1/dir11   /dir1/dir12   /dir1/dir11/file1 
+- mkdir dir1 
+- mkdir dir1/dir11 
+- mkdir /dir1/dir12
+- touch /dir1/dir11/file1
+ docs/mycv
+- mkdir /docs 
+- touch docs/mycv
+a. Remove dir11 in one-step.
+ What did you notice? 
+ And how did you overcome that?
+- rm dir1/dir11
+- rm: cannot remove 'dir1/dir11': Is a directory
+- rm -rf dir1/dir11
+b. Then remove dir12 using rmdir –p command. State what happened to the
+hierarchy (Note: you are in your home directory).
+- rmdir –p dir1/dir12
+c. The output of the command pwd was /home/user. Write the absolute
+and relative path for the file mycv
+- the absolute path /home/user/docs/mycv
+- relative path /docs/mycv
+
+# 5. Copy the /etc/passwd file to your home directory making its name is mypasswd.
+- cp /etc/passwd /home/user/mypasswd
+# 6. Rename this new file to be oldpasswd.
+- mv /home/user/mypasswd  /home/user/oldpasswd
+
+# 7. You are in /usr/bin, list four ways to go to your home directory
+- 1 cd 
+- 2 cd ~ 
+- 3 cd /home/user 
+- 4 cd $HOME
+# 8. List Linux commands in /usr/bin that start with letter w
+
+- ls /usr/bin/w*
+# 9. Display the first 4 lines of /etc/passwd
+- head -4 /etc/passwd
+# 10.Display the last 7 lines of /etc/passwd
+
+- tail -7 /etc/passwd
+# 11.Display the man pages of passwd the command and the file sequentially in one command. 
+
+- man passwd; man 5 passwd
+
+# 12.Display the man page of the passwd file.
+
+- man -s5 passwd
+# 13.Display a list of all the commands that contain the keyword passwd in their man page.
+
+- man -k "passwd"
+
+# 14 Create a user account with the following attribute
+username: islam
+Fullname/comment: Islam Askar
+Password: islam:
+- sudo useradd  -c "Islam Askar" -s /bin/bash islam
+- sudo passwd islam 
+# 15 Create a user account with the following attribute
+ Username: baduser:
+- useradd baduser
+ Full name/comment: Bad User
+- usermod   -c "Bad User" baduser
+ Password: baduser:
+- passed baduser and 
+
+# 16 Create a supplementary (Secondary) group called pgroup with group ID of 30000
+- groupadd   --g  30000 pgroup 
+
+# 17 Create a supplementary group called badgroup
+- groupadd  badgroup
+# 18 Add islam user to the pgroup group as a supplementary group
+- usermod -aG pgroup  islam
+# 19 Modify the password of islam's account to password
+- passwd islam  
+= password
+# 20 Lock bad user account so he can't log in
+- passwd -l baduser 
+# 21 Delete bad user account
+- userdel baduser
+# 22  Create a supplementary group called badgroup
+groupadd badgroup 
+# 23 Delete the supplementary group called badgroup.
+- groupdel badgroup
+
+# 24 Create a folder called myteam in your home directory and change its permissions to read only for the owner.
+
+- mkdir ~/myteam  
+- chmod 400  ~/myteam
+# 25 Log out and log in by another user
+- exit 
+- su username 
+# 26 Try to access (by cd command) the folder (myteam)
+- bash: cd: /home/mo/myteam: Permission denied
+
+# 27 -
+
+
+
+

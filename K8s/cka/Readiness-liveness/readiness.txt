@@ -1,0 +1,51 @@
+#  ============================================ Readiness and Liveness Probes ============================================================================
+
+readiness and liveness probes are used to ensure the health and availability of containerized applications running within the Kubernetes cluster.
+
+
+
+- Readiness
+A readiness probe is used to indicate whether a pod is ready to start accepting traffic. 
+Kubernetes sends periodic readiness probes to the container to check if it is ready to accept requests. 
+If the container fails the readiness probe, Kubernetes will remove the pod from service until the container passes the probe,
+ preventing any traffic from being sent to the container until it is ready to handle it.
+
+
+ containers:
+ - name: my-container
+   image: khaledhawil/pyapp
+   ports:
+   - containerPort: 8080
+   readinessProbe:
+     httpGet:
+       path: /healthz
+       port: 8080
+     initialDelaySeconds: 5
+     periodSeconds: 10
+
+
+$ k logs  my-app-695ff8c478-7xtzb -c my-container
+
+
+
+
+- Liveness
+A liveness probe is used to check if the container is still running and responding to requests. 
+Kubernetes sends periodic liveness probes to the container to check if it is still running and responding as expected. 
+If the container fails the liveness probe, Kubernetes will assume that the container is not functioning correctly and will terminate it,
+ triggering a restart of the container
+ 
+
+ livenessProbe:
+ httpGet:
+   path: /healthz
+   port: 8080
+ initialDelaySeconds: 10
+ periodSeconds: 20
+
+
+
+
+
+
+

@@ -1,0 +1,1000 @@
+  999  echo \ jf
+ 1000  echo \ 
+ 1001  echo khaled ll
+ 1002  echo khaled && ]
+ 1003  echo khaled && ls ;
+ 1004  ps -aux | less
+ 1005  cat /proc/meminfo
+ 1006  minikube start
+ 1007  minikube ssh
+ 1008  cd linux/
+ 1009  ll
+ 1010  code .
+ 1011  code-insiders .
+ 1012  sudo apt purge code-insiders 
+ 1013  sudo apt purge code
+ 1014  sudo apt install code 
+ 1015  sudo apt update 
+ 1016  sudo snap install --classic code
+ 1017  wget -O code-insiders.deb https://update.code.visualstudio.com/latest/linux-deb
+ 1018  cd Downloads/
+ 1019  sudo dpkg -i code-insiders_1.81.0-1690350766_amd64.deb 
+ 1020  sudo apt purge code-insiders 
+ 1021  cd Downloads/
+ 1022  l
+ 1023  sudo dpkg -i code_1.80.1-1689183569_amd64.deb 
+ 1024  sudo apt purge code 
+ 1025  sudo dpkg -i code-insiders_1.81.0-1690350766_amd64.deb 
+ 1026  sudoa apt upgrade -y 
+ 1027  sudo apt upgrade -y 
+ 1028  sudo apt purge code-insiders 
+ 1029  netstat  -lnt
+ 1030  netstat  -lntp
+ 1031  netstat  -lntp 
+ 1032  netstat  -lntp  | grep kube
+ 1033  sudo netstat  -lntp  | grep kube
+ 1034  sudo netstat  -lntp  | grep minikube-linux-amd64 
+ 1035  sudo netstat  -lntp  | grep minikube
+ 1036  sudo netstat  -lnt  | grep minikube
+ 1037  sudo netstat  -ln  | grep minikube
+ 1038  sudo netstat  -lntp  | grep ip
+ 1039  netstat  -lntp 
+ 1040  netstat  -alntp 
+ 1041  netstat  -alntp | grep kube
+ 1042  sudo netstat  -alntp | grep kube
+ 1043  sudo netstat  -alntp | grep mini
+ 1044  sudo netstat  -alntp | grep kubectl 
+ 1045  sudo netstat  -alntp | grep blu.sh 
+ 1046  nano /etc/hosts
+ 1047  sudo nano /etc/hosts
+ 1048  ping mobile 
+ 1049  gs
+ 1050  git add .
+ 1051  git commit -m "lesaa badry 3la ma a5als k8s" 
+ 1052  gp 
+ 1053  vagrant ssh
+ 1054  vim kind-multi-c.yaml
+ 1055  vagrant ssh
+ 1056  vagrant halt 
+ 1057  ll
+ 1058  vagrant init ubuntu/bionic64
+ 1059  vagrant up.
+ 1060  vagrant up
+ 1061  vagrant ssh
+ 1062  vagrant destroy 
+ 1063  vagrant box  list 
+ 1064  vagrant up
+ 1065  vagrant ssh
+ 1066  kind create cluster --name my-cluster 
+ 1067  k get node 
+ 1068  username -a
+ 1069  cat /etc/os-release 
+ 1070  hostname -a 
+ 1071  info
+ 1072  ll /snap/
+ 1073  uname -a
+ 1074  minikube status
+ 1075  [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+ 1076  chmod +x ./kind
+ 1077  ll ./kind 
+ 1078  sudo mv ./kind /usr/local/bin/kind
+ 1079  kind 
+ 1080  free -h 
+ 1081  code-insiders 
+ 1082  cd Desktop/linux/
+ 1083  code-insiders 
+ 1084  cd Desktop/linux/
+ 1085  code-insiders  .
+ 1086  htop
+ 1087  free -h 
+ 1088  kind
+ 1089  free -h 
+ 1090  kind
+ 1091  kubectl get nodes
+ 1092  kubectl cluster-info.
+ 1093  kubectl cluster-info
+ 1094  kubectl cluster-info dump
+ 1095  k run lll --image=nginx
+ 1096  k get all 
+ 1097  k delete  all --all 
+ 1098  k get all 
+ 1099  k describe svc kubernetes
+ 1100  reboot +40
+ 1101  su
+ 1102  docker volume create jenkins_data
+ 1103  docker pull jenkins/jenkins:lts
+ 1104  docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_data:/var/jenkins_home --name jenkins_container jenkins/jenkins:lts
+ 1105  docker exec jenkins_container cat /var/jenkins_home/secrets/initialAdminPassword
+ 1106  htop
+ 1107  cd ..
+ 1108  ls 
+ 1109  cat vsc.sh 
+ 1110  nano  vsc.sh 
+ 1111  k get all 
+ 1112  free -h 
+ 1113  docker pull jenkins/jenkins:2.303.1
+ 1114  docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_data:/var/jenkins_home --name jenkins_container jenkins/jenkins:2.303.1 
+ 1115  docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_data:/var/jenkins_home --name jenkins_server jenkins/jenkins:2.303.1 
+ 1116  free -h 
+ 1117  top
+ 1118  docker logs jenkins-container
+ 1119  docker logs jenkins_container 
+ 1120  docker volume create jenkins
+ 1121  docker run -d -p 8080:8080 -p 50000:50000 -v jenkins:/var/jenkins_home --name jenkins_container jenkins/jenkins:lts
+ 1122  docker ps
+ 1123  docker exec -it 19b95d792a18 bash 
+ 1124  code-insiders  .
+ 1125  kind delete cluster my-cluster
+ 1126  kind delete cluster --name my-cluster
+ 1127  free -h 
+ 1128  top
+ 1129  free -h 
+ 1130  cd jenkins/
+ 1131  git clone https://github.com/mahmoud254/jenkins_nodejs_example.git
+ 1132  cd jenkins_nodejs_example/
+ 1133  ll
+ 1134  rm -rf .git
+ 1135  git init
+ 1136  git remote add origin https://github.com/khaledhawil/jenkins-nodejs-ex.git
+ 1137  gs
+ 1138  git add .
+ 1139  git commit -m "First Commit on this Porject"
+ 1140  gp
+ 1141  nodejs nodeapp/app.js 
+ 1142  npm install express
+ 1143  nodejs nodeapp/app.js 
+ 1144  ll
+ 1145  docker build -t node-hw-app .
+ 1146  docker build -t khaledhawil/node-hw-app .
+ 1147  docker push  khaledhawil/node-hw-app
+ 1148  minikube start 
+ 1149  k get all 
+ 1150  vim deploy.yaml
+ 1151  k apply -f deploy.yaml 
+ 1152  vim svc.yaml
+ 1153  k apply -f svc.yaml 
+ 1154  k get all 
+ 1155  minikube ip
+ 1156  k get all -owide
+ 1157  k delete all --all 
+ 1158  docker pull mahmom/sprints_docker_example
+ 1159  docker ps 
+ 1160  docker exec -it 15160ecaa5a6 bash
+ 1161  docker exec -it 19b95d792a18 bash
+ 1162  ls
+ 1163  ll
+ 1164  git pull origin master 
+ 1165  touch .gitignore
+ 1166  g commit -m "Again"
+ 1167  g add .
+ 1168  g commit -m "Again"
+ 1169  gp
+ 1170  cd ..
+ 1171  git clone https://github.com/OmarMFathy219/simple-app-deployment.git
+ 1172  k get all 
+ 1173  minikube stop
+ 1174  curl http://localhost:3000
+ 1175  docker run -d khaledhawil/node-hw-app
+ 1176  docker ps -a
+ 1177  k get all -A 
+ 1178  man route
+ 1179  route -n
+ 1180  ip route 
+ 1181  free -h 
+ 1182  systemctl status bluetooth
+ 1183  5number
+ 1184  5numbe!
+ 1185  ll
+ 1186  free -h 
+ 1187  echo khaled && ls ;
+ 1188  wget https://www.youtube.com/watch?v=t3gXEk3789s
+ 1189  ls 
+ 1190  ll
+ 1191  cat 'watch?v=t3gXEk3789s' 
+ 1192  curl https://www.youtube.com/watch?v=qSWleIVZyQo
+ 1193  curl  https://www.youtube.com/watch?v=03_pzKB3hQs
+ 1194  wget https://drive.google.com/file/d/12DphnRcY21kuafP086ZjkiusLgQv_PdG/view
+ 1195  https://drive.google.com/file/d/12DphnRcY21kuafP086ZjkiusLgQv_PdG/view?usp=sharing
+ 1196  wget https://www.actualtechmedia.com/wp-content/uploads/2017/12/CUMULUS-NETWORKS-Linux101.pdf
+ 1197  https://media.licdn.com/dms/image/D4E22AQGaR6T6wB1HWg/feedshare-shrink_2048_1536/0/1691511615782?e=1694649600&v=beta&t=kgyzakjsD3ALQNCUFU5mHfsStqFfSAb42vg6caxrK5M
+ 1198  https://media.licdn.com/dms/image/D4E22AQGaR6T6wB1HWg/feedshare-shrink_2048_1536/0/1691511615782?e=1694649600&v=beta&t=kgyzakjsD3ALQNCUFU5mHfsStqFfSAb42vg6caxrK5M 
+ 1199  ll
+ 1200  open .
+ 1201  [1]-  Exit 127                https://media.licdn.com/dms/image/D4E22AQGaR6T6wB1HWg/feedshare-shrink_2048_1536/0/1691511615782?e=1694649600
+ 1202  [2]+  Done                    v=beta
+ 1203  k get all 
+ 1204  cd ..
+ 1205  cd K8s/
+ 1206  ll
+ 1207  md kind 
+ 1208  cd kind/
+ 1209  touch kind.yaml
+ 1210  luka@M12:~/Desktop/linux/K8s/kind$ 
+ 1211  kind create cluster --config kind-config.yaml
+ 1212  kind create cluster --config kind.yaml
+ 1213  k get all 
+ 1214  k ge tnode 
+ 1215  k get node 
+ 1216  free -h 
+ 1217  k ge all 
+ 1218  k get all 
+ 1219  docker run -d khaledhawil/pyapp
+ 1220  docker logs c6e9c63ac9bbf86e4f1c32b966305c34c6f8f179ba0e0b7c0347387c34f841c4
+ 1221  docker ps -a 
+ 1222  docker logs c6e9c63ac9bbf86e4f1c32b966305c34c6f8f179ba0e0b7c0347387c34f841c4
+ 1223  docker run -d  -p 8080:8080  khaledhawil/pyapp
+ 1224  docker run -d  -p 8080:8080  khaledhawil/pyapp:1.2.1
+ 1225  docker run -d  -p 8080:8080  khaledhawil/pyapp:1.2.0
+ 1226  docker run -d  -p 8080:8080  sri0123/pyapp
+ 1227  k get all -A 
+ 1228  docker pull curlimages/curl
+ 1229  docker run -it curlimages/curl
+ 1230  docker run -it curlimages/curl nash
+ 1231  docker run -it curlimages/curl bash
+ 1232  docker run -it curlimages/curl sh
+ 1233  k get all 
+ 1234  route
+ 1235  reboot
+ 1236  k get all 
+ 1237  k run ll --image=mongo
+ 1238  k get all 
+ 1239  netstat -an | grep LISTEN
+ 1240  netstat -rn
+ 1241  netstat -s
+ 1242  k get all
+ 1243  k delete all --all 
+ 1244  k delete all --all  --force 
+ 1245  k get all 
+ 1246  k run nginx --image=nginx --restart=Never  --port=80 --expose 
+ 1247  k get all 
+ 1248  k run busy --image=busybox 
+ 1249  k run alpine  --image=alpine
+ 1250  k get all 
+ 1251  k get ep 
+ 1252  k run busybox --image=b -it -- sh 
+ 1253  k exec -it pod/busybox sh 
+ 1254  k edit svc  nginx 
+ 1255  kubectl get nodes -o wide
+ 1256  k delete all --all 
+ 1257  k delete all --all  --force 
+ 1258  k run nginx --image=nginx --restart=Never  --port=80 --expose 
+ 1259  k patch svc nginx -p '{"spec":{"type":"NodePort"}}'
+ 1260  curl 172.18.0.3:30039
+ 1261  k delete all --all  --force 
+ 1262  k create deploy foo --image=dgkanatsios/simpleapp --port=8080 --replicas=3
+ 1263  k label deploy foo app=foo
+ 1264  k run mod --image=busybox -it -- sh
+ 1265  k expose deploy foo --port=8080
+ 1266  kubectl get endpoints foo 
+ 1267  k exec  pod/mod  -it  --sh 
+ 1268  k exec  pod/mod  -it  -- sh 
+ 1269  k delete all --all --force 
+ 1270  k create deploy nginx --image=nginx --replicas=2
+ 1271  kubectl expose deployment nginx --port=80
+ 1272  kubectl describe svc nginx 
+ 1273  vim nwp.yaml
+ 1274  k apply -f nwp.yaml 
+ 1275  k get nwp
+ 1276  k get np
+ 1277  k run mod --image=busybox -it -- sh
+ 1278  un busybox --image=busybox --rm -it --restart=Never --labels=access=granted -- wget -O- http://nginx:80 --timeout 2 
+ 1279  kubectl run busybox --image=busybox --rm -it --restart=Never --labels=access=granted -- wget -O- http://nginx:80 --timeout 2
+ 1280  kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- http://nginx:80 --timeout 2
+ 1281  kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- http://nginx:80 
+ 1282  kubectl get networkpolicies
+ 1283  k describe networkpolicies access-nginx
+ 1284  uname -a
+ 1285  k delete all --all --force 
+ 1286  wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+ 1287  ll
+ 1288  kubectl apply -f deploy.yaml
+ 1289  k get all -A 
+ 1290  kubectl cluster-info
+ 1291  k ge node 
+ 1292  k run nginc --image=nginx  --port=80 --expose 
+ 1293  k get all
+ 1294  k get svc 
+ 1295  k get ep 
+ 1296  k get svc 
+ 1297  k get all
+ 1298  watch kubectl  get all --owide 
+ 1299  watch kubectl  get all -owide 
+ 1300  k get ep 
+ 1301  k get node -owide 
+ 1302  k edit svc foo
+ 1303  type echo 
+ 1304  type ifconfig 
+ 1305  type ls
+ 1306  find  -type f -name "*WPSApp"
+ 1307  find  -type f -name "*WPS"
+ 1308  find  -type f -name "WPS"
+ 1309  find   -name "WPS"
+ 1310  find  . -name "WPS"
+ 1311  find  . -name WPS
+ 1312  find  . -name Wps
+ 1313  locate WPS
+ 1314  locate .  WPS
+ 1315  locate .  WPS .
+ 1316  find . -name '*.apk'
+ 1317  k run nginx --image nginx  --watch 
+ 1318  k run nginx --image nginx  -watch 
+ 1319  watch k run nginx --image nginx  
+ 1320  k get all --watch 
+ 1321  k get all -watch 
+ 1322  watch kubectl  get all  -owide 
+ 1323  k get all
+ 1324  k get nodes 
+ 1325  k get all 
+ 1326  فخح
+ 1327  top
+ 1328  find ~ -type WPS
+ 1329  find ~ -type f WPS
+ 1330  find ~ -type f -name "WPS"
+ 1331  find ~ -type f -name "*.WPS"
+ 1332  find ~ -type f -name "*WPS"
+ 1333  find ~ -type f -name "*WPSApp"
+ 1334  k get all 
+ 1335  k expose po nginx --type NodePort
+ 1336  k expose po nginx --type NodePort --port 8080 po --target-port 8080
+ 1337  docker ps 
+ 1338  docker ps  -a 
+ 1339  k get node -owide 
+ 1340  k delete all --all 
+ 1341  k run po --image kodekloud/webapp-color
+ 1342  k get all 
+ 1343  nano ~/.bashrc 
+ 1344  bash
+ 1345  ifconfig 
+ 1346  route
+ 1347  wget https://download.quranicaudio.com/quran/yasser_ad-dussary/003.mp3
+ 1348  mpg123 003.mp3 
+ 1349  play 003.mp3 
+ 1350  top 
+ 1351  watch kubectl  get all  -owide 
+ 1352  ن لث ىخيث 
+ 1353  k get node 
+ 1354  k create ds loka --image nginx 
+ 1355  kubectl create --help
+ 1356  man in 
+ 1357  ln
+ 1358  in
+ 1359  man ln
+ 1360  k top po 
+ 1361  cd K8s/
+ 1362  git clone https://github.com/kodekloudhub/kubernetes-metrics-server.git
+ 1363  cd kubernetes-metrics-server/
+ 1364  k apply -f . 
+ 1365  cd K8s/
+ 1366  k top po 
+ 1367  k get all -A 
+ 1368  k top po 
+ 1369  k get all -A 
+ 1370  k top po 
+ 1371  k get all -A 
+ 1372  kubectl get deployment metrics-server -n kube-system
+ 1373  k get all -A 
+ 1374  k top po 
+ 1375  k run loka --image  nginx 
+ 1376  k top po 
+ 1377  k get all -A  
+ 1378  kubectl get deployment metrics-server -n kube-system
+ 1379  k top po 
+ 1380  k top node
+ 1381  k top po 
+ 1382  docker pull kodekloud/webapp-color
+ 1383  k get all 
+ 1384  k top po 
+ 1385  k top node
+ 1386  k delete all --force 
+ 1387  k delete all --all --force 
+ 1388  sudo apt update
+ 1389  sudo apt install etcd-client
+ 1390  chmod +x etcdctl
+ 1391  etcdctl version
+ 1392  etcdctl get
+ 1393  cd
+ 1394  chmod +x etcdctl
+ 1395  etcdctl version
+ 1396  etcdctl --version
+ 1397  k run loka --image  nginx 
+ 1398  k run lomo --image  busybox 
+ 1399  k run lomo --image  alpine 
+ 1400  k run link --image  alpine 
+ 1401  k run losy --image  ubuntu 
+ 1402  k get node 
+ 1403  export ETCDCTL_API=3
+ 1404  k get po -n kube-system 
+ 1405  curl 10.244.1.3
+ 1406  ls -lrt /etc/kubernetes/manifests/
+ 1407  ls  /etc/kubernetes/manifests/
+ 1408  watch kubectl get all -owide 
+ 1409  sudo snap install helm --classic
+ 1410  helm --version 
+ 1411  helm version 
+ 1412  helm 
+ 1413  helm version 
+ 1414  helm install hello-world
+ 1415  helm install hello-world loma
+ 1416  helm install hello-world .
+ 1417  arb
+ 1418  sudo apt install arb
+ 1419  sysctl
+ 1420  telnet
+ 1421  telnet 192.168.1.1
+ 1422  telnet 192.168.0.4
+ 1423  telnet 192.168.0.1
+ 1424  telnet 192.168.0.4
+ 1425  telnet 192.168.1.1 22
+ 1426  ip a s 
+ 1427  telnet 192.168.1.120 22
+ 1428  telnet 192.168.1.163 22
+ 1429  pstree
+ 1430  h top
+ 1431  htop
+ 1432  top
+ 1433  sudo kill 14
+ 1434  top
+ 1435  su
+ 1436  top
+ 1437  cat .kube/config 
+ 1438  cat .kube/kubens/minikube 
+ 1439  cat .kube/config 
+ 1440  ls 
+ 1441  helm  install iti3month bitnami/wordpress
+ 1442  helm repo  add bitnami "bitnami" already exists with the same configuration, skipping
+ 1443  helm repo  add bitnami https://charts.bitnami.com/bitnami
+ 1444  helm  install iti3month bitnami/wordpress
+ 1445  helm uninstall iti3month 
+ 1446  k delete all --all --force 
+ 1447  helm  install iti3month bitnami/wordpress
+ 1448  k get pv 
+ 1449  k get pvc
+ 1450  k ge node 
+ 1451  k get node 
+ 1452  k get node  -owide
+ 1453  k logs pod/iti3month-mariadb-0
+ 1454  k logs pod/iti3month-wordpress-6b4b4ff86-hr4jw
+ 1455  cd ..
+ 1456  cd apps/
+ 1457  git clone https://github.com/kodekloudhub/example-voting-app-kubernetes.git
+ 1458  cd example-voting-app-kubernetes/
+ 1459  ls 
+ 1460  k get all
+ 1461  watch kubectl  get all -owide 
+ 1462  h history new-app 
+ 1463  ls
+ 1464  cd ..
+ 1465  cd helm/
+ 1466  ls
+ 1467  w
+ 1468  top
+ 1469  htop
+ 1470  uptime 
+ 1471  helm uninstall iti3month 
+ 1472  helm install  my-rlease bitnami/nginx
+ 1473  k get node -owide
+ 1474  helm pull --untar bitnami/nginx
+ 1475  helm install new-app nginx/ --set labels.intake=devops
+ 1476  helm list 
+ 1477  helm install new-app nginx/ --set labels.intake=devops
+ 1478  k exec  -it new-app-nginx-79b458974d-7sq6x sh 
+ 1479  k describe po new-app-nginx-79b458974d-7sq6x
+ 1480  k describe po new-app-nginx-79b458974d-7sq6x | grep -i labels 
+ 1481  k describe po new-app-nginx-79b458974d-7sq6x | grep  Labels 
+ 1482  k describe po new-app-nginx-79b458974d-7sq6x 
+ 1483  k describe  deployment.apps/new-app-nginx
+ 1484  echo alaise h='helm' >> ~/.bashrc 
+ 1485  bash
+ 1486  bash
+ 1487  nano ~/.bashrc 
+ 1488  bash
+ 1489  h
+ 1490  helm upgrade new-app 
+ 1491  helm upgrade new-app nginx/
+ 1492  h list 
+ 1493  h logs
+ 1494  h -A
+ 1495  h list -A 
+ 1496  h history nginx/
+ 1497  h history new-app
+ 1498  h rollback new-app 1
+ 1499  h history new-app
+ 1500  h create loka
+ 1501  h install loka loka/
+ 1502  h upgrade  loka loka/
+ 1503  k9s 
+ 1504  watch kubectl get all -owide 
+ 1505  h list 
+ 1506  h uninstall my-rlease
+ 1507  h list 
+ 1508  h uninstall loka 
+ 1509  h uninstall new-app
+ 1510  h uninstall hello
+ 1511  h list 
+ 1512  ls 
+ 1513  rm -rf loka/ myapp/
+ 1514  ls
+ 1515  h create devops-iti
+ 1516  cd devops-iti/
+ 1517  cd templates/
+ 1518  ls 
+ 1519  mf svc.yaml
+ 1520  ls
+ 1521  ls 
+ 1522  rm svc.yaml 
+ 1523  ls
+ 1524  cd ..
+ 1525  h install app nginx/
+ 1526  h uninstall app 
+ 1527  h install devops-iti devops-iti/
+ 1528  watch kubectl get all -owide
+ 1529  h updrade  devops-iti devops-iti/
+ 1530  h upgrade  devops-iti devops-iti/
+ 1531  k9s
+ 1532  g
+ 1533  gs
+ 1534  git add .
+ 1535  gs
+ 1536  g commit -m "Starting With Helm"
+ 1537  gp
+ 1538  h upgrade  devops-iti devops-iti/
+ 1539  watch kubectl get all -owide
+ 1540  helm template devops-iti devops-iti/
+ 1541  h  upgrade devops-iti/
+ 1542  h  upgrade devops-tit devops-iti/
+ 1543  h  upgrade devops-iti  devops-iti/
+ 1544  helm template devops-iti 
+ 1545  h  upgrade devops-iti  devops-iti/
+ 1546  k get node -owide 
+ 1547  h  upgrade devops-iti  devops-iti/
+ 1548  helm upgrade devop-iti --debug --dry-run devops-iti/
+ 1549  helm upgrade devops-iti --debug --dry-run devops-iti/
+ 1550  h list 
+ 1551  helm upgrade devops-iti --debug --dry-run devops-iti/
+ 1552  helm lint  devops-iti/
+ 1553  cls
+ 1554  helm lint  devops-iti/
+ 1555  helm template  devops-iti/
+ 1556  helm template devop-iti  devops-iti/
+ 1557  helm template devops  devops-iti/
+ 1558  l list 
+ 1559  h lsit 
+ 1560  h list 
+ 1561  helm template devops  devops-iti/
+ 1562  helm upgrade devops-iti 
+ 1563  helm upgrade devops-iti devops-iti/
+ 1564  helm lint  devops-iti devops-iti/
+ 1565  helm upgrade devops-iti devops-iti/
+ 1566  k ge tnode 
+ 1567  k get node -owide 
+ 1568  helm upgrade devops-iti devops-iti/
+ 1569  helm lint  devops-iti devops-iti/
+ 1570  helm template devops-iti devops-iti/
+ 1571  helm upgrade devops-iti devops-iti/
+ 1572  helm lint  devops-iti devops-iti/
+ 1573  helm template devops-iti devops-iti/
+ 1574  reboot
+ 1575  watch kubectl get all -owide
+ 1576  tty
+ 1577  reboot
+ 1578  helm template devops-iti devops-iti/
+ 1579  cd K8s/helm/
+ 1580  helm template devops-iti devops-iti/
+ 1581  tar zxvf poweriso-x64-1.0.tar.gz
+ 1582  tar zxvf poweriso-x64-1.1.tar.gz 
+ 1583  tar xvf poweriso-x64-1.1.tar.gz 
+ 1584  cd poweriso-x64/
+ 1585  ls
+ 1586  ./poweriso.sh 
+ 1587  cd ..
+ 1588  rm -rf poweriso-x64
+ 1589  tar xvf poweriso-x64-1.1.tar.gz 
+ 1590  rm -rf poweriso-x64
+ 1591  tar zxvf poweriso-x64-1.1.tar.gz 
+ 1592  tar zxvf poweriso-1.6.tar.gz
+ 1593  ./poweriso
+ 1594  sudo apt install wine64 wine32
+ 1595  sudo apt install brasero
+ 1596  sudo apt install k3b
+ 1597  ps
+ 1598  sudo apt install gparted
+ 1599  sudo gprof 
+ 1600  sudo gparted
+ 1601  sudo apt purge  k3b
+ 1602  helm template devops-iti devops-iti/
+ 1603  sudo apt purge  brasero
+ 1604  sudo add-apt-repository ppa:tomtomtom/woeusb
+ 1605  sudo apt update
+ 1606  sudo apt install woeusb
+ 1607  woeusb
+ 1608  sudo apt install woeusb-frontend-wxgtk 
+ 1609  watch kubectl get all -owide
+ 1610  ls
+ 1611  tar -xvf VagrantVirtualDevelopmentEnvironmentCookbook.pdf.gz
+ 1612  free -h 
+ 1613  cat /etc/issue
+ 1614  docker exec -u 0 -it jenkins_container bash
+ 1615  services
+ 1616  k delete all --all 
+ 1617  cd K8s/apps/mo/
+ 1618  ll
+ 1619  k apply -f .
+ 1620  k describe deployments.apps fluented 
+ 1621  k apply -f .
+ 1622  k describe deployments.apps fluented 
+ 1623  k apply -f .
+ 1624  k describe pod fluented-6ccd976d47-jk9hx 
+ 1625  k apply -f .
+ 1626  k get pv
+ 1627  k get pvc
+ 1628  k describe pod fluented-6ccd976d47-jk9hx 
+ 1629  k apply -f .
+ 1630  helm install elasticsearch elastic/elasticsearch
+ 1631  helm repo add elastic https://helm.elastic.co
+ 1632  k describe  pod/fluented-65f6f85ff4-qzwb8
+ 1633  helm install elasticsearch elastic/elasticsearch
+ 1634  helm install kibana elastic/kibana
+ 1635  h list 
+ 1636  h delete kibana
+ 1637  h list 
+ 1638  helm install kibana elastic/kibana
+ 1639  k delete all --all 
+ 1640  k delete all --all  --force
+ 1641  h list 
+ 1642  k delete kibana elasticsearch
+ 1643  k delete kibana 
+ 1644  k delete elasticsearch
+ 1645  h list 
+ 1646  helm delete kibana
+ 1647  helm uninstall kibana
+ 1648  h list 
+ 1649  helm delete elasticsearch 
+ 1650  h list 
+ 1651  nano kube-logging.yaml
+ 1652  ls
+ 1653  kubectl create -f kube-logging.yaml
+ 1654  kubectl get namespaces
+ 1655  nano elasticsearch_svc.yaml
+ 1656  ls
+ 1657  k apply -f elasticsearch_svc.yaml 
+ 1658  kubectl get services --namespace=kube-logging
+ 1659  nano elasticsearch_statefulset.yaml
+ 1660  kubectl create -f elasticsearch_statefulset.yaml
+ 1661  kubectl rollout status sts/es-cluster --namespace=kube-logging
+ 1662  k get all 
+ 1663  k get node 
+ 1664  ls
+ 1665  ls 
+ 1666  k apply -f kube-logging.yaml 
+ 1667  k apply -f elasticsearch_svc.yaml 
+ 1668  k apply -f elasticsearch_statefulset.yaml 
+ 1669  kubectl rollout status sts/es-cluster --namespace=kube-logging
+ 1670  k apply -f elasticsearch_statefulset.yaml 
+ 1671  kubectl port-forward es-cluster-0 9200:9200 --namespace=kube-logging
+ 1672  k delete statefulset.apps/es-cluster 
+ 1673  k delete statefulset.apps/es-cluster  -n kube-logging
+ 1674  k apply -f elasticsearch_statefulset.yaml 
+ 1675  k describe  pod/es-cluster-0  -n kube-logging
+ 1676  kubectl rollout status sts/es-cluster --namespace=kube-logging
+ 1677  ￼Copy
+ 1678  k delete all --all --force 
+ 1679  k delete all  -n -n kube-logging   --all --force 
+ 1680  k delete all   -n kube-logging   --all --force 
+ 1681  k run llll --image nginx 
+ 1682  k get po --watch 
+ 1683  helm install elasticsearch elastic/elasticsearch
+ 1684  helm install kibana elastic/kibana
+ 1685  h list 
+ 1686  k delete all --all --force 
+ 1687  free -h 
+ 1688  top
+ 1689  watch kubectl get all -owide
+ 1690  watch kubectl -n kube-logging  get all  -owide
+ 1691  watch kubectl  get all  -owide
+ 1692  top
+ 1693  free -h 
+ 1694  vagrant share 
+ 1695  vagrant ssh
+ 1696  vagrant ssh 
+ 1697  vagrant up 
+ 1698  vagrant ssh 
+ 1699  vagrant destroy 
+ 1700  vagrant box list
+ 1701  vagrant up 
+ 1702  vagrant box list
+ 1703  vagrant ssh 
+ 1704  vagrant destroy 
+ 1705  vagrant up
+ 1706  scp metasploit-latest-linux-x64-installer.run vagrant@192.168.59.1:~
+ 1707  scp metasploit-latest-linux-x64-installer.run root@192.168.59.1:~
+ 1708  ll
+ 1709  scp metasploit-latest-linux-x64-installer.run root@192.168.59.1:~/
+ 1710  scp metasploit-latest-linux-x64-installer.run vagrant@192.168.59.1:~/
+ 1711  vagrant plugin install vagrant-scp
+ 1712  vagrant scp metasploit-latest-linux-x64-installer.run master:~/
+ 1713  vagrant ssh
+ 1714  ifconfig 
+ 1715  ll
+ 1716  1
+ 1717  sleep 4525 && reboot
+ 1718  rebbot
+ 1719  reboot
+ 1720  ping 169.254.172.2
+ 1721  ll
+ 1722  docker stats
+ 1723  docker top
+ 1724  فخح
+ 1725  top
+ 1726  htop
+ 1727  sudo apt install ncat
+ 1728  ncat
+ 1729  sudo nvat 
+ 1730  sudo ncat 
+ 1731  ncat
+ 1732  ncat 
+ 1733  ncat  --help
+ 1734  sudo apt install wifite
+ 1735  sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
+ 1736  sudo apt update || sudo apt upgrade -y 
+ 1737  rebbot
+ 1738  reboot
+ 1739  sudo apt install wine64 wine32
+ 1740  ls
+ 1741  s
+ 1742  ls
+ 1743  wine iq.exe 
+ 1744  ls
+ 1745  man wine
+ 1746  wine iq.exe 
+ 1747  cd ..
+ 1748  ls
+ 1749  wine KMP64_2023.8.25.12.exe 
+ 1750  sudo apt install playonlinux
+ 1751  POST 
+ 1752  POL_Wine KMP64_2023.8.25.12.exe 
+ 1753  which playonlinux
+ 1754  /usr/bin/playonlinux KMP64_2023.8.25.12.exe 
+ 1755  sudo apt  purge  playonlinux
+ 1756  cd Downloads/
+ 1757  wine64 KMP64_2023.8.25.12.exe 
+ 1758  top
+ 1759  winecfg
+ 1760  wine64 KMP64_2023.8.25.12.exe 
+ 1761  cd Downloads/
+ 1762  wine64 KMP64_2023.8.25.12.exe 
+ 1763  winecfg
+ 1764  wine64 KMP64_2023.8.25.12.exe 
+ 1765  winecfg
+ 1766  wine KMP64_2023.8.25.12.exe 
+ 1767  winecfg
+ 1768  wine KMP64_2023.8.25.12.exe 
+ 1769  cd Downloads/
+ 1770  ll
+ 1771  l ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1772  ARNING: UNPROTECTED PRIVATE KEY FILE!
+ 1773  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1774  ll
+ 1775  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1776  cat ec2-iti.pem 
+ 1777  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1778  chmod 400 ec2-iti.pem
+ 1779  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1780  ls
+ 1781  ll
+ 1782  cd ..
+ 1783  ll
+ 1784  chmod 777 580E-6636/
+ 1785  cd Downloads/
+ 1786  ls
+ 1787  cat ec2-iti.pem 
+ 1788  ssh -i "ec2-iti.pem" ec2-user@54.252.245.41
+ 1789  ifconfig 
+ 1790  sudo apt-get install soundconverter
+ 1791  shutdown +60
+ 1792  top
+ 1793  htop
+ 1794  sudo apt serch totem
+ 1795  sudo apt search totem
+ 1796  sudo apt purge totem totem-plugins totem-common libtotem0gir1.2-totem-1.0  libtotem-plparser-common libtotem0
+ 1797  sudo apt remove totem totem-plugins totem-common libtotem0gir1.2-totem-1.0  libtotem-plparser-common libtotem0
+ 1798  sudo apt remove totem totem-plugins totem-common   libtotem-plparser-common libtotem0
+ 1799  sudo apt purge  totem totem-plugins totem-common   libtotem-plparser-common libtotem0
+ 1800  sudo install rhythmbox 
+ 1801  sudo apt  install rhythmbox 
+ 1802  kill -9 12763
+ 1803  htop
+ 1804  open .
+ 1805  sudo apt ypdate 
+ 1806  sudo apt update 
+ 1807  sudo apt upgrade -y 
+ 1808  reboot
+ 1809  sudo apt install   totem totem-plugins totem-common   libtotem-plparser-common libtotem0
+ 1810  open .
+ 1811  sudo apt install totem
+ 1812  reboot
+ 1813  	
+ 1814  sudo apt-get install nautilus
+ 1815  sudo snap install file-manager
+ 1816  htop 
+ 1817  ip route 
+ 1818  route
+ 1819  route - n
+ 1820  route -n
+ 1821  fish
+ 1822  sudo apt install fish
+ 1823  fish
+ 1824  ping 41.129.0.56
+ 1825  ping 41.129.0.58
+ 1826  ping 41.122.0.58
+ 1827  ping 41.122.0.56
+ 1828  mf
+ 1829  mf cotent.txt
+ 1830  vagrant up 
+ 1831  vagrant ssh 
+ 1832  vagrant halt 
+ 1833  ifconfig 
+ 1834  ping vagrant plugin install vagrant-vbguest
+ 1835  vagrant plugin install vagrant-reload
+ 1836  docker pull  http
+ 1837  docker pull  httpd
+ 1838  vagrant ssh 
+ 1839  ifconfig 
+ 1840  route -n
+ 1841  ip route show default
+ 1842  default via 192.168.1.1 dev eth0
+ 1843  ip route 
+ 1844  route -n
+ 1845  route del  gw 192.168.0.4
+ 1846  route -n
+ 1847  route del  gw 192.168.0.4 
+ 1848  route del  default  gw 192.168.0.4 
+ 1849  sudo route del  default  gw 192.168.0.4 
+ 1850  route -n
+ 1851  sudo route del  default  gw 192.168.0.4 
+ 1852  route -n
+ 1853  ping 8.8.8.8
+ 1854  ping 1.1.1.1
+ 1855  route -n
+ 1856  sudo route  add default  gw  192.168.0.4
+ 1857  route -n
+ 1858  sudo route  add default  gw  192.168.0.4
+ 1859  route -n
+ 1860  man route
+ 1861  route -n
+ 1862  fish
+ 1863  cd Desktop/linux/
+ 1864  l
+ 1865  file Vagrantfile 
+ 1866  file README.md 
+ 1867  file Notes.txt 
+ 1868  file Linux\ Commands.pdf 
+ 1869  cd Downloads/
+ 1870  chmod 440 ro.pem 
+ 1871  cd Downloads/
+ 1872  chmod 400 ro.pem 
+ 1873  0440
+ 1874  Free tier eligible customers can get up to 30 GB of EBS General Purpose (SSD) or Magnetic storage
+ 1875  ￼
+ 1876  ping 172.31.42.185/20
+ 1877  ping 172.31.42.185
+ 1878  ping 16.171.206.76
+ 1879  sudo pro status
+ 1880  pro status --all
+ 1881  lsblk 
+ 1882  kind delete cluster my-cluster
+ 1883  kind delete cluster --name my-cluster
+ 1884  xfreerdp /v:your-server-ip /u:your-username
+ 1885  sudo apt install freerdp2-x11
+ 1886  xfreerdp  /v:172.31.37.204 /u:Administrator
+ 1887  curl ifconfig.me
+ 1888  wget -qO- ifconfig.me
+ 1889  dig +short myip.opendns.com @resolver1.opendns.com
+ 1890  curl ifconfig.me
+ 1891  curl ifconfig.me "
+ 1892  ;
+ 1893  ;
+ 1894  curl ifconfig.me 
+ 1895  cd Downloads/
+ 1896  echo $hostname
+ 1897  echo $hostname -f
+ 1898  echo $(hostname) -f"
+ 1899  echo " $(hostname) -f"
+ 1900  echo " $(hostname)"
+ 1901  echo "$(hostname)"
+ 1902  echo "$(hostname-f )" 
+ 1903  echo "$(hostname -f )" 
+ 1904  echo "$(uname)" 
+ 1905  echo "$(uname -i )" 
+ 1906  echo "$(uname - )" 
+ 1907  echo "$(uname -a )" 
+ 1908  fish
+ 1909  free -h
+ 1910  docker ps -a 
+ 1911  echo " $(hostname)"
+ 1912  curl ifconfg.me
+ 1913  lslgk k
+ 1914  ms
+ 1915  msgen
+ 1916  msgen --help
+ 1917  man msge
+ 1918  man msgen
+ 1919  aws
+ 1920  sudo apt upgrade -y || reboot 
+ 1921  reboot
+ 1922  sudo systemctl status bluetooth.
+ 1923  sudo systemctl status bluetooth.service 
+ 1924  jupyter
+ 1925  free -h 
+ 1926  nestat
+ 1927  netstat -nlh
+ 1928  netstat -nltp
+ 1929  netstat -n
+ 1930  netstat -nl
+ 1931  netstat -nlt
+ 1932  netstat -nltp
+ 1933  sudo netstat -nltp
+ 1934  sudo apt update -y 
+ 1935  sudo apt upgrade -y 
+ 1936  sudo apt search jupyter-core
+ 1937  sudo apt search jupyter
+ 1938  sudo apt purge jupyter-core
+ 1939  reboot 
+ 1940  sudo systemctl  status bluetooth.service 
+ 1941  rfkill 
+ 1942  sudo rfkill 
+ 1943  sudo systemctl restart bluetooth
+ 1944  sudo rfkill 
+ 1945  udo hciconfig hci0 up/down
+ 1946  sudo hciconfig hci0 up/down
+ 1947  sudo hciconfig hci0 down
+ 1948  sudo systemctl status bluetooth.service
+ 1949  sudo systemctl enable bluetooth.service
+ 1950  sudo systemctl start bluetooth.service
+ 1951  sudo systemctl enable bluetooth
+ 1952  sudo rmmod btusb
+ 1953  sudo systemctl enable bluetooth
+ 1954  sudo systemctl status bluetooth.service
+ 1955  rfkill 
+ 1956  rfkill -a 
+ 1957  sudo apt-get remove bluez
+ 1958  sudo apt install bluez
+ 1959  sudo systemctl enable bluetooth
+ 1960  sudo systemctl start bluetooth
+ 1961  sudo systemctl status bluetooth.service
+ 1962  sudo systemctl status bluetooth
+ 1963  mpede our data transfer or bar us from that refreshing break we were looking forward to. Therefore, it is desirable to troubleshoot all connectivity issues so you can have a peaceful 
+ 1964  rfkill -
+ 1965  rfkill 
+ 1966  sudo apt-get install pulseaudio-module-bluetooth
+ 1967  sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware
+ 1968  systemctl restart bluetooth
+ 1969  sudo systemctl status bluetoo
+ 1970  sudo systemctl status bluetooth.service 
+ 1971  rfkill list 
+ 1972  rfkill list  all
+ 1973  rfkill list 1
+ 1974  reboot 
+ 1975  rfkill list 1
+ 1976  rfkill list \
+ 1977  rfkill list 
+ 1978  sudo systemctl status bluetoo
+ 1979  sudo systemctl status bluetooth.service 
+ 1980  sudo systemctl start bluetooth
+ 1981  sudo systemctl enable bluetooth
+ 1982  sudo systemctl enable --now bluetooth
+ 1983  sudo pacman -S --needed bluez bluez-utils pipwire-pulse
+ 1984  sudo apt install --reinstall bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1985  sudo apt install bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1986  sudo systemctl status bluetooth.service
+ 1987  sudo systemctl enable bluetooth.service
+ 1988  sudo systemctl start bluetooth.service
+ 1989  sudo vim /etc/bluetooth/main.conf
+ 1990  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1991  hciconfig
+ 1992  bluetoothctl
+ 1993  sudo systemctl disable tlp.service
+ 1994  sudo systemctl status bluetooth
+ 1995  sudo rm -r /var/lib/bluetooth/
+ 1996  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1997  sudo rfkill unblock all
+ 1998  history > Hist.txt

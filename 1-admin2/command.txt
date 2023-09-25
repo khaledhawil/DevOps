@@ -1,0 +1,11 @@
+$ lscpu # this command to show all about the CPU
+$ nproc # tihs will show to U how many cpu U have 
+$ sudo dpkg -i file-name.deb # to install app by cli
+$ select-editor # to open one of editors you have 
+$ dpkg -l sysstat
+$ sar -u  # how many cpus 
+$ sar -r 
+$ nmap 22  192.168.67.2
+$ nmap -p 22 192.168.0.4 # to check the open port on the ip 
+
+

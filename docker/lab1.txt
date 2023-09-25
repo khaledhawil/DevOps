@@ -1,0 +1,45 @@
+1- Run the container hello-world :
+$ docker run hell-world  or <image-name>
+
+2- Check the container status :
+$ docker ps hell-world or <image-name>
+
+3- Start the stopped container : 
+$ docker  start hell-world or <image-name>
+
+4- Remove the container:
+$ docker rm hell-world or <image-name>
+
+5- Remove the image:
+$ docker rmi hell-world  or <image-name>
+
+6- Run container centos or ubuntu in an interactive mode:
+$ docker run -it centos /bin/bash
+
+7- Run the following command in the container echo docker :
+$ echo docker 
+
+8- Open a bash shell in the container and touch a file named hello-docker:
+$ docker exec -it <container-id> bash
+$ touch hello-docker
+
+9-  Stop the container and remove it:
+$ docker stop hello-docker
+$ docker rm hello-docker
+
+10- Remove all stopped containers:
+$ docker container prune
+
+
+
+
+
+
+
+
+
+
+
+
+
+

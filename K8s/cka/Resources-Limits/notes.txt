@@ -1,0 +1,68 @@
+- ======================================= Resources and Limits =============================================================
+Resource limits in K9s refer to:
+ the maximum amount of CPU and memory resources that K9s is allowed to use when running within a Kubernetes cluster.
+
+
+
+- ===================================-==== how to use ===============================================
+
+
+you can specify them in the YAML file that defines your pod or deployment. 
+Here's an example YAML file that sets resource requests and limits for a container:
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: my-image
+    resources:
+      requests:
+        cpu: "500m"
+        memory: "256Mi"
+      limits:
+        cpu: "1"
+        memory: "512Mi"
+
+
+- ------------------------------------------------------------------------------------------------------------------------------
+You can also set resource requests and limits in a deployment YAML file. 
+Here's an example YAML file that sets resource requests and limits for a deployment:
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: my-deployment
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       app: my-app
+#   template:
+#     metadata:
+#       labels:
+#         app: my-app
+#     spec:
+#       containers:
+#       - name: my-container
+#         image: my-image
+#         resources:
+#           requests:
+#             cpu: "500m"
+#             memory: "256Mi"
+#           limits:
+#             cpu: "1"
+#             memory: "512Mi"
+
+
+
+
+
+
+
+
+
+
+bunch of service accounts that have been created

@@ -1,0 +1,122 @@
+
+- In Kubernetes, a manifest file is a YAML or JSON file that:
+defines the desired state of a Kubernetes resource,such as a pod, deployment, or service.
+The manifest file specifies the configuration settings and parameters for the resource, 
+including its metadata, spec, and status
+
+
+
+
+# <============================================= Deployment in k8s ========================================== 
+
+
+1 - Recreate 
+
+- The Recreate strategy updates all of the Pods in a Deployment at once
+
+
+2- Rolling update
+
+- The Rolling Update strategy updates the Pods in a Deployment gradually,
+ by replacing a few Pods at a time with the updated configuration.
+This allows the application to remain available during the update process
+
+- commands with deployment : 
+
+$ kubectl create deployment deply-name --image=ubuntu  # to create a deployment with command 
+
+$ kubectl get deployment 
+$ kubectl scale deployment deply-name --replicas=3 # to create more replicas
+
+$ kubectl describe deployment deply-name
+$ kubectl get deployment deploy  -o yaml # more info
+
+
+
+* what is a difference between Imperative and  Declarative ??:
+- Imperative:
+to give a command just it 
+اي كوماند بترنه
+- Declarative:
+ Yaml file 
+اي ملف تعديل او كونفيجريشن
+ 
+
+===============================================================================================================================
+# <======================= Docker CMD and ENTRYPOINT Revision =======================>
+CMD: is the default command that will be executed when you run the container. 
+You can override the CMD command when you run the container.
+ENTRYPOINT: is the command that will be executed when you run the container. 
+You can't override the ENTRYPOINT command when you run the container. (by Default)
+by default the ENTRYPOINT is /bin/sh -c
+# ===============================================================================================================================
+# <======================= Docker CMD and ENTRYPOINT Examples =======================>
+let say we have a docker image with the following Dockerfile:
+FROM ubuntu
+entrypoint: ["echo", "Hello World"]
+
+If we run the container with the following command: 
+docker run ubuntu ===> The output will be: Hello World
+# <======================= Docker CMD Override =======================>
+let say we have a docker image with the following Dockerfile:
+FROM ubuntu
+entrypoint: ["echo"]
+CMD ["Hello World"]
+
+if we run the container with the following command:
+docker run ubuntu ===> The output will be: Hello World it will run the entrypoint command "echo" and concatenate it with the CMD command "Hello World" so the output will be "echo Hello World"
+
+if we want to override the message "Hello World" with another message like "Hello Docker", we can run the container with the following command:
+docker run ubuntu "Hello Docker" ===> The output will be: "Hello Docker" because it will run the entrypoint command "echo" and concatenate it with the CMD command "Hello Docker" after overriding the CMD command so the output will be "echo Hello Docker"
+
+so we could override the CMD command when we run the container. 
+and accually, the CMD command here is arrgument to the entrypoint command.
+but what if we want to override the entrypoint command?
+# <======================= Docker ENTRYPOINT Override =======================>
+let say we have a docker image with the following Dockerfile:
+FROM ubuntu
+entrypoint: ["echo"]
+CMD ["Hello World"]
+
+and we want to override the entrypoint command with another command like "ls", we can run the container with the following command:
+docker run --entrypoint ls ubuntu ===> The output will be: "ls" because it will run the entrypoint command "ls" and concatenate it with the CMD command "Hello World" after overriding the entrypoint command so the output will be "ls Hello World"
+
+if we want to override the entrypoint command and the CMD command, we can run the container with the following command:
+docker run --entrypoint ls ubuntu -l ===> The output will be: "ls -l" because it will run the entrypoint command "ls" and concatenate it with the CMD command "-l" after overriding the entrypoint command so the output will be "ls -l"
+
+
+# <==================================== Command and Args in k8s ===============================================================================>
+
+ 
+- commmand in k8s  = Enterypoint in dokcer 
+- args  in    k8s  = CMD in docker 
+
+
+
+
+# ======================= A Resource request =====================================================================================================================================>
+
+- is used to specify the minimum amount of resources that a container or pod requires to run
+-  can be defined for CPU and memory and are used by the Kubernetes scheduler to ensure that nodes with sufficient resources are assigned to run the container or pod
+
+
+Example:
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: my-pod
+# spec:
+#   containers:
+#   - name: my-container
+#     image: my-image
+#     resources:
+#       requests:
+#         memory: "1Gi"
+#         cpu: "500m"
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: iti
+    labels:
+        version: {{ .Capabilities.KubeVersion | quote }}
+data:
+{{- range .Values.date }}
+ - {{ . }} 
+{{- end }}
+
+{{- range $x,$y := .Values.labels }}
+{{ $x }}: {{ $y | quote }}
+{{- end }}

@@ -1,0 +1,7 @@
+$ k create cm --help
+$  k create po --help
+$  k create deploy --help
+$ kubectl explain pod.spec.volumes
+$ kubectl explain pod
+$ kubectl explain deploy
+

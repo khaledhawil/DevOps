@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hello
+spec:
+  schedule: "*/1 * * * * "
+  # successfulJobHistoryLimit: 0 # 
+  # failedJobHistoryLimit: 0
+  jobTemplate:
+    spec:
+      template:
+        spec: 
+          containers:
+          - name: hello
+            image: nginx
+            command:
+            - /bin/sh
+            - -c
+            - date; echo Khaled Hiiiiii
+          restartPolicy: Never

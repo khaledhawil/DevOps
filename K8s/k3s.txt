@@ -1,0 +1,28 @@
+to create cluster with k3s :
+1- create two or more vms 
+2- update your machines  # apt update 
+3- install some pkdg on master and worker  # apt install vim nano htop curl make gcc 
+4- run this command to install k3s on master 
+$ curl -sfL  https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.25.5+k3s2  INSTALL_K3S_EXEC="--disable traefik" K3S_KUBECONFIG_MODE="644"  sh -s -
+5- install on worker  :
+run this command on worker node and replice ip with master's node ip 
+get the token-node from master node from  this path: cat /var/lib/rancher/k3s/server/node-token 
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.57.101:6443 K3S_TOKEN="K10bea8cb7266a52b40f72cede8cb3a7f5732f79e3d6a9e4911cfc0eb680e58e67d::server:4cd5d598c8743278bb585b17b5032682" K3S_NODE_NAME="worker2"    INSTALL_K3S_CHANNEL=v1.25.5+k3s2   sh -
+
+
+6- to create load balancer 
+
+
+192.168.56.10   master
+192.168.56.11   worker
+
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.57.101:6443 K3S_TOKEN="K108494cdb476f5a48f7953bdc5474a7b6f4d16920be18eebfdd63f89331068a4b6::server:518dba308d414e4da57126d515e222e8" K3S_NODE_NAME="worker2"    INSTALL_K3S_CHANNEL=v1.25.5+k3s2   sh -
+
+
+
+192.168.57.101
+
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF

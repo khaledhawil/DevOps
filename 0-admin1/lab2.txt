@@ -1,0 +1,37 @@
+1- List the available shells in your system:
+- echo $SHELL,cat /etc/shells
+2 -List the environment variables in your current shell.
+- $env,$printenv
+3-  What are the commands that list the value of a specific variable?:
+- echo $PATH
+4 - Display your current shell name.:
+ - echo $SHELL
+5- Edit in your profile to display date at login and change your prompt permanently.:
+- put the date command in .bashrc
+6 -Execute the following command :
+- echo \ then press enter
+
+7- Create a Bash shell alias named ls for the “ls –l” command:
+- write alias ls="ls -l" in .bashrc file
+
+8 - List the user commands :
+$ compgen -c 
+9- Count the number of user commands:
+- compgen -c | wc -l
+10 - Display the number of users who is logged now to the system.:
+$ w
+11- Display lines 7 to line 10 of /etc/passwd file:
+- head -n 10 /etc/passwd | tail -n 4
+12 - Stop the last command:
+Ctrl + c 
+13 - Display all processes except yours:
+- ps aux | grep -v $(whoami)
+14- Display your processes only:
+- ps -u $(whoami)
+- pgrep -u username
+15 -Send the sleep command to the foreground and send it again to the background.
+- sleep 100 & ,it sends to background
+- fg %1, it shows to screen again
+
+
+

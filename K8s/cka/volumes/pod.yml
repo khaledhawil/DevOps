@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-server
+spec:
+  volumes:
+    - name: server-storage
+      persistentVolumeClaim:
+        claimName:  pvc-storage
+  containers:
+    - name: web
+      image: nginx
+      ports:
+       - containerPort: 80
+         name: web-server
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: server-storage
+
+       

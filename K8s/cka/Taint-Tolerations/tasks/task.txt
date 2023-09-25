@@ -1,0 +1,85 @@
+
+- How many nodes exist on the system?
+$ k get pods 
+output:
+# No resources found in default namespace.
+
+- Do any taints exist on node01 node? # node01 = minikube
+$ kubectl describe node minikube  | grep -i taint 
+output:
+# Taints:             <none>
+
+- Create a taint on node01 with key of spray, value of mortein and effect of NoSchedule
+$ kubectl taint node minikube spray=mortein:NoSchedule
+output:
+# node/minikube tainted
+
+- Create a new pod with the nginx image and pod name as mosquito.
+$ kubectl run mosquito --image=nginx 
+output:
+# pod/mosquito created
+
+- What is the state of the POD?
+$ kubectl get po 
+output:  # tha state is pending 
+# NAME       READY   STATUS    RESTARTS   AGE
+# mosquito   0/1     Pending   0          52s
+
+
+- Why do you think the pod is in a pending state?
+the pod cannot tolerate the taint on the node.
+
+
+- Create another pod named bee with the nginx image, which has a toleration set to the taint mortein
+
+in taint.yml file 
+$ kubectl create -f taint.yml
+output:
+#pod/myapp-pod created
+ 
+
+- Do you see any taints on minikube node?
+$ kubectl describe node minikube | grep Taint
+output:
+# Taints:             spray=mortein:NoSchedule
+
+- Remove the taint on minikube, which currently has the taint effect of NoSchedule.
+$ kubectl taint node minikube spray- 
+output:
+# node/minikube untainted
+
+- What is the state of the pod mosquito now?
+$ kubectl  get po
+output: is running now after remove the taint 
+# mosquito    1/1     Running   0          9m14s
+
+
+- Which node is the POD mosquito on now?
+$ kubectl get pods -o wide
+output:
+# mosquito    1/1     Running   0          10m     10.244.0.46   minikube   <none>           <none>
+
+
+
+
+
+
+
+
+
+# - Create a taint on  node node01 with key app with value critical and effect of NoSchedule
+
+
+# kk taint node node01 app=critical:NoSchedule
+
+
+
+
+
+
+
+
+
+
+
+

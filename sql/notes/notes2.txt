@@ -1,0 +1,106 @@
+1- max :
+> SELECT MAX(age) FROM users ; # to show the old one 
+- min
+> SELECT min(age) FROM users ; # to show the small one
+- avg
+> SELECT AVG(age) FROM users ;  # to show the avraga
+- count
+> SELECT COUNT(id) FROM users ; # to count how many 
+> SELECT COUNT(country) FROM users ; # to show how many country 
+> SELECT COUNT(DISTINCT  country) FROM users ; # to show how many contry without repet
+- and sum
+> SELECT sum(id) FROM users ; # to sum 
+
+2- Like
+> SELECT * FROM users WHERE name LIKE 'K%' ;
+> SELECT * FROM users WHERE name LIKE '%H%' ;
+> SELECT name FROM users WHERE name LIKE 'k%d' ;
+
+￼
+2- between and in :
+> SELECT * FROM users WHERE country in ('kfs' , 'cairo') ;
+> SELECT age FROM users WHERE age BETWEEN 22 and 30 ;
+
+3- aliase :
+> SELECT name as username  FROM users ;
+> SELECT COUNT(id) as CountId from users ;
+
+
+
+
+* let's talk about date and time .... :
+
+1- DATE data type: Stores only the date in YYYY-MM-DD format.
+- Example: '2023-04-04'
+> CURRENT_DATE();
+
+2- TIME data type: Stores only the time in HH:MM:SS format.
+- Example: '17:30:45'
+> CURRENT_TIME() ;
+
+3-DATETIME data type: Stores both date and time in YYYY-MM-DD HH:MM:SS format.
+- Example: '2023-04-04 17:30:45'
+> CURRENT_TIMESTAMP();
+
+4- TIMESTAMP data type: Stores the number of seconds since the Unix epoch (1970-01-01 00:00:00 UTC) in UTC.
+- Example: '1651811445'
+
+5- YEAR data type: Stores a year in four-digit format.
+- Example: '2023'
+> YEAR();
+
+*                some of exs:
+
+> SELECT CURRENT_DATE() as Today , DAYNAME(CURRENT_DATE) as DayName ;
++------------+---------+
+| Today      | DayName |
++------------+---------+
+| 2023-04-03 | Monday  |
++------------+---------+
+
+
+> SELECT date('2001-4-16') as Today , DAYNAME('2001-4-16') as DayName ;
+
++------------+---------+
+| Today      | DayName |
++------------+---------+
+| 2001-04-16 | Monday  |
++------------+---------+
+BTW this is my BD ;)
+
+> SELECT date('2001-4-16') as Today , DAYNAME('2001-4-16') as DayName , DAYOFWEEK('2001-4-16') as WeekName , DAYOFMONTH('2001-4-16') as DayOfMonth ;
+
++------------+---------+----------+------------+
+| Today      | DayName | WeekName | DayOfMonth |
++------------+---------+----------+------------+
+| 2001-04-16 | Monday  |        2 |         16 |
++------------+---------+----------+------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

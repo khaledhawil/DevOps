@@ -1,0 +1,73 @@
+- ---------------------------------------------- Services ------------------------------------------------------------------------------
+- الملخص  انها بتديك endpoint for pod or Deploy 
+
+
+In Kubernetes, 
+a service is an abstraction layer that provides a stable IP address and DNS name for a set of pods running the same application or microservice. 
+Services in Kubernetes provide a way to expose applications running in a Kubernetes cluster to other parts of the system or external clients.
+
+
+Services in Kubernetes also provide load balancing capabilities. 
+When a client sends a request to a service, the service automatically distributes the request to one of the available pods running the application. 
+This allows multiple pods to serve incoming requests, providing high availability and improved performance.
+
+- ============================================ types of services ======================================================================================
+
+
+- ClusterIP: 
+The ClusterIP service type is the default type and provides internal access to the service within the cluster. 
+The service is given a virtual IP address (ClusterIP) that is used by other services within the cluster to communicate with it.
+
+
+
+- NodePort: 
+The NodePort service type provides external access to the service by exposing a static port on each node in the cluster. 
+Traffic to this port is forwarded to the service's ClusterIP.
+
+
+- LoadBalancer: 
+The LoadBalancer service type provides external access to the service by provisioning a cloud provider's load balancer. 
+This is typically used for services that need to be accessed from outside the cluster.
+
+
+
+
+# Some questions 
+- What is a Kubernetes service and why is it used?
+
+It allows clients to access the pods without needing to know their individual IP addresses.
+
+- How do you create a Kubernetes service using the command line interface (CLI)?
+
+k expose deploy dep-name --name service-name --type NodePort  --port 80 --target-port 80 
+
+- What is the difference between ClusterIP, NodePort, and LoadBalancer service types in Kubernetes?
+
+- ClusterIP:
+this to communicate pods inside  the k8s cluster 
+
+- NodePort:
+it allows to access the pod from outside
+
+
+- LoadBalancer :
+
+This type of service creates a load balancer in the cloud provider's infrastructure 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

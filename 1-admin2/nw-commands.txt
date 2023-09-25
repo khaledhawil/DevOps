@@ -1,0 +1,89 @@
+ifconfig 
+ip
+traceroute
+tracepath
+ping
+netstat
+ss
+dig
+nslookup
+route
+host
+arp
+iwconfig
+hostname
+curl or wget
+mtr
+whois
+ifplugstatus
+iftop
+tcpdum
+https://www.javatpoint.com/linux-networking-commands
+https://mindmajix.com/linux-networking-commands-best-examples#nslookup
+https://itsfoss.com/basic-linux-networking-commands/
+
+
+- The nslookup command:
+ is a network diagnostic tool used to query the Domain Name System (DNS) to obtain information about domain names or IP addresses. 
+It is commonly used to perform DNS lookups and resolve hostnames to IP addresses, or vice versa.
+The basic syntax of the nslookup command is as follows:
+
+$ nslookup [options] [hostname or IP address] [DNS server]
+
+Here are some common usages of the nslookup command:
+
+$ nslookup example.com
+
+Perform a reverse DNS lookup (resolve an IP address to a hostname):
+
+$ nslookup 192.0.2.1
+
+Specify a specific DNS server to query:
+
+$ nslookup example.com 8.8.8.8
+
+Get more detailed information (including the DNS server used, query type, and response time:
+
+$ nslookup -debug example.com
+
+
+
+- ping:
+Sends ICMP Echo Request packets to a specified IP address or hostname to check network connectivity and measure round-trip time.
+
+$ ping example.com
+
+- traceroute:
+ (or tracert on Windows): Displays the route and measures the round-trip time for packets sent from your device to a destination IP address or hostname, showing each intermediate hop.
+
+$ traceroute example.com
+ 
+
+
+
+
+
+
+
+
+Explore tools like curl, nslookup, netcat, and traceroute to diagnose network-related issues within your pods. These tools can help you troubleshoot connectivity problems.
+
+
+
+تصنيفات  subnet mask :
+class A :           255.0.0.0
+class B :      255.255.0.0
+class C : 255.255.255.0
+____________________________________________________________________
+تصنيفات IP address
+class A :          0 : 127
+class B :      128 : 191
+class C :      191 : 223
+
+
+- to add default getway on host 
+$ sudo route  add default  gw  192.168.0.4
+
+- to delete 
+$ sudo route del  default  gw 192.168.0.4
+
