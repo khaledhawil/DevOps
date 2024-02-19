@@ -1,0 +1,1000 @@
+ 1000  telnet 192.168.1.1
+ 1001  telnet 192.168.0.4
+ 1002  telnet 192.168.0.1
+ 1003  telnet 192.168.0.4
+ 1004  telnet 192.168.1.1 22
+ 1005  ip a s 
+ 1006  telnet 192.168.1.120 22
+ 1007  telnet 192.168.1.163 22
+ 1008  pstree
+ 1009  h top
+ 1010  htop
+ 1011  top
+ 1012  sudo kill 14
+ 1013  top
+ 1014  su
+ 1015  top
+ 1016  cat .kube/config 
+ 1017  cat .kube/kubens/minikube 
+ 1018  cat .kube/config 
+ 1019  ls 
+ 1020  helm  install iti3month bitnami/wordpress
+ 1021  helm repo  add bitnami "bitnami" already exists with the same configuration, skipping
+ 1022  helm repo  add bitnami https://charts.bitnami.com/bitnami
+ 1023  helm  install iti3month bitnami/wordpress
+ 1024  helm uninstall iti3month 
+ 1025  k delete all --all --force 
+ 1026  helm  install iti3month bitnami/wordpress
+ 1027  k get pv 
+ 1028  k get pvc
+ 1029  k ge node 
+ 1030  k get node 
+ 1031  k get node  -owide
+ 1032  k logs pod/iti3month-mariadb-0
+ 1033  k logs pod/iti3month-wordpress-6b4b4ff86-hr4jw
+ 1034  cd ..
+ 1035  cd apps/
+ 1036  git clone https://github.com/kodekloudhub/example-voting-app-kubernetes.git
+ 1037  cd example-voting-app-kubernetes/
+ 1038  ls 
+ 1039  k get all
+ 1040  watch kubectl  get all -owide 
+ 1041  h history new-app 
+ 1042  ls
+ 1043  cd ..
+ 1044  cd helm/
+ 1045  ls
+ 1046  w
+ 1047  top
+ 1048  htop
+ 1049  uptime 
+ 1050  helm uninstall iti3month 
+ 1051  helm install  my-rlease bitnami/nginx
+ 1052  k get node -owide
+ 1053  helm pull --untar bitnami/nginx
+ 1054  helm install new-app nginx/ --set labels.intake=devops
+ 1055  helm list 
+ 1056  helm install new-app nginx/ --set labels.intake=devops
+ 1057  k exec  -it new-app-nginx-79b458974d-7sq6x sh 
+ 1058  k describe po new-app-nginx-79b458974d-7sq6x
+ 1059  k describe po new-app-nginx-79b458974d-7sq6x | grep -i labels 
+ 1060  k describe po new-app-nginx-79b458974d-7sq6x | grep  Labels 
+ 1061  k describe po new-app-nginx-79b458974d-7sq6x 
+ 1062  k describe  deployment.apps/new-app-nginx
+ 1063  echo alaise h='helm' >> ~/.bashrc 
+ 1064  bash
+ 1065  bash
+ 1066  nano ~/.bashrc 
+ 1067  bash
+ 1068  h
+ 1069  helm upgrade new-app 
+ 1070  helm upgrade new-app nginx/
+ 1071  h list 
+ 1072  h logs
+ 1073  h -A
+ 1074  h list -A 
+ 1075  h history nginx/
+ 1076  h history new-app
+ 1077  h rollback new-app 1
+ 1078  h history new-app
+ 1079  h create loka
+ 1080  h install loka loka/
+ 1081  h upgrade  loka loka/
+ 1082  k9s 
+ 1083  watch kubectl get all -owide 
+ 1084  h list 
+ 1085  h uninstall my-rlease
+ 1086  h list 
+ 1087  h uninstall loka 
+ 1088  h uninstall new-app
+ 1089  h uninstall hello
+ 1090  h list 
+ 1091  ls 
+ 1092  rm -rf loka/ myapp/
+ 1093  ls
+ 1094  h create devops-iti
+ 1095  cd devops-iti/
+ 1096  cd templates/
+ 1097  ls 
+ 1098  mf svc.yaml
+ 1099  ls
+ 1100  ls 
+ 1101  rm svc.yaml 
+ 1102  ls
+ 1103  cd ..
+ 1104  h install app nginx/
+ 1105  h uninstall app 
+ 1106  h install devops-iti devops-iti/
+ 1107  watch kubectl get all -owide
+ 1108  h updrade  devops-iti devops-iti/
+ 1109  h upgrade  devops-iti devops-iti/
+ 1110  k9s
+ 1111  g
+ 1112  gs
+ 1113  git add .
+ 1114  gs
+ 1115  g commit -m "Starting With Helm"
+ 1116  gp
+ 1117  h upgrade  devops-iti devops-iti/
+ 1118  watch kubectl get all -owide
+ 1119  helm template devops-iti devops-iti/
+ 1120  h  upgrade devops-iti/
+ 1121  h  upgrade devops-tit devops-iti/
+ 1122  h  upgrade devops-iti  devops-iti/
+ 1123  helm template devops-iti 
+ 1124  h  upgrade devops-iti  devops-iti/
+ 1125  k get node -owide 
+ 1126  h  upgrade devops-iti  devops-iti/
+ 1127  helm upgrade devop-iti --debug --dry-run devops-iti/
+ 1128  helm upgrade devops-iti --debug --dry-run devops-iti/
+ 1129  h list 
+ 1130  helm upgrade devops-iti --debug --dry-run devops-iti/
+ 1131  helm lint  devops-iti/
+ 1132  cls
+ 1133  helm lint  devops-iti/
+ 1134  helm template  devops-iti/
+ 1135  helm template devop-iti  devops-iti/
+ 1136  helm template devops  devops-iti/
+ 1137  l list 
+ 1138  h lsit 
+ 1139  h list 
+ 1140  helm template devops  devops-iti/
+ 1141  helm upgrade devops-iti 
+ 1142  helm upgrade devops-iti devops-iti/
+ 1143  helm lint  devops-iti devops-iti/
+ 1144  helm upgrade devops-iti devops-iti/
+ 1145  k ge tnode 
+ 1146  k get node -owide 
+ 1147  helm upgrade devops-iti devops-iti/
+ 1148  helm lint  devops-iti devops-iti/
+ 1149  helm template devops-iti devops-iti/
+ 1150  helm upgrade devops-iti devops-iti/
+ 1151  helm lint  devops-iti devops-iti/
+ 1152  helm template devops-iti devops-iti/
+ 1153  reboot
+ 1154  watch kubectl get all -owide
+ 1155  tty
+ 1156  reboot
+ 1157  helm template devops-iti devops-iti/
+ 1158  cd K8s/helm/
+ 1159  helm template devops-iti devops-iti/
+ 1160  tar zxvf poweriso-x64-1.0.tar.gz
+ 1161  tar zxvf poweriso-x64-1.1.tar.gz 
+ 1162  tar xvf poweriso-x64-1.1.tar.gz 
+ 1163  cd poweriso-x64/
+ 1164  ls
+ 1165  ./poweriso.sh 
+ 1166  cd ..
+ 1167  rm -rf poweriso-x64
+ 1168  tar xvf poweriso-x64-1.1.tar.gz 
+ 1169  rm -rf poweriso-x64
+ 1170  tar zxvf poweriso-x64-1.1.tar.gz 
+ 1171  tar zxvf poweriso-1.6.tar.gz
+ 1172  ./poweriso
+ 1173  sudo apt install wine64 wine32
+ 1174  sudo apt install brasero
+ 1175  sudo apt install k3b
+ 1176  ps
+ 1177  sudo apt install gparted
+ 1178  sudo gprof 
+ 1179  sudo gparted
+ 1180  sudo apt purge  k3b
+ 1181  helm template devops-iti devops-iti/
+ 1182  sudo apt purge  brasero
+ 1183  sudo add-apt-repository ppa:tomtomtom/woeusb
+ 1184  sudo apt update
+ 1185  sudo apt install woeusb
+ 1186  woeusb
+ 1187  sudo apt install woeusb-frontend-wxgtk 
+ 1188  watch kubectl get all -owide
+ 1189  ls
+ 1190  tar -xvf VagrantVirtualDevelopmentEnvironmentCookbook.pdf.gz
+ 1191  free -h 
+ 1192  cat /etc/issue
+ 1193  docker exec -u 0 -it jenkins_container bash
+ 1194  services
+ 1195  k delete all --all 
+ 1196  cd K8s/apps/mo/
+ 1197  ll
+ 1198  k apply -f .
+ 1199  k describe deployments.apps fluented 
+ 1200  k apply -f .
+ 1201  k describe deployments.apps fluented 
+ 1202  k apply -f .
+ 1203  k describe pod fluented-6ccd976d47-jk9hx 
+ 1204  k apply -f .
+ 1205  k get pv
+ 1206  k get pvc
+ 1207  k describe pod fluented-6ccd976d47-jk9hx 
+ 1208  k apply -f .
+ 1209  helm install elasticsearch elastic/elasticsearch
+ 1210  helm repo add elastic https://helm.elastic.co
+ 1211  k describe  pod/fluented-65f6f85ff4-qzwb8
+ 1212  helm install elasticsearch elastic/elasticsearch
+ 1213  helm install kibana elastic/kibana
+ 1214  h list 
+ 1215  h delete kibana
+ 1216  h list 
+ 1217  helm install kibana elastic/kibana
+ 1218  k delete all --all 
+ 1219  k delete all --all  --force
+ 1220  h list 
+ 1221  k delete kibana elasticsearch
+ 1222  k delete kibana 
+ 1223  k delete elasticsearch
+ 1224  h list 
+ 1225  helm delete kibana
+ 1226  helm uninstall kibana
+ 1227  h list 
+ 1228  helm delete elasticsearch 
+ 1229  h list 
+ 1230  nano kube-logging.yaml
+ 1231  ls
+ 1232  kubectl create -f kube-logging.yaml
+ 1233  kubectl get namespaces
+ 1234  nano elasticsearch_svc.yaml
+ 1235  ls
+ 1236  k apply -f elasticsearch_svc.yaml 
+ 1237  kubectl get services --namespace=kube-logging
+ 1238  nano elasticsearch_statefulset.yaml
+ 1239  kubectl create -f elasticsearch_statefulset.yaml
+ 1240  kubectl rollout status sts/es-cluster --namespace=kube-logging
+ 1241  k get all 
+ 1242  k get node 
+ 1243  ls
+ 1244  ls 
+ 1245  k apply -f kube-logging.yaml 
+ 1246  k apply -f elasticsearch_svc.yaml 
+ 1247  k apply -f elasticsearch_statefulset.yaml 
+ 1248  kubectl rollout status sts/es-cluster --namespace=kube-logging
+ 1249  k apply -f elasticsearch_statefulset.yaml 
+ 1250  kubectl port-forward es-cluster-0 9200:9200 --namespace=kube-logging
+ 1251  k delete statefulset.apps/es-cluster 
+ 1252  k delete statefulset.apps/es-cluster  -n kube-logging
+ 1253  k apply -f elasticsearch_statefulset.yaml 
+ 1254  k describe  pod/es-cluster-0  -n kube-logging
+ 1255  kubectl rollout status sts/es-cluster --namespace=kube-logging
+ 1256  ￼Copy
+ 1257  k delete all --all --force 
+ 1258  k delete all  -n -n kube-logging   --all --force 
+ 1259  k delete all   -n kube-logging   --all --force 
+ 1260  k run llll --image nginx 
+ 1261  k get po --watch 
+ 1262  helm install elasticsearch elastic/elasticsearch
+ 1263  helm install kibana elastic/kibana
+ 1264  h list 
+ 1265  k delete all --all --force 
+ 1266  free -h 
+ 1267  top
+ 1268  watch kubectl get all -owide
+ 1269  watch kubectl -n kube-logging  get all  -owide
+ 1270  watch kubectl  get all  -owide
+ 1271  top
+ 1272  free -h 
+ 1273  vagrant share 
+ 1274  vagrant ssh
+ 1275  vagrant ssh 
+ 1276  vagrant up 
+ 1277  vagrant ssh 
+ 1278  vagrant destroy 
+ 1279  vagrant box list
+ 1280  vagrant up 
+ 1281  vagrant box list
+ 1282  vagrant ssh 
+ 1283  vagrant destroy 
+ 1284  vagrant up
+ 1285  scp metasploit-latest-linux-x64-installer.run vagrant@192.168.59.1:~
+ 1286  scp metasploit-latest-linux-x64-installer.run root@192.168.59.1:~
+ 1287  ll
+ 1288  scp metasploit-latest-linux-x64-installer.run root@192.168.59.1:~/
+ 1289  scp metasploit-latest-linux-x64-installer.run vagrant@192.168.59.1:~/
+ 1290  vagrant plugin install vagrant-scp
+ 1291  vagrant scp metasploit-latest-linux-x64-installer.run master:~/
+ 1292  vagrant ssh
+ 1293  ifconfig 
+ 1294  ll
+ 1295  1
+ 1296  sleep 4525 && reboot
+ 1297  rebbot
+ 1298  reboot
+ 1299  ping 169.254.172.2
+ 1300  ll
+ 1301  docker stats
+ 1302  docker top
+ 1303  فخح
+ 1304  top
+ 1305  htop
+ 1306  sudo apt install ncat
+ 1307  ncat
+ 1308  sudo nvat 
+ 1309  sudo ncat 
+ 1310  ncat
+ 1311  ncat 
+ 1312  ncat  --help
+ 1313  sudo apt install wifite
+ 1314  sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
+ 1315  sudo apt update || sudo apt upgrade -y 
+ 1316  rebbot
+ 1317  reboot
+ 1318  sudo apt install wine64 wine32
+ 1319  ls
+ 1320  s
+ 1321  ls
+ 1322  wine iq.exe 
+ 1323  ls
+ 1324  man wine
+ 1325  wine iq.exe 
+ 1326  cd ..
+ 1327  ls
+ 1328  wine KMP64_2023.8.25.12.exe 
+ 1329  sudo apt install playonlinux
+ 1330  POST 
+ 1331  POL_Wine KMP64_2023.8.25.12.exe 
+ 1332  which playonlinux
+ 1333  /usr/bin/playonlinux KMP64_2023.8.25.12.exe 
+ 1334  sudo apt  purge  playonlinux
+ 1335  cd Downloads/
+ 1336  wine64 KMP64_2023.8.25.12.exe 
+ 1337  top
+ 1338  winecfg
+ 1339  wine64 KMP64_2023.8.25.12.exe 
+ 1340  cd Downloads/
+ 1341  wine64 KMP64_2023.8.25.12.exe 
+ 1342  winecfg
+ 1343  wine64 KMP64_2023.8.25.12.exe 
+ 1344  winecfg
+ 1345  wine KMP64_2023.8.25.12.exe 
+ 1346  winecfg
+ 1347  wine KMP64_2023.8.25.12.exe 
+ 1348  cd Downloads/
+ 1349  ll
+ 1350  l ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1351  ARNING: UNPROTECTED PRIVATE KEY FILE!
+ 1352  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1353  ll
+ 1354  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1355  cat ec2-iti.pem 
+ 1356  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1357  chmod 400 ec2-iti.pem
+ 1358  ssh -i "ec2-iti.pem" ec2-user@ec2-54-252-245-41.ap-southeast-2.compute.amazonaws.com
+ 1359  ls
+ 1360  ll
+ 1361  cd ..
+ 1362  ll
+ 1363  chmod 777 580E-6636/
+ 1364  cd Downloads/
+ 1365  ls
+ 1366  cat ec2-iti.pem 
+ 1367  ssh -i "ec2-iti.pem" ec2-user@54.252.245.41
+ 1368  ifconfig 
+ 1369  sudo apt-get install soundconverter
+ 1370  shutdown +60
+ 1371  top
+ 1372  htop
+ 1373  sudo apt serch totem
+ 1374  sudo apt search totem
+ 1375  sudo apt purge totem totem-plugins totem-common libtotem0gir1.2-totem-1.0  libtotem-plparser-common libtotem0
+ 1376  sudo apt remove totem totem-plugins totem-common libtotem0gir1.2-totem-1.0  libtotem-plparser-common libtotem0
+ 1377  sudo apt remove totem totem-plugins totem-common   libtotem-plparser-common libtotem0
+ 1378  sudo apt purge  totem totem-plugins totem-common   libtotem-plparser-common libtotem0
+ 1379  sudo install rhythmbox 
+ 1380  sudo apt  install rhythmbox 
+ 1381  kill -9 12763
+ 1382  htop
+ 1383  open .
+ 1384  sudo apt ypdate 
+ 1385  sudo apt update 
+ 1386  sudo apt upgrade -y 
+ 1387  reboot
+ 1388  sudo apt install   totem totem-plugins totem-common   libtotem-plparser-common libtotem0
+ 1389  open .
+ 1390  sudo apt install totem
+ 1391  reboot
+ 1392  	
+ 1393  sudo apt-get install nautilus
+ 1394  sudo snap install file-manager
+ 1395  htop 
+ 1396  ip route 
+ 1397  route
+ 1398  route - n
+ 1399  route -n
+ 1400  fish
+ 1401  sudo apt install fish
+ 1402  fish
+ 1403  ping 41.129.0.56
+ 1404  ping 41.129.0.58
+ 1405  ping 41.122.0.58
+ 1406  ping 41.122.0.56
+ 1407  mf
+ 1408  mf cotent.txt
+ 1409  vagrant up 
+ 1410  vagrant ssh 
+ 1411  vagrant halt 
+ 1412  ifconfig 
+ 1413  ping vagrant plugin install vagrant-vbguest
+ 1414  vagrant plugin install vagrant-reload
+ 1415  docker pull  http
+ 1416  docker pull  httpd
+ 1417  vagrant ssh 
+ 1418  ifconfig 
+ 1419  route -n
+ 1420  ip route show default
+ 1421  default via 192.168.1.1 dev eth0
+ 1422  ip route 
+ 1423  route -n
+ 1424  route del  gw 192.168.0.4
+ 1425  route -n
+ 1426  route del  gw 192.168.0.4 
+ 1427  route del  default  gw 192.168.0.4 
+ 1428  sudo route del  default  gw 192.168.0.4 
+ 1429  route -n
+ 1430  sudo route del  default  gw 192.168.0.4 
+ 1431  route -n
+ 1432  ping 8.8.8.8
+ 1433  ping 1.1.1.1
+ 1434  route -n
+ 1435  sudo route  add default  gw  192.168.0.4
+ 1436  route -n
+ 1437  sudo route  add default  gw  192.168.0.4
+ 1438  route -n
+ 1439  man route
+ 1440  route -n
+ 1441  fish
+ 1442  cd Desktop/linux/
+ 1443  l
+ 1444  file Vagrantfile 
+ 1445  file README.md 
+ 1446  file Notes.txt 
+ 1447  file Linux\ Commands.pdf 
+ 1448  cd Downloads/
+ 1449  chmod 440 ro.pem 
+ 1450  cd Downloads/
+ 1451  chmod 400 ro.pem 
+ 1452  0440
+ 1453  Free tier eligible customers can get up to 30 GB of EBS General Purpose (SSD) or Magnetic storage
+ 1454  ￼
+ 1455  ping 172.31.42.185/20
+ 1456  ping 172.31.42.185
+ 1457  ping 16.171.206.76
+ 1458  sudo pro status
+ 1459  pro status --all
+ 1460  lsblk 
+ 1461  kind delete cluster my-cluster
+ 1462  kind delete cluster --name my-cluster
+ 1463  xfreerdp /v:your-server-ip /u:your-username
+ 1464  sudo apt install freerdp2-x11
+ 1465  xfreerdp  /v:172.31.37.204 /u:Administrator
+ 1466  curl ifconfig.me
+ 1467  wget -qO- ifconfig.me
+ 1468  dig +short myip.opendns.com @resolver1.opendns.com
+ 1469  curl ifconfig.me
+ 1470  curl ifconfig.me "
+ 1471  ;
+ 1472  ;
+ 1473  curl ifconfig.me 
+ 1474  cd Downloads/
+ 1475  echo $hostname
+ 1476  echo $hostname -f
+ 1477  echo $(hostname) -f"
+ 1478  echo " $(hostname) -f"
+ 1479  echo " $(hostname)"
+ 1480  echo "$(hostname)"
+ 1481  echo "$(hostname-f )" 
+ 1482  echo "$(hostname -f )" 
+ 1483  echo "$(uname)" 
+ 1484  echo "$(uname -i )" 
+ 1485  echo "$(uname - )" 
+ 1486  echo "$(uname -a )" 
+ 1487  fish
+ 1488  free -h
+ 1489  docker ps -a 
+ 1490  echo " $(hostname)"
+ 1491  curl ifconfg.me
+ 1492  lslgk k
+ 1493  ms
+ 1494  msgen
+ 1495  msgen --help
+ 1496  man msge
+ 1497  man msgen
+ 1498  aws
+ 1499  sudo apt upgrade -y || reboot 
+ 1500  reboot
+ 1501  sudo systemctl status bluetooth.
+ 1502  sudo systemctl status bluetooth.service 
+ 1503  jupyter
+ 1504  free -h 
+ 1505  nestat
+ 1506  netstat -nlh
+ 1507  netstat -nltp
+ 1508  netstat -n
+ 1509  netstat -nl
+ 1510  netstat -nlt
+ 1511  netstat -nltp
+ 1512  sudo netstat -nltp
+ 1513  sudo apt update -y 
+ 1514  sudo apt upgrade -y 
+ 1515  sudo apt search jupyter-core
+ 1516  sudo apt search jupyter
+ 1517  sudo apt purge jupyter-core
+ 1518  reboot 
+ 1519  sudo systemctl  status bluetooth.service 
+ 1520  rfkill 
+ 1521  sudo rfkill 
+ 1522  sudo systemctl restart bluetooth
+ 1523  sudo rfkill 
+ 1524  udo hciconfig hci0 up/down
+ 1525  sudo hciconfig hci0 up/down
+ 1526  sudo hciconfig hci0 down
+ 1527  sudo systemctl status bluetooth.service
+ 1528  sudo systemctl enable bluetooth.service
+ 1529  sudo systemctl start bluetooth.service
+ 1530  sudo systemctl enable bluetooth
+ 1531  sudo rmmod btusb
+ 1532  sudo systemctl enable bluetooth
+ 1533  sudo systemctl status bluetooth.service
+ 1534  rfkill 
+ 1535  rfkill -a 
+ 1536  sudo apt-get remove bluez
+ 1537  sudo apt install bluez
+ 1538  sudo systemctl enable bluetooth
+ 1539  sudo systemctl start bluetooth
+ 1540  sudo systemctl status bluetooth.service
+ 1541  sudo systemctl status bluetooth
+ 1542  mpede our data transfer or bar us from that refreshing break we were looking forward to. Therefore, it is desirable to troubleshoot all connectivity issues so you can have a peaceful 
+ 1543  rfkill -
+ 1544  rfkill 
+ 1545  sudo apt-get install pulseaudio-module-bluetooth
+ 1546  sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware
+ 1547  systemctl restart bluetooth
+ 1548  sudo systemctl status bluetoo
+ 1549  sudo systemctl status bluetooth.service 
+ 1550  rfkill list 
+ 1551  rfkill list  all
+ 1552  rfkill list 1
+ 1553  reboot 
+ 1554  rfkill list 1
+ 1555  rfkill list \
+ 1556  rfkill list 
+ 1557  sudo systemctl status bluetoo
+ 1558  sudo systemctl status bluetooth.service 
+ 1559  sudo systemctl start bluetooth
+ 1560  sudo systemctl enable bluetooth
+ 1561  sudo systemctl enable --now bluetooth
+ 1562  sudo pacman -S --needed bluez bluez-utils pipwire-pulse
+ 1563  sudo apt install --reinstall bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1564  sudo apt install bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1565  sudo systemctl status bluetooth.service
+ 1566  sudo systemctl enable bluetooth.service
+ 1567  sudo systemctl start bluetooth.service
+ 1568  sudo vim /etc/bluetooth/main.conf
+ 1569  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1570  hciconfig
+ 1571  bluetoothctl
+ 1572  sudo systemctl disable tlp.service
+ 1573  sudo systemctl status bluetooth
+ 1574  sudo rm -r /var/lib/bluetooth/
+ 1575  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1576  sudo rfkill unblock all
+ 1577  history > Hist.txt
+ 1578  cat Hist.txt 
+ 1579  cd Downloads/
+ 1580  bash
+ 1581  luka@M12:~/Downloads$  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1582  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1583  ls
+ 1584  ll
+ 1585  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1586  -r--------  1 luka luka 1.7K Sep 16 11:38  ro.pem
+ 1587  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1588  chmod 400 m
+ 1589  chmod 400 mo.pem 
+ 1590  chmod 400 mom.pem 
+ 1591  dig fb.com 
+ 1592  rebbot
+ 1593  reboot
+ 1594  cd Downloads/
+ 1595  [200~ ssh -i "mo.pem" ec2-user@ec2-51-20-70-3.eu-north-1.compute.amazonaws.com
+ 1596  ssh -i "mo.pem" ec2-user@ec2-51-20-70-3.eu-north-1.compute.amazonaws.com
+ 1597  [200~ ssh -i "mo.pem" ubuntu@ec2-13-53-124-105.eu-north-1.compute.amazonaws.com
+ 1598  nano jen-doc.sh
+ 1599  chmod +x jen-doc.sh 
+ 1600  ll
+ 1601  reboot
+ 1602  sudo systemctl status bluetooth
+ 1603  sudo systemctl  status bluetooth.service
+ 1604  sudo rfkill 
+ 1605  sudo systemctl restart bluetooth
+ 1606  sudo systemctl  status bluetooth.service
+ 1607  udo hciconfig hci0 up/down
+ 1608  sudo hciconfig hci0 up/down
+ 1609  sudo rmmod btusb
+ 1610  sudo apt-get remove bluez
+ 1611  sudo apt install bluez
+ 1612  sudo systemctl enable bluetooth
+ 1613  sudo systemctl start bluetooth
+ 1614  sudo systemctl status bluetooth.service
+ 1615  sudo apt-get install pulseaudio-module-bluetooth
+ 1616  sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware
+ 1617  systemctl restart bluetooth
+ 1618  sudo systemctl status bluetooth.service
+ 1619  sudo apt install --reinstall bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1620  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1621  sudo systemctl disable tlp.service
+ 1622  sudo systemctl status bluetooth
+ 1623  sudo rm -r /var/lib/bluetooth/
+ 1624  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1625  sudo rfkill unblock all
+ 1626  sudo systemctl status bluetooth.service
+ 1627  nmcli --fields SSID,PSK device wifi list
+ 1628  cd /etc/NetworkManager/system-connections/
+ 1629  ls
+ 1630  cat DODO U.nmconnection
+ 1631  cat Root.nmconnection 
+ 1632  sudo cat Root.nmconnection 
+ 1633  wifi-qr option
+ 1634  sudo apt install wifi-qr
+ 1635  wifi-qr option
+ 1636  wifi-qr -c 
+ 1637  wifi-qr -g
+ 1638  top 
+ 1639  sudo rm -r /var/lib/bluetooth/
+ 1640  sudo systemctl status bluetooth.service
+ 1641  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1642  sudo apt install --reinstall bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1643  sudo systemctl status bluetooth.service
+ 1644  systemctl restart bluetooth
+ 1645  sudo systemctl status bluetooth.service
+ 1646  sudo systemctl enable bluetooth
+ 1647  sudo systemctl status bluetooth.service
+ 1648  sudo systemctl start bluetooth
+ 1649  sudo systemctl status bluetooth.service
+ 1650  wget -q -O - archive.kali.org/archive-key.asc | sudo apt-key add -
+ 1651  wifi-qr 
+ 1652  wifi-qr c
+ 1653  host
+ 1654  host google.com
+ 1655  tcpdum
+ 1656  telnet 192.168.0.4
+ 1657  telnet 192.168.0.0
+ 1658  telnet 192.168.0.0 22
+ 1659  telnet 192.168.0.4 22
+ 1660  telnet 192.168.1.1 22
+ 1661  telnet 192.168.1.16
+ 1662  telnet 192.168.1.163
+ 1663  telnet 192.168.1.163 22
+ 1664  telnet 192.168.1.163 80
+ 1665  telnet 192.168.1.163 88080
+ 1666  telnet 192.168.1.163 88
+ 1667  telnet 192.168.1.163 8080
+ 1668  telnet 192.168.1.163 22
+ 1669  free -h 
+ 1670  top 
+ 1671  htop 
+ 1672  cd Downloads/
+ 1673  ssh -i "iti.pem" ubuntu@ec2-34-207-135-90.compute-1.amazonaws.com
+ 1674  sudo nginx -t
+ 1675  free -h 
+ 1676  tracert
+ 1677  tracert www.google.com
+ 1678  tracepath www.google.com
+ 1679  man tracepath 
+ 1680  traceroute www.google.com
+ 1681  tracepath google.com
+ 1682  ping _gateway
+ 1683  tracepath  _gateway
+ 1684  curl _gateway
+ 1685  netstat -npt
+ 1686  netstat -npat
+ 1687  netstat -tuln
+ 1688  ss -tuln
+ 1689  sudo lsof -i -n | grep LISTEN
+ 1690  netstat -npat
+ 1691  nmap
+ 1692  nmap _getway
+ 1693  nmap localhost
+ 1694  gig localhost
+ 1695  dig localhost
+ 1696  dig google.com
+ 1697  nslookup google.com
+ 1698  nslookup localhost
+ 1699  nslookup 142.251.209.46
+ 1700  dig 142.251.209.46
+ 1701  route -t 
+ 1702  route -n
+ 1703  arb
+ 1704  ar
+ 1705  arp
+ 1706  mtr
+ 1707  totem-video-thumbnailer
+ 1708  sudo apt remove totem-video-thumbnailer
+ 1709  sudo apt remove totem-video
+ 1710  sudo apt remove totem
+ 1711  sudo apt-get install desktop-file-utils
+ 1712  sudo apt remove Xwayland
+ 1713  sudo apt remove xwayland
+ 1714  sudo apt update -y 
+ 1715  sudo apt-get dist-upgrade 
+ 1716  sudo apt --fix-broken install
+ 1717  sudo apt-get dist-upgrade 
+ 1718  sudo apt remove totem
+ 1719  sudo apt install  totem
+ 1720  reboot
+ 1721  sudo apt-get dist-upgrade 
+ 1722  journalctl 
+ 1723  journalctl  --since yesterday --until today
+ 1724  journalctl   today
+ 1725  sudo apt-get dist-upgrade 
+ 1726  ifconfig 
+ 1727  sudo dpkg --configure -a
+ 1728  sudo apt --fix-broken install
+ 1729  sudo apt install  xwayland
+ 1730  sudo apt update -y 
+ 1731  sudo apt upgrade -y 
+ 1732  fish
+ 1733  sudo apt update || sudo apt upgrade -y 
+ 1734  sudo dpkg --configure -a
+ 1735  sudo apt --fix-broken install
+ 1736  sudo apt-get dist-upgrade 
+ 1737  ar
+ 1738  sudo useradd  -m -s /bin/bash    lol 
+ 1739  sudo useradd  -m -s /bin/bash    mox
+ 1740  sudo su
+ 1741  sudo Desktop/linux/
+ 1742  cd Desktop/linux/
+ 1743  gs
+ 1744  git add 
+ 1745  git add  .
+ 1746  du -f
+ 1747  du -h
+ 1748  bash
+ 1749  du -f
+ 1750  du -h
+ 1751  du --help
+ 1752  du -hs
+ 1753  du -hs *
+ 1754  du -hs
+ 1755  gs
+ 1756  du -hs *
+ 1757  cd K8s/
+ 1758  du -hs *
+ 1759  gs
+ 1760  gp
+ 1761  gm
+ 1762  gc
+ 1763  git commit  -m "TH"
+ 1764  gc
+ 1765  gp
+ 1766  gs
+ 1767  git add .
+ 1768  git commit -m "Gj"
+ 1769  gp
+ 1770  du -hF
+ 1771  du -hf
+ 1772  du -Hf
+ 1773  du -H
+ 1774  du -h
+ 1775  du -h *
+ 1776  cd K
+ 1777  cd K8s/
+ 1778  cd K
+ 1779  du -h *
+ 1780  cd ..
+ 1781  gs
+ 1782  git add .
+ 1783  git commit -m " fg
+ 1784  "
+ 1785  gp
+ 1786  ps
+ 1787  gp
+ 1788  gs
+ 1789  git add .
+ 1790  git commit -m "JEGhd
+ 1791  "
+ 1792  gp
+ 1793  gs
+ 1794  git commit -m "JEGhd
+ 1795  "
+ 1796  git commit -m "JEGhd
+ 1797  5"
+ 1798  git add .
+ 1799  gs
+ 1800  git remote  add https://github.com/khaledhawil/DevOps.git
+ 1801  git remote  add  master https://github.com/khaledhawil/DevOps.git
+ 1802  git remote  add  origin  https://github.com/khaledhawil/DevOps.git
+ 1803  cd ..
+ 1804  git clone https://github.com/khaledhawil/DevOps.git
+ 1805  cd linux/
+ 1806  rm -rf .git
+ 1807  ls
+ 1808  ll
+ 1809  git init
+ 1810  git remote  add  master https://github.com/khaledhawil/DevOps.git
+ 1811  git add .
+ 1812  gs
+ 1813  git commit  -m "JDLFJ"
+ 1814  gp
+ 1815  git remote -v
+ 1816  git push master master 
+ 1817  git remote -v
+ 1818  git push master master 
+ 1819  git push master master -f
+ 1820  git pull master HEAD HEAD 
+ 1821  git pull master HEAD 
+ 1822  git add .
+ 1823  git commit -m "New"
+ 1824  ps
+ 1825  gp
+ 1826  git push master 
+ 1827  git push master master 
+ 1828  git push master master  --force
+ 1829  cd ..
+ 1830  md dev-ops
+ 1831  cd dev-ops/
+ 1832  git init
+ 1833  git branch -m main master
+ 1834  git branch -u origin/master master
+ 1835  git remote add master https://github.com/khaledhawil/Dev-Ops-way.git
+ 1836  gs
+ 1837  ll
+ 1838  mf README.md
+ 1839  ls
+ 1840  ll
+ 1841  nano README.md 
+ 1842  gs
+ 1843  git add .
+ 1844  gs
+ 1845  git commit -m "The New Way Here"
+ 1846  gp
+ 1847  git push master 
+ 1848  git pull
+ 1849  git pull master
+ 1850  gp
+ 1851  gs
+ 1852  nano README.md 
+ 1853  git add .
+ 1854  gs
+ 1855  git commit -m "Hi"
+ 1856  git push  master 
+ 1857  git push  master master
+ 1858  git push  master master --force
+ 1859  code .
+ 1860  code-insiders .
+ 1861  tar
+ 1862  df 
+ 1863  fd .
+ 1864  df .
+ 1865  df * .
+ 1866  df -*-
+ 1867  du *
+ 1868  du * -h
+ 1869  du  -h
+ 1870  gs
+ 1871  du * -h
+ 1872  du * -hs
+ 1873  du * -hsa
+ 1874  du * -hs
+ 1875  cd ..
+ 1876  du * -hs
+ 1877  cd i
+ 1878  cd linux/
+ 1879  cd i
+ 1880  du * -hs
+ 1881  git add .
+ 1882  ls
+ 1883  ll
+ 1884  cd .git/
+ 1885  ls
+ 1886  nano config 
+ 1887  git status
+ 1888  git init
+ 1889  gs
+ 1890  nano .git/config 
+ 1891  cd ..
+ 1892  git fetch origin
+ 1893  git merge origin/master
+ 1894  cd Downloads/
+ 1895  chmod 400 aw.pem 
+ 1896  curl wttr.in/samannud
+ 1897  sudo apt install awscli
+ 1898  aws --version
+ 1899  export PATH=$PATH:$HOME/.local/bin
+ 1900  source ~/.bashrc
+ 1901  aws --version
+ 1902  aws
+ 1903  aws help
+ 1904  aws configure 
+ 1905  aws
+ 1906  aws s3 ls
+ 1907  kaws ec2 describe-regions
+ 1908  aws ec2 describe-regions
+ 1909  aws s3 md s3://hawil
+ 1910  aws s3 mb s3://hawil
+ 1911  aws s3 ls 
+ 1912  aws s3 mb s3://khaled
+ 1913  aws iam list-users
+ 1914  cd Do
+ 1915  cd Downloads/
+ 1916  vnstat -d
+ 1917  vnstat -d 
+ 1918  vnstat -i eth0 -d
+ 1919  ip a s 
+ 1920  vnstat -i enp2s0  -d
+ 1921  ifconfig 
+ 1922  netstat -e
+ 1923  sudo netstat -e
+ 1924  sudo nethogs
+ 1925  sudo nethogs -m
+ 1926  sudo nethogs -d
+ 1927  sudo iftop
+ 1928  sudo apt install iftop
+ 1929  sudo iftop
+ 1930  sudo apt-get install nload
+ 1931  nload
+ 1932  sudo iftop -P
+ 1933  lsof -i
+ 1934  netstat -lantp | grep -i stab | awk -F/ '{print $2 $3}' | sort | uniq
+ 1935  sudo ufw show listening
+ 1936  trickler -d 1 -u 1 application
+ 1937  atop
+ 1938  netstat -anp --inet
+ 1939  sudo nethogs
+ 1940  sudo ss -tp
+ 1941  iptraf-ng
+ 1942  bmon
+ 1943  sudo apt install bmon
+ 1944  bmon
+ 1945  sudo iftop -i
+ 1946  sudo iftop -i enp2s0
+ 1947  vnstati -m -i eth0 -o monthly.png
+ 1948  sudo apt install vnstati
+ 1949  vnstati -m -i enp2s0  -o monthly.png
+ 1950  sudo iptraf
+ 1951  sudo apt install iptraf
+ 1952  sudo iptraf
+ 1953  vnstat --iflist
+ 1954  vnstat -q
+ 1955  vnstat -l
+ 1956  ifstat
+ 1957  vnstat -u -i
+ 1958  sudo vnstat -u -i
+ 1959  sudo vnstat  -i
+ 1960  nslookup 1.1.1.1
+ 1961  dig 1.1.1.1
+ 1962  host 1.1.1.1.
+ 1963  host 1.1.1.1
+ 1964  aws s3 ls
+ 1965  top
+ 1966  sudo pass
+ 1967  su
+ 1968  cd Downloads/
+ 1969  ssh -i "iti.pem" ubuntu@ec2-34-239-49-208.compute-1.amazonaws.com
+ 1970  qrcode-terminal 
+ 1971  wifi-qr 
+ 1972  su du *
+ 1973  su
+ 1974  sudo apt update 
+ 1975  sudo apt upgrade -y 
+ 1976  htop 
+ 1977  sudo apt upgrade -y 
+ 1978  pkill -9 94737
+ 1979  sudo apt upgrade -y 
+ 1980  pkill -15 94737
+ 1981  sudo apt upgrade -y 
+ 1982  trivy 
+ 1983  docker images
+ 1984  trivy khaledhawil/pyapp
+ 1985  trivy image  khaledhawil/pyapp
+ 1986  reboot
+ 1987  cd docker/
+ 1988  ls
+ 1989  sudo apt upgrade -y 
+ 1990  sudo apt upgrade -y 
+ 1991  reboot
+ 1992  sudo ps -eaf | grep -i apt
+ 1993  kill -9 6328
+ 1994  sudo ps -eaf | grep -i apt
+ 1995  kill -9 6329
+ 1996  sudo kill -9 6329
+ 1997  sudo ps -eaf | grep -i apt
+ 1998  reboot
+ 1999  history > history.txt

@@ -1,8 +1,9 @@
 # Linux Adminstration  
+# Bash
 # Docker 
 # MongoDB
 # Sql
-# vagrant
+# Vagrant
 # K8s 
 # Git/GitHub
 # Helm
