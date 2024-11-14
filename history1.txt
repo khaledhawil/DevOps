@@ -1,0 +1,1000 @@
+ 1002  luka@M12:~/Downloads$  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1003  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1004  ls
+ 1005  ll
+ 1006  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1007  -r--------  1 luka luka 1.7K Sep 16 11:38  ro.pem
+ 1008  ssh -i "ro.pem" ec2-user@13.48.136.95
+ 1009  chmod 400 m
+ 1010  chmod 400 mo.pem 
+ 1011  chmod 400 mom.pem 
+ 1012  dig fb.com 
+ 1013  rebbot
+ 1014  reboot
+ 1015  cd Downloads/
+ 1016  [200~ ssh -i "mo.pem" ec2-user@ec2-51-20-70-3.eu-north-1.compute.amazonaws.com
+ 1017  ssh -i "mo.pem" ec2-user@ec2-51-20-70-3.eu-north-1.compute.amazonaws.com
+ 1018  [200~ ssh -i "mo.pem" ubuntu@ec2-13-53-124-105.eu-north-1.compute.amazonaws.com
+ 1019  nano jen-doc.sh
+ 1020  chmod +x jen-doc.sh 
+ 1021  ll
+ 1022  reboot
+ 1023  sudo systemctl status bluetooth
+ 1024  sudo systemctl  status bluetooth.service
+ 1025  sudo rfkill 
+ 1026  sudo systemctl restart bluetooth
+ 1027  sudo systemctl  status bluetooth.service
+ 1028  udo hciconfig hci0 up/down
+ 1029  sudo hciconfig hci0 up/down
+ 1030  sudo rmmod btusb
+ 1031  sudo apt-get remove bluez
+ 1032  sudo apt install bluez
+ 1033  sudo systemctl enable bluetooth
+ 1034  sudo systemctl start bluetooth
+ 1035  sudo systemctl status bluetooth.service
+ 1036  sudo apt-get install pulseaudio-module-bluetooth
+ 1037  sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware
+ 1038  systemctl restart bluetooth
+ 1039  sudo systemctl status bluetooth.service
+ 1040  sudo apt install --reinstall bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1041  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1042  sudo systemctl disable tlp.service
+ 1043  sudo systemctl status bluetooth
+ 1044  sudo rm -r /var/lib/bluetooth/
+ 1045  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1046  sudo rfkill unblock all
+ 1047  sudo systemctl status bluetooth.service
+ 1048  nmcli --fields SSID,PSK device wifi list
+ 1049  cd /etc/NetworkManager/system-connections/
+ 1050  ls
+ 1051  cat DODO U.nmconnection
+ 1052  cat Root.nmconnection 
+ 1053  sudo cat Root.nmconnection 
+ 1054  wifi-qr option
+ 1055  sudo apt install wifi-qr
+ 1056  wifi-qr option
+ 1057  wifi-qr -c 
+ 1058  wifi-qr -g
+ 1059  top 
+ 1060  sudo rm -r /var/lib/bluetooth/
+ 1061  sudo systemctl status bluetooth.service
+ 1062  sudo apt reinstall --purge bluez gnome-bluetooth
+ 1063  sudo apt install --reinstall bluez gnome-bluetooth indicator-bluetooth pulseaudio-module-bluetooth
+ 1064  sudo systemctl status bluetooth.service
+ 1065  systemctl restart bluetooth
+ 1066  sudo systemctl status bluetooth.service
+ 1067  sudo systemctl enable bluetooth
+ 1068  sudo systemctl status bluetooth.service
+ 1069  sudo systemctl start bluetooth
+ 1070  sudo systemctl status bluetooth.service
+ 1071  wget -q -O - archive.kali.org/archive-key.asc | sudo apt-key add -
+ 1072  wifi-qr 
+ 1073  wifi-qr c
+ 1074  host
+ 1075  host google.com
+ 1076  tcpdum
+ 1077  telnet 192.168.0.4
+ 1078  telnet 192.168.0.0
+ 1079  telnet 192.168.0.0 22
+ 1080  telnet 192.168.0.4 22
+ 1081  telnet 192.168.1.1 22
+ 1082  telnet 192.168.1.16
+ 1083  telnet 192.168.1.163
+ 1084  telnet 192.168.1.163 22
+ 1085  telnet 192.168.1.163 80
+ 1086  telnet 192.168.1.163 88080
+ 1087  telnet 192.168.1.163 88
+ 1088  telnet 192.168.1.163 8080
+ 1089  telnet 192.168.1.163 22
+ 1090  free -h 
+ 1091  top 
+ 1092  htop 
+ 1093  cd Downloads/
+ 1094  ssh -i "iti.pem" ubuntu@ec2-34-207-135-90.compute-1.amazonaws.com
+ 1095  sudo nginx -t
+ 1096  free -h 
+ 1097  tracert
+ 1098  tracert www.google.com
+ 1099  tracepath www.google.com
+ 1100  man tracepath 
+ 1101  traceroute www.google.com
+ 1102  tracepath google.com
+ 1103  ping _gateway
+ 1104  tracepath  _gateway
+ 1105  curl _gateway
+ 1106  netstat -npt
+ 1107  netstat -npat
+ 1108  netstat -tuln
+ 1109  ss -tuln
+ 1110  sudo lsof -i -n | grep LISTEN
+ 1111  netstat -npat
+ 1112  nmap
+ 1113  nmap _getway
+ 1114  nmap localhost
+ 1115  gig localhost
+ 1116  dig localhost
+ 1117  dig google.com
+ 1118  nslookup google.com
+ 1119  nslookup localhost
+ 1120  nslookup 142.251.209.46
+ 1121  dig 142.251.209.46
+ 1122  route -t 
+ 1123  route -n
+ 1124  arb
+ 1125  ar
+ 1126  arp
+ 1127  mtr
+ 1128  totem-video-thumbnailer
+ 1129  sudo apt remove totem-video-thumbnailer
+ 1130  sudo apt remove totem-video
+ 1131  sudo apt remove totem
+ 1132  sudo apt-get install desktop-file-utils
+ 1133  sudo apt remove Xwayland
+ 1134  sudo apt remove xwayland
+ 1135  sudo apt update -y 
+ 1136  sudo apt-get dist-upgrade 
+ 1137  sudo apt --fix-broken install
+ 1138  sudo apt-get dist-upgrade 
+ 1139  sudo apt remove totem
+ 1140  sudo apt install  totem
+ 1141  reboot
+ 1142  sudo apt-get dist-upgrade 
+ 1143  journalctl 
+ 1144  journalctl  --since yesterday --until today
+ 1145  journalctl   today
+ 1146  sudo apt-get dist-upgrade 
+ 1147  ifconfig 
+ 1148  sudo dpkg --configure -a
+ 1149  sudo apt --fix-broken install
+ 1150  sudo apt install  xwayland
+ 1151  sudo apt update -y 
+ 1152  sudo apt upgrade -y 
+ 1153  fish
+ 1154  sudo apt update || sudo apt upgrade -y 
+ 1155  sudo dpkg --configure -a
+ 1156  sudo apt --fix-broken install
+ 1157  sudo apt-get dist-upgrade 
+ 1158  ar
+ 1159  sudo useradd  -m -s /bin/bash    lol 
+ 1160  sudo useradd  -m -s /bin/bash    mox
+ 1161  sudo su
+ 1162  sudo Desktop/linux/
+ 1163  cd Desktop/linux/
+ 1164  gs
+ 1165  git add 
+ 1166  git add  .
+ 1167  du -f
+ 1168  du -h
+ 1169  bash
+ 1170  du -f
+ 1171  du -h
+ 1172  du --help
+ 1173  du -hs
+ 1174  du -hs *
+ 1175  du -hs
+ 1176  gs
+ 1177  du -hs *
+ 1178  cd K8s/
+ 1179  du -hs *
+ 1180  gs
+ 1181  gp
+ 1182  gm
+ 1183  gc
+ 1184  git commit  -m "TH"
+ 1185  gc
+ 1186  gp
+ 1187  gs
+ 1188  git add .
+ 1189  git commit -m "Gj"
+ 1190  gp
+ 1191  du -hF
+ 1192  du -hf
+ 1193  du -Hf
+ 1194  du -H
+ 1195  du -h
+ 1196  du -h *
+ 1197  cd K
+ 1198  cd K8s/
+ 1199  cd K
+ 1200  du -h *
+ 1201  cd ..
+ 1202  gs
+ 1203  git add .
+ 1204  git commit -m " fg
+ 1205  "
+ 1206  gp
+ 1207  ps
+ 1208  gp
+ 1209  gs
+ 1210  git add .
+ 1211  git commit -m "JEGhd
+ 1212  "
+ 1213  gp
+ 1214  gs
+ 1215  git commit -m "JEGhd
+ 1216  "
+ 1217  git commit -m "JEGhd
+ 1218  5"
+ 1219  git add .
+ 1220  gs
+ 1221  git remote  add https://github.com/khaledhawil/DevOps.git
+ 1222  git remote  add  master https://github.com/khaledhawil/DevOps.git
+ 1223  git remote  add  origin  https://github.com/khaledhawil/DevOps.git
+ 1224  cd ..
+ 1225  git clone https://github.com/khaledhawil/DevOps.git
+ 1226  cd linux/
+ 1227  rm -rf .git
+ 1228  ls
+ 1229  ll
+ 1230  git init
+ 1231  git remote  add  master https://github.com/khaledhawil/DevOps.git
+ 1232  git add .
+ 1233  gs
+ 1234  git commit  -m "JDLFJ"
+ 1235  gp
+ 1236  git remote -v
+ 1237  git push master master 
+ 1238  git remote -v
+ 1239  git push master master 
+ 1240  git push master master -f
+ 1241  git pull master HEAD HEAD 
+ 1242  git pull master HEAD 
+ 1243  git add .
+ 1244  git commit -m "New"
+ 1245  ps
+ 1246  gp
+ 1247  git push master 
+ 1248  git push master master 
+ 1249  git push master master  --force
+ 1250  cd ..
+ 1251  md dev-ops
+ 1252  cd dev-ops/
+ 1253  git init
+ 1254  git branch -m main master
+ 1255  git branch -u origin/master master
+ 1256  git remote add master https://github.com/khaledhawil/Dev-Ops-way.git
+ 1257  gs
+ 1258  ll
+ 1259  mf README.md
+ 1260  ls
+ 1261  ll
+ 1262  nano README.md 
+ 1263  gs
+ 1264  git add .
+ 1265  gs
+ 1266  git commit -m "The New Way Here"
+ 1267  gp
+ 1268  git push master 
+ 1269  git pull
+ 1270  git pull master
+ 1271  gp
+ 1272  gs
+ 1273  nano README.md 
+ 1274  git add .
+ 1275  gs
+ 1276  git commit -m "Hi"
+ 1277  git push  master 
+ 1278  git push  master master
+ 1279  git push  master master --force
+ 1280  code .
+ 1281  code-insiders .
+ 1282  tar
+ 1283  df 
+ 1284  fd .
+ 1285  df .
+ 1286  df * .
+ 1287  df -*-
+ 1288  du *
+ 1289  du * -h
+ 1290  du  -h
+ 1291  gs
+ 1292  du * -h
+ 1293  du * -hs
+ 1294  du * -hsa
+ 1295  du * -hs
+ 1296  cd ..
+ 1297  du * -hs
+ 1298  cd i
+ 1299  cd linux/
+ 1300  cd i
+ 1301  du * -hs
+ 1302  git add .
+ 1303  ls
+ 1304  ll
+ 1305  cd .git/
+ 1306  ls
+ 1307  nano config 
+ 1308  git status
+ 1309  git init
+ 1310  gs
+ 1311  nano .git/config 
+ 1312  cd ..
+ 1313  git fetch origin
+ 1314  git merge origin/master
+ 1315  cd Downloads/
+ 1316  chmod 400 aw.pem 
+ 1317  curl wttr.in/samannud
+ 1318  sudo apt install awscli
+ 1319  aws --version
+ 1320  export PATH=$PATH:$HOME/.local/bin
+ 1321  source ~/.bashrc
+ 1322  aws --version
+ 1323  aws
+ 1324  aws help
+ 1325  aws configure 
+ 1326  aws
+ 1327  aws s3 ls
+ 1328  kaws ec2 describe-regions
+ 1329  aws ec2 describe-regions
+ 1330  aws s3 md s3://hawil
+ 1331  aws s3 mb s3://hawil
+ 1332  aws s3 ls 
+ 1333  aws s3 mb s3://khaled
+ 1334  aws iam list-users
+ 1335  cd Do
+ 1336  cd Downloads/
+ 1337  vnstat -d
+ 1338  vnstat -d 
+ 1339  vnstat -i eth0 -d
+ 1340  ip a s 
+ 1341  vnstat -i enp2s0  -d
+ 1342  ifconfig 
+ 1343  netstat -e
+ 1344  sudo netstat -e
+ 1345  sudo nethogs
+ 1346  sudo nethogs -m
+ 1347  sudo nethogs -d
+ 1348  sudo iftop
+ 1349  sudo apt install iftop
+ 1350  sudo iftop
+ 1351  sudo apt-get install nload
+ 1352  nload
+ 1353  sudo iftop -P
+ 1354  lsof -i
+ 1355  netstat -lantp | grep -i stab | awk -F/ '{print $2 $3}' | sort | uniq
+ 1356  sudo ufw show listening
+ 1357  trickler -d 1 -u 1 application
+ 1358  atop
+ 1359  netstat -anp --inet
+ 1360  sudo nethogs
+ 1361  sudo ss -tp
+ 1362  iptraf-ng
+ 1363  bmon
+ 1364  sudo apt install bmon
+ 1365  bmon
+ 1366  sudo iftop -i
+ 1367  sudo iftop -i enp2s0
+ 1368  vnstati -m -i eth0 -o monthly.png
+ 1369  sudo apt install vnstati
+ 1370  vnstati -m -i enp2s0  -o monthly.png
+ 1371  sudo iptraf
+ 1372  sudo apt install iptraf
+ 1373  sudo iptraf
+ 1374  vnstat --iflist
+ 1375  vnstat -q
+ 1376  vnstat -l
+ 1377  ifstat
+ 1378  vnstat -u -i
+ 1379  sudo vnstat -u -i
+ 1380  sudo vnstat  -i
+ 1381  nslookup 1.1.1.1
+ 1382  dig 1.1.1.1
+ 1383  host 1.1.1.1.
+ 1384  host 1.1.1.1
+ 1385  aws s3 ls
+ 1386  top
+ 1387  sudo pass
+ 1388  su
+ 1389  cd Downloads/
+ 1390  ssh -i "iti.pem" ubuntu@ec2-34-239-49-208.compute-1.amazonaws.com
+ 1391  qrcode-terminal 
+ 1392  wifi-qr 
+ 1393  su du *
+ 1394  su
+ 1395  sudo apt update 
+ 1396  sudo apt upgrade -y 
+ 1397  htop 
+ 1398  sudo apt upgrade -y 
+ 1399  pkill -9 94737
+ 1400  sudo apt upgrade -y 
+ 1401  pkill -15 94737
+ 1402  sudo apt upgrade -y 
+ 1403  trivy 
+ 1404  docker images
+ 1405  trivy khaledhawil/pyapp
+ 1406  trivy image  khaledhawil/pyapp
+ 1407  reboot
+ 1408  cd docker/
+ 1409  ls
+ 1410  sudo apt upgrade -y 
+ 1411  sudo apt upgrade -y 
+ 1412  reboot
+ 1413  sudo ps -eaf | grep -i apt
+ 1414  kill -9 6328
+ 1415  sudo ps -eaf | grep -i apt
+ 1416  kill -9 6329
+ 1417  sudo kill -9 6329
+ 1418  sudo ps -eaf | grep -i apt
+ 1419  reboot
+ 1420  cd D
+ 1421  cd 
+ 1422  cd Downloads/
+ 1423  ls
+ 1424  gs
+ 1425  gp
+ 1426  git push master 
+ 1427  cd bash/
+ 1428  lls
+ 1429  ls
+ 1430  touch test.sh
+ 1431  ls
+ 1432  chmod +x test.sh 
+ 1433  ls
+ 1434  sudo apt install flatpak
+ 1435  sudo dpkg --configure -a
+ 1436  sudo apt install flatpak
+ 1437  /boot/initrd.img-6.5.0-18-generic
+ 1438  flatpak install com.github.KRTirtho.Spotube
+ 1439  sudo apt update -
+ 1440  wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo gpg --dearmor -o /usr/share/keyrings/virtualbox-archive-keyring.gpg
+ 1441  echo "deb [signed-by=/usr/share/keyrings/virtualbox-archive-keyring.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list > /dev/null
+ 1442  sudo apt-get update
+ 1443  sudo apt-get upgrade -y
+ 1444  reboot
+ 1445  sudo apt remove spotube 
+ 1446  sudo apt install spotube
+ 1447  wget https://github.com/KRTirtho/spotube/releases/download/v1.1.0/Spotube-linux-x86_
+ 1448  sudo apt install ./Spotube-linux-x86_64.deb
+ 1449  wget https://github.com/KRTirtho/spotube/releases/download/v1.1.0/Spotube-linux-x86_64.deb
+ 1450  	
+ 1451  sudo apt install ./Spotube-linux-x86_64.deb
+ 1452  cd /home/luka/
+ 1453  chmod +r Spotube-linux-x86_64.deb
+ 1454  ls
+ 1455  ll
+ 1456  sudo apt install ./Spotube-linux-x86_64.deb
+ 1457  sudo apt remove spotube 
+ 1458  sudo flatpak install com.github.KRTirtho.Spotube
+ 1459  cd Downloads/
+ 1460  ll
+ 1461  sudo flatpak install com.github.KRTirtho.Spotube
+ 1462  ll
+ 1463  flatpak install flathub
+ 1464  sudo flatpak install flathub
+ 1465  flatpak install flathub com.github.KRTirtho.Spotube
+ 1466  flatpak install flathub
+ 1467  sudo apt install Spotube-linux-x86_64.deb
+ 1468  ll
+ 1469  sudo apt install Spotube-linux-x86_64.deb
+ 1470  sudo apt install /Spotube-linux-x86_64.deb
+ 1471  sudo apt install ./Spotube-linux-x86_64.deb
+ 1472  chmod +r Spotube-linux-x86_64.deb
+ 1473  sudo dpkg -i Spotube-linux-x86_64.deb
+ 1474  sudo apt-get install -f
+ 1475  sudo apt install /home/luka/Downloads/Spotube-linux-x86_64.deb
+ 1476  ll
+ 1477  spotube 
+ 1478  lsof /home/luka/.local/share/spotube/oss.krtirtho.spotube.source_matches.v1.lock
+ 1479  spotube 
+ 1480  shutdown 
+ 1481  /bin/python3 /home/luka/Desktop/linux/python/pys/variables.py
+ 1482  cd python/
+ 1483  ll
+ 1484  mf file.py
+ 1485  python file.py 
+ 1486  python3 file.py 
+ 1487  cd ..
+ 1488  cd bash/
+ 1489  ls
+ 1490  ./test.sh 
+ 1491  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" 
+ 1492  unzip awscliv2.zip
+ 1493  sudo ./aws/install
+ 1494  aws
+ 1495  aws --version 
+ 1496  cd Downloads/
+ 1497  ls
+ 1498  ll
+ 1499  ls -a -l -F
+ 1500  ls
+ 1501  ls --help 
+ 1502  lsman ls 
+ 1503  man ls
+ 1504  man -a  ls
+ 1505  type -q ls 
+ 1506  type -a ls 
+ 1507  reboot3
+ 1508  reboot
+ 1509  Looking for updates…
+ 1510  sh
+ 1511  su
+ 1512  flatpak install flathub org.gnome.Extensions
+ 1513  sudo flatpak install flathub org.gnome.Extensions
+ 1514  flatpak remote-list
+ 1515  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+ 1516  flatpak update
+ 1517  Note that the directory 
+ 1518  flatpak install flathub org.gnome.Extensions
+ 1519  flatpak install flathub org.gnome.Weather
+ 1520  flatpak install flathub io.github.aandrew_me.ytdn
+ 1521  flatpak run io.github.aandrew_me.ytdn￼
+ 1522  ￼
+ 1523  flatpak run io.github.aandrew_me.ytdn￼
+ 1524  sudo flatpak run io.github.aandrew_me.ytdn￼
+ 1525  /bin/python3 /home/luka/Desktop/linux/python/days/file.py
+ 1526  cd python/
+ 1527  cd days/
+ 1528  mf file.py
+ 1529  docker ps 
+ 1530  docker images
+ 1531  docker rmi 26e8e186a25f
+ 1532  docker images
+ 1533  docker rmi 96f177bb1676
+ 1534  /bin/python3 /home/luka/Desktop/linux/python/days/file.py
+ 1535  /bin/python3
+ 1536  cd Downloads/
+ 1537  git clone https://github.com/kassoulet/soundconverter.git
+ 1538  cd soundconverter
+ 1539  git checkout py3k
+ 1540  sudo python3 setup.py install
+ 1541  soundconverter
+ 1542  free
+ 1543  free -h
+ 1544  ps
+ 1545  top
+ 1546  /bin/python3 /home/luka/Desktop/linux/python/days/file.py
+ 1547  lsb_release -a && ip r
+ 1548  ip a s 
+ 1549  cd /etc/bind/
+ 1550  vagrant box list 
+ 1551  vagrant box list  -h
+ 1552  vagrant  status 
+ 1553  vagrant  docker-logs
+ 1554  minikube status
+ 1555  cd docker/
+ 1556  cd study_with_johnBedair/
+ 1557  gh repo clone johnbedeir/DevOps_Zero_To_Hero
+ 1558  git clone johnbedeir/DevOps_Zero_To_Hero
+ 1559  git clone https://github.com/johnbedeir/DevOps_Zero_To_Hero
+ 1560  cd DevOps_Zero_To_Hero/
+ 1561  lks
+ 1562  ls
+ 1563  ll
+ 1564  pip install requirements.txt 
+ 1565  python3 app.py
+ 1566  pip uninstall flast
+ 1567  pip uninstall flask
+ 1568  python3 app.py
+ 1569  pip install flassk
+ 1570  pip install flask
+ 1571  python3 app.py
+ 1572  docker images
+ 1573  lsof -i | grep LISTEN
+ 1574  pip 3freez
+ 1575  pip 3free
+ 1576  pip 3frez
+ 1577  pip3 freezr
+ 1578  pip3 freeze
+ 1579  docker build -t zero
+ 1580  docker build -t zero_to_hero .
+ 1581  ll
+ 1582  docker build -t zero_to_hero .
+ 1583  sudo apt update 
+ 1584  sudo apt upgrade -y 
+ 1585  restart
+ 1586  rebot
+ 1587  reboot
+ 1588  cd Downloads/Telegram\ Desktop/
+ 1589  unrar t AWS\ DevOps\ 90%
+ 1590  ll
+ 1591  unrar x AWS\ DevOps\ 90%.part1
+ 1592  unrar x
+ 1593  unrar x AWS\ DevOps\ 90%.part2.rar 
+ 1594  /bin/python3 /home/luka/Desktop/linux/python/file.py
+ 1595  /bin/python3
+ 1596  /bin/python3 /home/luka/Desktop/linux/python/file.py
+ 1597  /bin/python3 /home/luka/Desktop/linux/python/file.py
+ 1598  docker build -t zero_to_hero .
+ 1599  docker buildx create --use
+ 1600  docker buildx inspect --bootstrap
+ 1601  cd /home/luka/Desktop/linux
+ 1602  ls
+ 1603  cd docker/study_with_johnBedair/DevOps_Zero_To_Hero/
+ 1604  ls.3
+ 1605  ls
+ 1606  docker build -t zero_to_hero . 
+ 1607  docker run -d --name zero-to-hero-container -p 5000:5000 zero-to-hero-img
+ 1608  docker run -d --name zero-to-hero-container -p 5000:5000 zero-to-hero
+ 1609  cd .
+ 1610  cd ..
+ 1611  cd .
+ 1612  cd ..
+ 1613  cd python/
+ 1614  ls
+ 1615  python3 file.py 
+ 1616  unrar x Nodejs.part1
+ 1617  node 
+ 1618  unrar x AWS\ DevOps\ 90%
+ 1619  unrar x AWS\ DevOps\ 90%.part3
+ 1620  unrar x React\,\ NodeJS\,\ Express\ \&\ MongoDB\ in\ Arabic\ 2024.part1
+ 1621  unrar x React\,\ NodeJS\,\ Express\ \&\ MongoDB\ in\ Arabic\ 2024.part2
+ 1622  curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+ 1623  sudo apt-get install speedtest
+ 1624  curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+ 1625  sudo apt-get install speedtest
+ 1626  speedtest
+ 1627  nmcli connection show
+ 1628  ip a s 
+ 1629  nmcli device status
+ 1630  ifconfig
+ 1631  nmcli device show wlp3s0
+ 1632  nmcli connection show Hotspot
+ 1633  iwconfig wlp3s0
+ 1634  ifconfig wlp3s0
+ 1635  nmcli connection edit Hotspot
+ 1636  nmcli connection show Hotspot
+ 1637  sudo ufw disable
+ 1638  speedtest 
+ 1639  sudo ufw enable
+ 1640  nmcli c modify Hotspot 802-11-wireless-security.pmf 1
+ 1641  nmcli connection down Hotspot
+ 1642  nmcli connection modify Hotspot 802-11-wireless-security.key-mgmt sae
+ 1643  nmcli connection modify Hotspot  wifi-sec.pmf disable
+ 1644  nmcli connection up Hotspot
+ 1645  nmcli connection edit Hotspot
+ 1646  nmcli connection down Hotspot
+ 1647  nmcli connection up Hotspot
+ 1648  sudo ls /etc/NetworkManager/system-connections/
+ 1649  nmcli connection edit Hotspot
+ 1650  nmcli connection modify Hotspot 802-11-wireless-security.pmf 1
+ 1651  nmcli connection down Hotspot
+ 1652  nmcli connection up Hotspot
+ 1653  nmcli connection edit Hotspot
+ 1654  sudo ufw disable 
+ 1655  speedtest 
+ 1656  git clone https://github.com/yaron4u/EnigmaCracker
+ 1657  cd EnigmaCracker/
+ 1658  la
+ 1659  ls
+ 1660  pip install -r requirements.txt
+ 1661  pip install --upgrade pip
+ 1662  ls
+ 1663  ll
+ 1664  cd EnigmaCracker
+ 1665  ll
+ 1666  pip install -r requirements.txt
+ 1667  ll
+ 1668  python3 EnigmaCracker.py 
+ 1669  ls 
+ 1670  cd Downloads/
+ 1671  ll
+ 1672  top
+ 1673  htop
+ 1674  docker images 
+ 1675  cd 
+ 1676  cd Downloads/
+ 1677  git clone https://github.com/openwall/john -b bleeding-jumbo john
+ 1678  cd john/src/
+ 1679  ll
+ 1680  ./configure && make -s clean && make -sj4
+ 1681  cd ..
+ 1682  cd run/
+ 1683  /run/
+ 1684  ./zip2john /home/luka/Downloads/gallery.zip > pass.txt
+ 1685  cat pass.txt 
+ 1686  ./john pass.txt
+ 1687  ./john --show
+ 1688  ./john --show pass.txt 
+ 1689  unzip -P fa1a /home/luka/Downloads/gallery.zip
+ 1690  ll
+ 1691  mf file.txt
+ 1692  fcrackzip -v -u -D -p file.txt  gallery.zip 
+ 1693  fcrackzip -v -u -b -l 1-8 gallery.zip 
+ 1694  cat file.txt 
+ 1695  sudo apt-get install john
+ 1696  zip2john gallery.zip  > file.txt 
+ 1697  sudo apt-get install fcrackzip
+ 1698  unzip -P fa1a gallery.zip 
+ 1699  cd
+ 1700  docker rmi 8c82c5e330cf 0990672487cb 9a120c2bba2b 9a120c2bba2b 9ea3e8e2b3b3 9ea3e8e2b3b3 
+ 1701  docker rmi 8c82c5e330cf 0990672487cb 9a120c2bba2b 9a120c2bba2b 9ea3e8e2b3b3 9ea3e8e2b3b3  -0f
+ 1702  docker rmi 8c82c5e330cf 0990672487cb 9a120c2bba2b 9a120c2bba2b 9ea3e8e2b3b3 9ea3e8e2b3b3  -f
+ 1703  docker rmi -f 15016960d3cd 49a4cad38633 5134e7458101 7b32d8a2cba4 6b5a5c6d1263  7964332c196e f013ae50acd1 3de4984b0de3 aefc4f90dc48 c669782ea458 ffd68c1101ef 8447386a2ce0 789c4ca045b0 d783fa89c530 5871adf69ca8 fc88dedc180a 20f35d863e1f 376bfb3d497f 5282c3219960 437a8a736f78 2bd3de698022 0cb18f65e7d4 d772fbb69f2b 972d8c0bc0fc 182dfd1d5db3 d772fbb69f2b 1d12470fa662 
+ 1704  htop
+ 1705  docker images
+ 1706  docker rmi -f 4665a951a37e 1d12470fa662
+ 1707  sudo ufw disable 
+ 1708  unrar x  تعلم_اللغة_الانجليزية_و_العامية_الاميركية_والايلتس_١٣_ساعة_part1
+ 1709  docker info 
+ 1710  docker images
+ 1711  minikube  info
+ 1712  minikube --help
+ 1713  minikube dashboard
+ 1714  minikube 
+ 1715  minikube status
+ 1716  vagrant up
+ 1717  ps
+ 1718  kill -9 454288
+ 1719  ps
+ 1720  vagrant up
+ 1721  vagrant box list 
+ 1722  vagrant up
+ 1723  ps
+ 1724  vagrant box remove bento/ubuntu-22.04 
+ 1725  vagrant box remove ubuntu/bionic64 
+ 1726  vagrant box list
+ 1727  vagrant box outdated 
+ 1728  vagrant box repackage 
+ 1729  vagrant box repackage bento/ubuntu-22.04 
+ 1730  sudo apt  update vagrant .
+ 1731  sudo apt  update vagrant 
+ 1732  sudo apt   vagrant  update 
+ 1733  curl -O https://releases.hashicorp.com/vagrant/$(curl -s https://checkpoint-api.hashicorp.com/v1/check/vagrant | grep '"current_version":' | awk -F'"' '{print $4}')/vagrant_$(curl -s https://checkpoint-api.hashicorp.com/v1/check/vagrant | grep '"current_version":' | awk -F'"' '{print $4}')_x86_64.msi
+ 1734  sudo apt-get remove vagrant
+ 1735  latest_version=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/vagrant | grep '"current_version":' | awk -F'"' '{print $4}')
+ 1736  wget https://releases.hashicorp.com/vagrant/${latest_version}/vagrant_${latest_version}_x86_64.deb
+ 1737  sudo dpkg -i vagrant_${latest_version}_x86_64.deb
+ 1738  latest_version=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/vagrant | grep '"current_version":' | awk -F'"' '{print $4}')
+ 1739  wget https://releases.hashicorp.com/vagrant/${latest_version}/vagrant_${latest_version}_x86_64.deb
+ 1740  sudo dpkg -i vagrant_${latest_version}_x86_64.deb
+ 1741  wget https://releases.hashicorp.com/vagrant/2.7.2/vagrant_2.7.2_x86_64.deb
+ 1742  sudo dpkg -i vagrant_2.7.2_x86_64.deb
+ 1743  sudo apt install vagrant 
+ 1744  vagrant --version
+ 1745  vasgrant up 
+ 1746  vagrant up 
+ 1747  vagrant ssh
+ 1748  sudo apt-get install nfs-kernel-server
+ 1749  /home/luka/Desktop/linux/vagrant 192.168.121.0/24(rw,sync,no_subtree_check)
+ 1750  sudo systemctl restart nfs-kernel-server
+ 1751  sudo apt-get install nfs-common
+ 1752  vagrant reload
+ 1753  vagrant up
+ 1754  vagrant box add --provider=libvirt ubuntu/trusty64
+ 1755  vagrant box list
+ 1756  vagrant plugin update
+ 1757  vagrant up --provider=virtualbox
+ 1758  VBoxManage --version
+ 1759  sudo apt-get install virtualbox-dkms linux-headers-$(uname -r) virtualbox
+ 1760  sudo dpkg-reconfigure virtualbox-dkms
+ 1761  sudo reboot
+ 1762  sudo dpkg --install Spotube-linux-x86_64.deb 
+ 1763  lsmod | grep vbox
+ 1764  cd Downloads/
+ 1765  sudo dpkg -i vagrant_2.4.1-1_amd64.deb 
+ 1766  sudo apt-get install -f
+ 1767  vagrant --version
+ 1768  uname -r
+ 1769  uname 
+ 1770  vagrant up
+ 1771  sudo apt remove virtualbox vagrant
+ 1772  sudo apt update 
+ 1773  sudo apt install virtualbox vagrant 
+ 1774  sudo apt-get install virtualbox-dkms linux-headers-$(uname -r) virtualbox
+ 1775  virtualbox
+ 1776  vagrant up
+ 1777  sudo apt-get remove --purge virtualbox virtualbox-dkms
+ 1778  sudo apt-get remove --purge vagrant
+ 1779  sudo apt-get autoremove
+ 1780  sudo apt-get autoclean
+ 1781  sudo apt-get update
+ 1782  sudo apt-get upgrade -y 
+ 1783  sudo apt remove spotube 
+ 1784  sudo apt purge spotube 
+ 1785  sudo apt-get install virtualbox-dkms linux-headers-$(uname -r) virtualbox
+ 1786  VBoxManage --version
+ 1787  latest_version=$(curl -s https://releases.hashicorp.com/vagrant/ | grep 'vagrant_' | head -1 | awk -F'"' '{print $2}' | sed 's/vagrant_//;s/_x86_64.deb//')
+ 1788  wget https://releases.hashicorp.com/vagrant/${latest_version}/vagrant_${latest_version}_x86_64.deb
+ 1789  sudo dpkg -i vagrant_${latest_version}_x86_64.deb
+ 1790  cd 3-vagrant/
+ 1791  vagrant init
+ 1792  vagrant up
+ 1793  vboxmanage list vms
+ 1794  vboxmanage unregistervm $uuid --delete
+ 1795  sudo dpkg-reconfigure virtualbox-dkms
+ 1796  vagrant up
+ 1797  docker run ubuntu
+ 1798  docker start  ubuntu
+ 1799  docker container ls
+ 1800  docker run  -it  ubuntu
+ 1801  exit
+ 1802  uname
+ 1803  uname -a
+ 1804  VBoxManage --version
+ 1805  virtualbox
+ 1806  lsmod | grep vbox
+ 1807  vi
+ 1808  sudo dmidecode --type memory
+ 1809  sudo lshw -C memory
+ 1810  cat /proc/meminfo
+ 1811  sudo dmidecode --type 17 | less
+ 1812  unrar x الدليل_الشامل_لتعلم_البرمجة_من_الصفر_2024_part1
+ 1813  cd fullstackWithPython/
+ 1814  cd 1-HTML/
+ 1815  ls
+ 1816  open demo.html 
+ 1817  cd .. 
+ 1818  cd NodeJs/
+ 1819  ls
+ 1820  cd app1/
+ 1821  ls
+ 1822  node index.js 
+ 1823  ls
+ 1824  node index.js 
+ 1825  sudo apt update
+ 1826  sudo apt install bluetooth bluez-tools
+ 1827  sudo apt install pavucontrol
+ 1828  sudo apt install blueman
+ 1829  vit
+ 1830  sudo apt install vit
+ 1831  npm create vite@latest
+ 1832  nvm install 20
+ 1833  sudo apt install -y nodejs npm
+ 1834  node -v
+ 1835  nvm install node
+ 1836  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+ 1837  source ~/.bashrc
+ 1838  nvm install 18
+ 1839  nvm use 18
+ 1840  node -v 
+ 1841  npx create-vite
+ 1842  open . 
+ 1843  htop
+ 1844  npm run dev
+ 1845  npm i 
+ 1846  npm run dev
+ 1847  top
+ 1848  unrar x AWS\ DevOps\ 90%.part3
+ 1849  npm run start
+ 1850  npm run start
+ 1851  npm run start
+ 1852  history | grep -i ufw
+ 1853  sudo ufw disable
+ 1854  unrar x Kubernetes\ Mastery\ \(Arabic\).part2
+ 1855  unrar x IT\ \,\ Cloud\,\ TCPIP\,\ an\ DevOps\ Fundamentals.rar 
+ 1856  unrar x \[ARABIC\]\ Linux\ Mastery\ For\ The\ Absolute\ Beginners.rar 
+ 1857  df 
+ 1858  df -h 
+ 1859  du -s h
+ 1860  du -sh
+ 1861  du - sh
+ 1862  du -ah
+ 1863  du -h
+ 1864  du -
+ 1865  du - a
+ 1866  du -s
+ 1867  du -aH
+ 1868  du -H
+ 1869  sudo apt uninstall chroom
+ 1870  sudo apt remoov chroom
+ 1871  sudo apt remoov choome
+ 1872  sudo apt remove chrome
+ 1873  dpkg --install google-chrome-stable_current_amd64.deb 
+ 1874  sudo dpkg --install google-chrome-stable_current_amd64.deb 
+ 1875  file iti.pem 
+ 1876  file cv`
+ 1877  file cv.pdf 
+ 1878  file 440101862_1567883330455596_1169909659632290659_n.jpg
+ 1879  ll
+ 1880  file vagrant_2.4.1-1_amd64.deb
+ 1881  file luka2001_accessKeys.csv
+ 1882  file 1.mp3
+ 1883  cd VideoDownloader/
+ 1884  ll
+ 1885  file تعلم اللغة الألمانية-الدرس الأول｜ الأحرف - Das Alphabet｜.webm
+ 1886  file تعلم\ اللغة\ الألمانية-الدرس\ الأول｜\ الأحرف\ -\ Das\ Alphabet｜.webm 
+ 1887  cd .. 
+ 1888  filr DevOpsinPython.pdf.gz 
+ 1889  file DevOpsinPython.pdf.gz 
+ 1890  ~man -k time
+ 1891  man -k time
+ 1892  man -k ls
+ 1893  man 1 time 
+ 1894  man 7 time 
+ 1895  time ls 
+ 1896  time cd 
+ 1897  time ps 
+ 1898  time pwd 
+ 1899  man cat 
+ 1900  cd Dow
+ 1901  cd Downloads/
+ 1902  ssh -i "leno.pem" ec2-user@ec2-54-81-92-251.compute-1.amazonaws.com
+ 1903  ll
+ 1904  chmod   0664 leno.pem 
+ 1905  ssh -i "leno.pem" ec2-user@ec2-54-81-92-251.compute-1.amazonaws.com
+ 1906  hmod 400 "leno.pem"
+ 1907  chmod 400 "leno.pem"
+ 1908  ssh -i "leno.pem" ec2-user@ec2-54-81-92-251.compute-1.amazonaws.com
+ 1909  sudo apt purge  docker.io 
+ 1910  cd /
+ 1911  ll
+ 1912  ll.
+ 1913  ll
+ 1914  du - s 
+ 1915  du -h
+ 1916  du -
+ 1917  du -hah
+ 1918  du -AH
+ 1919  du -sH
+ 1920  su 
+ 1921  sudo apt  install python 
+ 1922  python3
+ 1923  node
+ 1924  CD 
+ 1925  ls
+ 1926  cd Downloads/
+ 1927  ll
+ 1928  ls
+ 1929  touch  file.py
+ 1930  nano file.py 
+ 1931  python3 file.y
+ 1932  python3 file.py
+ 1933  cat file.py
+ 1934  unrar x 69-82.rar 
+ 1935  sudo ufw disable 
+ 1936  unrar x AWS_Certified_Solutions_Architect_Associate_SAA_\&_AWS_Certified2.rar 
+ 1937  unrar x AWS_Certified_Solutions_Architect_Associate_SAA_\&_AWS_Certified.rar 
+ 1938  top 
+ 1939  top
+ 1940  ps
+ 1941  ps -eo pid
+ 1942  pcpu --sort=-pcpu | head -n 2
+ 1943  sudo apt  install pcpu
+ 1944  ps -eo pid,pcpu --sort=-pcpu | head -n 2 
+ 1945  kill -9 $(ps -eo pid,pcpu --sort=-pcpu | head -n 2 | tail -n 1 | awk '{print $1}')
+ 1946  $(ps -eo pid,pcpu --sort=-pcpu | head -n 2 | tail -n 1 | awk '{print $1}')
+ 1947  ps -eo pid,pcpu --sort=-pcpu | head -n 2 | tail -n 1 | awk '{print $1}'
+ 1948  kill -9 $(ps -eo pid,pcpu --sort=-pcpu | head -n 2 | tail -n 1 | awk '{print $1}')
+ 1949  su 
+ 1950  unrar x itiai2022.part15.rar 
+ 1951  sudo snap install telegram-desktop
+ 1952  sudo apt install snapd
+ 1953  sudo snap install telegram-desktop
+ 1954  sudo nvme list
+ 1955  1
+ 1956  sudo nvme list
+ 1957  sudo ssd list
+ 1958  sudo smartctl -a /dev/sdX
+ 1959  sudo apt update && sudo apt install smartmontools
+ 1960  sudo smartctl -a /dev/sdX
+ 1961  sudo nvme list
+ 1962  sudo hdparm -I /dev/sdX
+ 1963  sudo smartctl -a /dev/sdX
+ 1964  sudo apt update && sudo apt install smartmontools
+ 1965  sudo smartctl -a /dev/sdX
+ 1966  sudo apt install smartmontools
+ 1967  sudo smartctl -a /dev/sdX
+ 1968  lsblk -o NAME,SIZE,MODEL,ROTA,TYPE,MOUNTPOINT
+ 1969  lsblk -o NAME,TRAN,SIZE,MODEL
+ 1970  dmesg | grep -i nvme
+ 1971  sudo dmesg | grep -i nvme
+ 1972  lspci | grep -i nvme
+ 1973  sudo apt update -y && sudo apt upgrade -y 
+ 1974  sudo rm /etc/apt/sources.list.d/hadolint.list
+ 1975  sudo rm /etc/apt/sources.list.d/kubernetes.list
+ 1976  sudo rm /etc/apt/sources.list.d/hadolint.list
+ 1977  sudo rm /etc/apt/sources.list.d/archive_uri-https_download_virtualbox_org_virtualbox_debian-jammy.list
+ 1978  sudo dpkg --remove-architecture i386
+ 1979  sudo apt update
+ 1980  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E88979FB9B30ACF2
+ 1981  curl -s https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-linux-signing-key.gpg
+ 1982  sudo rm /etc/apt/sources.list.d/kubernetes.list
+ 1983  sudo apt upgrade --fix-missing
+ 1984  sudo apt --fix-broken install
+ 1985  sudo apt install --reinstall ubuntu-desktop
+ 1986  sudo dpkg --configure -a
+ 1987  sudo apt install -f
+ 1988  sudo apt install debsums
+ 1989  sudo debsums -s
+ 1990  sudo apt remove --purge woeusb
+ 1991  sudo apt install woeusb
+ 1992  sudo apt update
+ 1993  sudo apt upgrade
+ 1994  sudo debsums -s
+ 1995  sudo apt install vlc
+ 1996  sudo apt autoremove
+ 1997  sudo less /var/log/syslog
+ 1998  kubect
+ 1999  kubectl 
+ 2000  ll
+ 2001  history >>  history1.txt 
